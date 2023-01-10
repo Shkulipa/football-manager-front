@@ -1,0 +1,82 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true 
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:import/typescript",
+      "plugin:react-hooks/recommended",
+      "prettier"
+  ],
+  "overrides": [
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "import"
+  ],
+  "ignorePatterns": ["build"],
+  "rules": {
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "@typescript-eslint/no-empty-interface": [
+			"error",
+			{
+				"allowSingleExtends": true
+			}
+		],
+    "react/display-name": "off",
+    "no-trailing-spaces": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx", ".ts"] }],
+    "prettier/prettier": ["error", {
+			"useTabs": true,
+			"tabWidth": 2,
+			"semi": true,
+      "singleQuote": true,
+			"parser": "typescript",
+			"trailingComma": "none",
+			"bracketSpacing": true,
+			"arrowParens": "avoid",
+      "printWidth": 80,
+      "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "^validations/(.*)$",
+        "^interfaces/(.*)$",
+        "^components/(.*)$",
+        "^providers/(.*)$",
+        "^contexts/(.*)$",
+        "^helpers/(.*)$",
+        "^services/(.*)$",
+        "^config/(.*)$",
+        "^assets/(.*)$",
+        "^types/(.*)$",
+        "^hooks/(.*)$",
+        "^store/(.*)$",
+        "^utils/(.*)$",
+        "^data/(.*)$",
+        "^api/(.*)$",
+        "^../(.*)",
+        "^./(.*)",
+        "(.scss)$"
+      ],
+      "importOrderSeparation": true,
+      "importOrderSortSpecifiers": true
+		}]
+	}
+}

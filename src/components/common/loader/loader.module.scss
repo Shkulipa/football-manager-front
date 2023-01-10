@@ -1,0 +1,48 @@
+.mainLoader{
+  width: 50px;
+  height: 50px;
+  .loader {
+    svg {
+      display: block;
+      margin: 0 auto;
+      path {
+        animation-duration: 1s;
+        animation-name: pulse;
+        animation-iteration-count: infinite;
+        color: gray;
+
+        &.path7 {
+          animation-delay: -1s
+        }
+        &.path6 {
+          animation-delay: -.875s
+        }
+        &.path5 {
+          animation-delay: -.75s
+        }
+        &.path4 {
+          animation-delay: -.625s
+        }
+        &.path3 {
+          animation-delay: -.5s
+        }
+        &.path2 {
+          animation-delay: -.375s
+        }
+        &.path1 {
+          animation-delay: -.25s
+        }
+        &.path0 {
+          animation-delay: -.125s
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes pulse {
+  0%     { opacity: .1; }
+  30%    { opacity: .8; }
+  100%   { opacity: .1; }
+}

@@ -1,0 +1,4 @@
+{
+  "**/*.{ts,tsx}": ["yarn eslint:fix"],
+  "**/*.{scss}": ["yarn stylelint:fix"]
+}

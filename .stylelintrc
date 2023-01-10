@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss", 
+    "stylelint-config-prettier-scss",
+    "stylelint-config-recess-order"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": [
+      "^([a-z]|[a-z][a-zA-Z0-9])+$",
+      {
+        "message": "Expected custom property name to be camelCase"
+      }
+    ],
+    "scss/at-mixin-pattern": [
+      "^([a-z]|[a-z][a-zA-Z0-9])+$",
+      {
+        "message": "Expected custom property name to be camelCase"
+      }
+    ],
+    "indentation": [
+			2, { "baseIndentLevel": 1 }
+		],
+    "string-quotes": "single"
+  }
+}

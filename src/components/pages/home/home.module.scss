@@ -1,0 +1,78 @@
+.home {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  
+  $darkness: linear-gradient(to right, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.1));
+  background-image: $darkness, url('src/assets/images/screensavers/team.jpeg');
+}
+
+.homeMenuWrapper {
+  background: rgba(0, 0, 0, 0.3);
+  width: 50%;
+  height: 100%;
+
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.homeMenu {
+  padding: 10% 8%;
+}
+
+.path {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  width: 2%;
+  height: 100%;
+  left: -5%;
+  
+  transform: skewX(-13.3deg);
+}
+
+.menus {
+  margin-top: 50px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.tab {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  &:hover {
+    padding-bottom: 12px;
+    color: black;
+    background-color: white;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.active {
+  padding-bottom: 12px;
+  color: black;
+  background-color: white;
+  transition: all 0.2s ease-in;
+}
+
+.content {
+  background-color: white;
+  color: black;
+  padding: 20px 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}

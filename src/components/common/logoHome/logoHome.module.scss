@@ -1,0 +1,19 @@
+.logoHome {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logoHomeImg {
+ width: 100%;
+ max-width: 150px; 
+}
+
+.logoHomeText {
+  color: white;
+  font-family: springwood, arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  line-height: 1;
+  letter-spacing: 4px;
+}
