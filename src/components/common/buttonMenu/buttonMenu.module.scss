@@ -1,0 +1,15 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.buttonMenu {
+  font-family: $primary-font;
+  font-size: $l-text-size;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: $hover-transition;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

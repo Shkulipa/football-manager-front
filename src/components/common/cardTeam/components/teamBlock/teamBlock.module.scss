@@ -1,0 +1,40 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.team {
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+}
+
+.teamName {
+  font-family: $primary-font;
+  font-size: $l-text-size;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.teamImg {
+  width: 100%;
+  max-width: 125px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skill {
+  display: grid;
+  justify-content: center;
+}
+
+.skillName, .skillValue {
+  font-family: $primary-font;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,23 @@
+@import 'src/assets/styles/variables';
+
+.menus {
+  margin-top: 50px;
+}
+
+$indent: 25px;
+
+.navigation {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: calc($indent + 15px);
+  border-bottom: 3px solid white;
+}
+
+.content {
+  display: grid;
+  gap: $indent;
+  justify-content: center;
+  padding: 0 10px;
+}

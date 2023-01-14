@@ -1,0 +1,52 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.classicMatch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(to right, rgb(0 0 0 / 70%) 20%, rgb(0 0 0 / 10%)), 
+    url('src/assets/images/backgrounds/single-match.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+}
+
+.title {
+  font-family: $primary-font;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.teams {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;  
+}
+
+.playWrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.gamepad {
+  width: 100%;
+  max-width: 60px;
+  fill: $white;
+}

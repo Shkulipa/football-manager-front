@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "premierLeague-england",
+    "name": "Premier League",
+    "logoLeague": "https://download.logo.wine/logo/Premier_League/Premier_League-Logo.wine.png",
+    "countryId": "england"
+  },
+  {
+    "_id": "laLiga-spain",
+    "name": "LaLiga",
+    "logoLeague": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/LaLiga.svg/799px-LaLiga.svg.png",
+    "countryId": "spain"
+  },
+  {
+    "_id": "laLiga2-spain",
+    "name": "LaLiga 2",
+    "logoLeague": "https://www.footballtalk.org/wp-content/uploads/2019/04/LaLiga2.svg_.png",
+    "countryId": "spain"
+  }
+]

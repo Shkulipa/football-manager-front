@@ -1,0 +1,33 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.country {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  justify-content: center;
+  height: 75px;
+}
+
+.countryName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $primary-font;
+  font-size: $l-text-size;
+  color: $white;
+  letter-spacing: 1px;
+}
+
+.countrySlider {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag {
+  width: 100%;
+  max-width: 60px;
+  border-radius: 6px;
+}

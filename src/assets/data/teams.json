@@ -1,0 +1,79 @@
+[
+  {
+    "_id": 1,
+    "leagueId": "premierLeague-england",
+    "clubName": "Manchester City",
+    "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/167.png",
+    "skills": {
+      "att": "99",
+      "mid": "99",
+      "def": "99"
+    }
+  },
+  {
+    "_id": 2,
+    "leagueId": "premierLeague-england",
+    "clubName": "Arsenal",
+    "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/13.png",
+    "skills": {
+      "att": "98",
+      "mid": "98",
+      "def": "98"
+    }
+  },
+  {
+    "_id": 3,
+    "leagueId": "premierLeague-england",
+    "clubName": "Newcastle",
+    "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/23.png",
+    "skills": {
+      "att": "97",
+      "mid": "97",
+      "def": "97"
+    }
+  },
+  {
+    "_id": 4,
+    "leagueId": "laLiga-spain",
+    "clubName": "Barcelona",
+    "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/65.png",
+    "skills": {
+      "att": "99",
+      "mid": "99",
+      "def": "99"
+    }
+  },
+  {
+    "_id": 5,
+    "leagueId": "laLiga-spain",
+    "clubName": "Real Madrid",
+    "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/52.png",
+    "skills": {
+      "att": "98",
+      "mid": "98",
+      "def": "98"
+    }
+  },
+  {
+    "_id": 6,
+    "leagueId": "laLiga-spain",
+    "clubName": "Atletico Madrid",
+    "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/63.png",
+    "skills": {
+      "att": "97",
+      "mid": "97",
+      "def": "97"
+    }
+  },
+  {
+    "_id": 7,
+    "leagueId": "laLiga2-spain",
+    "clubName": "Villarreal B",
+    "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/6168.png",
+    "skills": {
+      "att": "50",
+      "mid": "50",
+      "def": "50"
+    }
+  }
+]

@@ -1,0 +1,4 @@
+export enum ETabsMenu {
+	SINGLE_GAME = 'SINGLE_GAME',
+	MULTIPLAYER = 'MULTIPLAYER'
+}

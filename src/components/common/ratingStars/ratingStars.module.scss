@@ -1,0 +1,13 @@
+@import 'src/assets/styles/variables';
+
+.ratingWrapper {
+  display: flex;
+  gap: 7px;
+  margin: 0 auto;
+}
+
+.starRating {
+  width: 100%;
+  max-width: 25px;
+  fill: $yellow;
+}

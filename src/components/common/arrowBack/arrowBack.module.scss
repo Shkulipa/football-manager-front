@@ -1,0 +1,14 @@
+@import 'src/assets/styles/variables';
+
+.arrowBack {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100%;
+  max-width: 35px;
+  transition: $hover-transition;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

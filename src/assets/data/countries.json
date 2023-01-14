@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "england",
+    "country": "England",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png"
+  },
+  {
+    "_id": "spain",
+    "country": "Spain",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/250px-Flag_of_Spain.svg.png"
+  }
+]

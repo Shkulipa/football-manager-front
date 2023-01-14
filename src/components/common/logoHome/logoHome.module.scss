@@ -1,19 +1,23 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
 .logoHome {
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: center;
 }
 
 .logoHomeImg {
- width: 100%;
- max-width: 150px; 
+  width: 100%;
+  max-width: 150px; 
 }
 
 .logoHomeText {
-  color: white;
-  font-family: springwood, arial, sans-serif;
-  text-transform: uppercase;
+  font-family: $primary-font;
   font-size: 4.5rem;
   line-height: 1;
+  color: $white;
+  text-transform: uppercase;
   letter-spacing: 4px;
 }

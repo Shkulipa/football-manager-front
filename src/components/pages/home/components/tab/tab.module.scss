@@ -1,0 +1,29 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.tab {
+  padding: 10px;
+  font-family: $primary-font;
+  font-size: $l-text-size;
+  color: $white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: transparent;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: $transition;
+
+  &:hover {
+    padding-bottom: 12px;
+    color: black;
+    background-color: $white;
+    transition: $transition;
+  }
+}
+
+.active {
+  padding-bottom: 12px;
+  color: $black;
+  background-color: $white;
+  transition: $transition;
+}
