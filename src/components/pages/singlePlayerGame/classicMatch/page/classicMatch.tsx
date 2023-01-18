@@ -1,6 +1,13 @@
 import { memo, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { ReactComponent as Gamepad } from 'src/assets/icons/gamepad.svg';
-import { ArrowBack, ArrowSlider, CardTeam, Htag } from 'src/components';
+import {
+	ArrowBack,
+	ArrowSlider,
+	CardTeam,
+	Htag,
+	PrimaryLayout
+} from 'src/components';
 import { ITeam } from 'src/interfaces';
 
 import styles from './classicMatch.module.scss';
@@ -30,15 +37,11 @@ export function ClassicMatch() {
 		}
 	};
 
-	const handlerStartMatch = () => {
-		const test = 'test';
-	};
-
 	return (
 		<div className={styles.classicMatch}>
 			<ArrowBack to={'/'} />
 
-			<div className={styles.container}>
+			<PrimaryLayout>
 				<div className={styles.content}>
 					<MemoTitle tag="h1" className={styles.title}>
 						Classic Match
@@ -46,14 +49,14 @@ export function ClassicMatch() {
 
 					<div className={styles.teams}>
 						<div>
-							<CardTeam title="hosts" team={hosts} setTeam={setHosts} />
+							<CardTeam title="Hosts" team={hosts} setTeam={setHosts} />
 							{controllPlayer === ETeam.LEFT && (
 								<Gamepad className={styles.gamepad} />
 							)}
 						</div>
 
 						<div>
-							<CardTeam title="guests" team={guests} setTeam={setGuests} />
+							<CardTeam title="Guests" team={guests} setTeam={setGuests} />
 							{controllPlayer === ETeam.RIGHT && (
 								<Gamepad className={styles.gamepad} />
 							)}
@@ -67,16 +70,14 @@ export function ClassicMatch() {
 							isDisabled={controllPlayer === ETeam.LEFT}
 						/>
 						{!controllPlayer && <Gamepad className={styles.gamepad} />}
-						{controllPlayer && (
-							<button onClick={handlerStartMatch}>Play</button>
-						)}
+						{controllPlayer && <NavLink to="/classic-match-game">Play</NavLink>}
 						<ArrowSlider
 							onClick={() => handlerMove(ETeam.RIGHT)}
 							isDisabled={controllPlayer === ETeam.RIGHT}
 						/>
 					</div>
 				</div>
-			</div>
+			</PrimaryLayout>
 		</div>
 	);
 }

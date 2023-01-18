@@ -1,6 +1,12 @@
 import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Career, ClassicMatch, Home, Loader } from 'src/components';
+import {
+	Career,
+	ClassicMatch,
+	ClassicMatchGame,
+	Home,
+	Loader
+} from 'src/components';
 
 export function Router(): JSX.Element {
 	return (
@@ -18,6 +24,12 @@ export function Router(): JSX.Element {
 					path={'/classic-match'}
 					element={
 						<Suspense fallback={<Loader />}>{<ClassicMatch />}</Suspense>
+					}
+				/>
+				<Route
+					path={'/classic-match-game'}
+					element={
+						<Suspense fallback={<Loader />}>{<ClassicMatchGame />}</Suspense>
 					}
 				/>
 			</Routes>

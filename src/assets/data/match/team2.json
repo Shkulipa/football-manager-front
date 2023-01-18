@@ -1,0 +1,248 @@
+{
+  "name": "Dragons",
+  "manager": "Aiden 2",
+  "players": [
+    {
+      "name": "Bill Johnson",
+      "number": 1,
+      "position": "GK",
+      "rating": "75",
+      "skill": {
+        "passing": "100",
+        "shooting": "12",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "43",
+        "jumping": "300"
+      },
+      "currentPOS": [
+        325,
+        30
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Fred Johnson",
+      "number": 2,
+      "position": "LB",
+      "rating": "90",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "saving": "100",
+        "tackling": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "235"
+      },
+      "currentPOS": [
+        65,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "George Johnson",
+      "number": 3,
+      "position": "CB",
+      "rating": "84",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "212"
+      },
+      "currentPOS": [
+        215,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Jim Johnson",
+      "number": 4,
+      "position": "CB",
+      "rating": "75",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "21",
+        "jumping": "280"
+      },
+      "currentPOS": [
+        460,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Georgina Johnson",
+      "number": 5,
+      "position": "RB",
+      "rating": "82",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "23",
+        "penalty_taking": "100",
+        "jumping": "299"
+      },
+      "currentPOS": [
+        585,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Lucy Johnson",
+      "number": 6,
+      "position": "LM",
+      "rating": "87",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "250"
+      },
+      "currentPOS": [
+        65,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Arthur Johnson",
+      "number": 7,
+      "position": "CM",
+      "rating": "41",
+      "skill": {
+        "passing": "33",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "1",
+        "jumping": "1100"
+      },
+      "currentPOS": [
+        215,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Cameron Johnson",
+      "number": 8,
+      "position": "CM",
+      "rating": "99",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "175"
+      },
+      "currentPOS": [
+        460,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Gill Johnson",
+      "number": 9,
+      "position": "RM",
+      "rating": "79",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "288"
+      },
+      "currentPOS": [
+        585,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Peter Johnson",
+      "number": 10,
+      "position": "ST",
+      "rating": "75",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "291"
+      },
+      "currentPOS": [
+        240,
+        425
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Louise Johnson",
+      "number": 11,
+      "position": "ST",
+      "rating": "88",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "280"
+      },
+      "currentPOS": [
+        410,
+        425
+      ],
+      "fitness": 100,
+      "injured": false
+    }
+  ]
+}

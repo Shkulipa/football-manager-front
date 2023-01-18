@@ -2,7 +2,7 @@
 @import 'src/assets/styles/fonts';
 
 .tab {
-  padding: 10px;
+  padding: 12px;
   font-family: $primary-font;
   font-size: $l-text-size;
   color: $white;
@@ -12,18 +12,19 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   transition: $transition;
+  transform: translateY(4px);
 
   &:hover {
-    padding-bottom: 12px;
     color: black;
     background-color: $white;
     transition: $transition;
+    transform: translateY(0);
   }
 }
 
 .active {
-  padding-bottom: 12px;
   color: $black;
   background-color: $white;
   transition: $transition;
+  transform: translateY(0);
 }
