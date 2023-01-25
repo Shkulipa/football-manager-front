@@ -5,7 +5,7 @@
   "players": [
     {
       "name": "Bill Johnson",
-      "number": "1",
+      "number": 1,
       "position": "GK",
       "rating": "75",
       "skill": {
@@ -16,7 +16,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "43",
-        "jumping": "300"
+        "jumping": "90"
       },
       "currentPOS": [
         325,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Fred Johnson",
-      "number": "2",
+      "number": 2,
       "position": "LB",
       "rating": "90",
       "skill": {
@@ -38,7 +38,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "75",
-        "jumping": "235"
+        "jumping": "82"
       },
       "currentPOS": [
         65,
@@ -60,7 +60,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "75",
-        "jumping": "212"
+        "jumping": "89"
       },
       "currentPOS": [
         215,
@@ -82,7 +82,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "21",
-        "jumping": "280"
+        "jumping": "67"
       },
       "currentPOS": [
         460,
@@ -104,7 +104,7 @@
         "agility": "75",
         "strength": "23",
         "penalty_taking": "75",
-        "jumping": "299"
+        "jumping": "80"
       },
       "currentPOS": [
         585,
@@ -126,7 +126,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "75",
-        "jumping": "250"
+        "jumping": "82"
       },
       "currentPOS": [
         65,
@@ -148,7 +148,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "1",
-        "jumping": "175"
+        "jumping": "80"
       },
       "currentPOS": [
         215,
@@ -170,7 +170,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "75",
-        "jumping": "175"
+        "jumping": "87"
       },
       "currentPOS": [
         460,
@@ -192,7 +192,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "75",
-        "jumping": "288"
+        "jumping": "77"
       },
       "currentPOS": [
         585,
@@ -214,7 +214,7 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "75",
-        "jumping": "291"
+        "jumping": "80"
       },
       "currentPOS": [
         265,
@@ -236,11 +236,57 @@
         "agility": "75",
         "strength": "75",
         "penalty_taking": "75",
-        "jumping": "280"
+        "jumping": "90"
       },
       "currentPOS": [
         465,
         500
+      ],
+      "fitness": 100,
+      "injured": false
+    }
+  ],
+  "bench": [
+    {
+      "name": "Kingsley Murphy",
+      "number": 34,
+      "position": "GK",
+      "rating": "60",
+      "skill": {
+        "passing": "55",
+        "shooting": "6",
+        "tackling": "60",
+        "saving": "55",
+        "agility": "65",
+        "strength": "60",
+        "penalty_taking": "24",
+        "jumping": "70"
+      },
+      "currentPOS": [
+        0,
+        0
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Cole Robinson",
+      "number": 44,
+      "position": "CB",
+      "rating": "60",
+      "skill": {
+        "passing": "60",
+        "shooting": "60",
+        "tackling": "60",
+        "saving": "60",
+        "agility": "60",
+        "strength": "60",
+        "penalty_taking": "60",
+        "jumping": "60"
+      },
+      "currentPOS": [
+        0,
+        0
       ],
       "fitness": 100,
       "injured": false

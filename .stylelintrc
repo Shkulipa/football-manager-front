@@ -18,6 +18,12 @@
         "message": "Expected custom property name to be camelCase"
       }
     ],
+    "scss/dollar-variable-pattern": [
+      "^([a-z]|[a-z][a-zA-Z0-9])+$",
+      {
+        "message": "Expected custom property name to be camelCase"
+      }
+    ],
     "indentation": [
 			2, { "baseIndentLevel": 1 }
 		],

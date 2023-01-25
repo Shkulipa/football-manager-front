@@ -14,7 +14,7 @@ export function useHandlersSliders({
 	teamsFromCurrentLeague,
 
 	setLeaguesLength,
-	setTeam,
+	handlerTeam,
 	setTeamCountry,
 	setTeamLeague,
 	setTeamsFromCurrentLeague
@@ -80,7 +80,7 @@ export function useHandlersSliders({
 		 */
 		const teamsFromNewLeague = teams.filter(t => t.leagueId === newLeague?._id);
 		setTeamsFromCurrentLeague(teamsFromNewLeague);
-		setTeam(teamsFromNewLeague[0]);
+		handlerTeam(teamsFromNewLeague[0]);
 	};
 
 	/**
@@ -130,7 +130,7 @@ export function useHandlersSliders({
 		 */
 		const teamsFromNewLeague = teams.filter(t => t.leagueId === newLeague?._id);
 		setTeamsFromCurrentLeague(teamsFromNewLeague);
-		setTeam(teamsFromNewLeague[0]);
+		handlerTeam(teamsFromNewLeague[0]);
 	};
 
 	/**
@@ -150,10 +150,10 @@ export function useHandlersSliders({
 		if (action === ESliderActions.NEXT) {
 			if (currentTeamPosition + 1 >= teamsFromCurrentLeague.length) {
 				newTeam = teamsFromCurrentLeague[0];
-				setTeam(newTeam);
+				handlerTeam(newTeam);
 			} else {
 				newTeam = teamsFromCurrentLeague[currentTeamPosition + 1];
-				setTeam(newTeam);
+				handlerTeam(newTeam);
 			}
 		}
 
@@ -164,10 +164,10 @@ export function useHandlersSliders({
 		if (action === ESliderActions.BACK) {
 			if (currentTeamPosition === 0) {
 				newTeam = teamsFromCurrentLeague[teamsFromCurrentLeague.length - 1];
-				setTeam(newTeam);
+				handlerTeam(newTeam);
 			} else {
 				newTeam = teamsFromCurrentLeague[currentTeamPosition - 1];
-				setTeam(newTeam);
+				handlerTeam(newTeam);
 			}
 		}
 	};

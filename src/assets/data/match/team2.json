@@ -14,8 +14,8 @@
         "saving": "100",
         "agility": "100",
         "strength": "100",
-        "penalty_taking": "43",
-        "jumping": "300"
+        "penalty_taking": "100",
+        "jumping": "100"
       },
       "currentPOS": [
         325,
@@ -37,7 +37,7 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "100",
-        "jumping": "235"
+        "jumping": "100"
       },
       "currentPOS": [
         65,
@@ -59,7 +59,7 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "100",
-        "jumping": "212"
+        "jumping": "100"
       },
       "currentPOS": [
         215,
@@ -81,7 +81,7 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "21",
-        "jumping": "280"
+        "jumping": "100"
       },
       "currentPOS": [
         460,
@@ -103,7 +103,7 @@
         "agility": "100",
         "strength": "23",
         "penalty_taking": "100",
-        "jumping": "299"
+        "jumping": "100"
       },
       "currentPOS": [
         585,
@@ -125,7 +125,7 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "100",
-        "jumping": "250"
+        "jumping": "100"
       },
       "currentPOS": [
         65,
@@ -140,14 +140,14 @@
       "position": "CM",
       "rating": "41",
       "skill": {
-        "passing": "33",
+        "passing": "100",
         "shooting": "100",
         "tackling": "100",
         "saving": "100",
         "agility": "100",
         "strength": "100",
         "penalty_taking": "1",
-        "jumping": "1100"
+        "jumping": "100"
       },
       "currentPOS": [
         215,
@@ -169,7 +169,7 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "100",
-        "jumping": "175"
+        "jumping": "100"
       },
       "currentPOS": [
         460,
@@ -191,7 +191,7 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "100",
-        "jumping": "288"
+        "jumping": "100"
       },
       "currentPOS": [
         585,
@@ -213,7 +213,7 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "100",
-        "jumping": "291"
+        "jumping": "100"
       },
       "currentPOS": [
         240,
@@ -226,7 +226,7 @@
       "name": "Louise Johnson",
       "number": 11,
       "position": "ST",
-      "rating": "88",
+      "rating": "100",
       "skill": {
         "passing": "100",
         "shooting": "100",
@@ -235,11 +235,57 @@
         "agility": "100",
         "strength": "100",
         "penalty_taking": "100",
-        "jumping": "280"
+        "jumping": "100"
       },
       "currentPOS": [
         410,
         425
+      ],
+      "fitness": 100,
+      "injured": false
+    }
+  ],
+  "bench": [
+    {
+      "name": "Ashley Hudson",
+      "number": 67,
+      "position": "GK",
+      "rating": "100",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "100"
+      },
+      "currentPOS": [
+        0,
+        0
+      ],
+      "fitness": 100,
+      "injured": false
+    },
+    {
+      "name": "Maxwell Graham",
+      "number": 23,
+      "position": "CB",
+      "rating": "100",
+      "skill": {
+        "passing": "100",
+        "shooting": "100",
+        "tackling": "100",
+        "saving": "100",
+        "agility": "100",
+        "strength": "100",
+        "penalty_taking": "100",
+        "jumping": "100"
+      },
+      "currentPOS": [
+        0,
+        0
       ],
       "fitness": 100,
       "injured": false

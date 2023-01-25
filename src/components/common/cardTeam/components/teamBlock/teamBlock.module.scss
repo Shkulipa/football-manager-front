@@ -8,8 +8,8 @@
 }
 
 .teamName {
-  font-family: $primary-font;
-  font-size: $l-text-size;
+  font-family: $primaryFont;
+  font-size: $lTextSize;
   color: $white;
   text-align: center;
   letter-spacing: 1px;
@@ -17,7 +17,8 @@
 
 .teamImg {
   width: 100%;
-  max-width: 125px;
+  width: auto;
+  max-height: 70px;
   margin: 0 auto;
   border-radius: 6px;
 }
@@ -33,7 +34,7 @@
 }
 
 .skillName, .skillValue {
-  font-family: $primary-font;
+  font-family: $primaryFont;
   color: $white;
   text-align: center;
   letter-spacing: 1px;

@@ -12,21 +12,21 @@ $darkness: rgb(0 0 0 / 70%);
     linear-gradient($darkness, $darkness), 
     url('src/assets/images/backgrounds/single-match.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 180%;
 }
 
 .stadiumWrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .stadium {
-  position: absolute;
   width: 100%;
   background-image: url('src/assets/images/pitches/pitch-1-vertical.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  transform: rotate(90deg) translate(-30.62%, -19.22%);
-  transform-origin: center;
+  background-size: 100% 100%;
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
 }
 
 .actions {
@@ -75,16 +75,16 @@ $darkness: rgb(0 0 0 / 70%);
   grid-template-columns: 1fr auto 1fr;
   gap: 10px;
   align-items: center;
-  font-family: $primary-font;
-  font-size: $l-text-size;
+  font-family: $primaryFont;
+  font-size: $lTextSize;
   color: $white;
   text-align: center;
   letter-spacing: 1px;
 }
 
 .teamsNames {
-  font-family: $primary-font;
-  font-size: $l-text-size;
+  font-family: $primaryFont;
+  font-size: $lTextSize;
   color: $white;
   text-align: center;
   letter-spacing: 1px;
@@ -103,8 +103,8 @@ $darkness: rgb(0 0 0 / 70%);
 
 .timeText {
   width: 1px;
-  font-family: $primary-font;
-  font-size: $l-text-size;
+  font-family: $primaryFont;
+  font-size: $lTextSize;
   color: $white;
   text-align: center;
   letter-spacing: 1px;
@@ -201,8 +201,8 @@ $darkness: rgb(0 0 0 / 70%);
 
 .speedText {
   width: 30px;
-  font-family: $primary-font;
-  font-size: $l-text-size;
+  font-family: $primaryFont;
+  font-size: $lTextSize;
   color: $white;
   text-align: center;
   letter-spacing: 1px;
@@ -228,6 +228,7 @@ $darkness: rgb(0 0 0 / 70%);
 .matchTabContent {
   display: grid;
   gap: 15px;
+  justify-content: center;
 }
 
 .navigator {
@@ -235,6 +236,9 @@ $darkness: rgb(0 0 0 / 70%);
   gap: 5px;
   align-items: flex-end;
   justify-content: center;
+  width: 100%;
+  max-width: 80vh;
+  margin: 0 auto;
   margin-bottom: 45px;
   border-bottom: 3px solid white;
 }

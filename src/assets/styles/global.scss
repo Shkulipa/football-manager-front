@@ -6,6 +6,24 @@ body {
   font-weight: 400;
 }
 
+// styles for scrollbar, tutorial:
+// https://stackoverflow.com/questions/23200639/transparent-scrollbar-with-css
+body { overflow-y: overlay; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 24%);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 a {
   text-decoration: none;
 }

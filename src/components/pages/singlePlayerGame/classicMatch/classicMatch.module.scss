@@ -20,7 +20,7 @@
 }
 
 .title {
-  font-family: $primary-font;
+  font-family: $primaryFont;
   color: $white;
   text-align: center;
   letter-spacing: 1px;
@@ -34,13 +34,46 @@
 }
 
 .playWrapper {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.manage {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .gamepad {
   width: 100%;
-  max-width: 60px;
+  max-width: 70px;
   fill: $white;
+}
+
+.container {
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.isAvailablePlay {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+}
+
+.hosts {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.guests {
+  display: flex;
+  justify-content: flex-end;
 }

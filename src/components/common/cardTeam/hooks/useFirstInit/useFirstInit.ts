@@ -10,7 +10,8 @@ export function useFirstInit({
 	setTeamCountry,
 	setLeaguesLength,
 	setTeamLeague,
-	setTeam
+	handlerTeam,
+	setTeamsFromCurrentLeague
 }: IUseFirstInitProps) {
 	/**
 	 * @info
@@ -25,10 +26,12 @@ export function useFirstInit({
 		).length;
 		setLeaguesLength(leaguesCountInCountry);
 
-		const teamteam = teams.filter(t => t.leagueId === leagueteam?._id)[0];
-
+		const teamsFromCurrentLeague = teams.filter(
+			t => t.leagueId === leagueteam?._id
+		);
 		setTeamCountry(countryteam);
 		setTeamLeague(leagueteam);
-		setTeam(teamteam);
+		setTeamsFromCurrentLeague(teamsFromCurrentLeague);
+		handlerTeam(teamsFromCurrentLeague[0]);
 	}, []);
 }

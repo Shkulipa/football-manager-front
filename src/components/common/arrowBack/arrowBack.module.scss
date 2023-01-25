@@ -6,7 +6,7 @@
   left: 50px;
   width: 100%;
   max-width: 35px;
-  transition: $hover-transition;
+  transition: $hoverTransition;
 
   &:hover {
     transform: scale(1.2);

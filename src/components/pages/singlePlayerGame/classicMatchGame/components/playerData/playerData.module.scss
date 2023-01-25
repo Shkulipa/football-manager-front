@@ -1,0 +1,20 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.playerData {
+  display: grid;
+  grid-template-columns: $grid;
+  gap: 5px;
+  align-items: center;
+  padding: 5px 0;
+  font-family: $primaryFont;
+  font-size: $sTextSize;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 12px;
+
+  &:nth-child(even) {
+    background-color: rgba($color: $black, $alpha: 75%);
+  }
+}

@@ -1,0 +1,101 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.tactics {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.player {
+  font-family: $primaryFont;
+  font-size: $lTextSize;
+  color: $white;
+  letter-spacing: 1px;
+}
+
+.field {
+  position: relative;
+  background-image: url('src/assets/images/pitches/pitch-1-vertical.png');
+  background-size: 100% 100%;
+}
+
+$sizeForLine: 5.55%;
+$middlePlayersLeft: 50%;
+$extremePosition: 10%;
+$betweenExtremeAndMiddlePosition: calc($extremePosition * 3);
+
+// attackers
+$attackersBottom: calc($sizeForLine * 15.05);
+
+.st {
+  bottom: $attackersBottom;
+  left: $middlePlayersLeft;
+}
+
+// attackers midfielders
+$attackersMidfieldersBottom: calc($sizeForLine * 12.1);
+
+.am {
+  bottom: $attackersMidfieldersBottom;
+  left: $middlePlayersLeft;
+}
+
+// midfielders
+$midfielderBottom: 50%;
+
+.cm {
+  bottom: $midfielderBottom;
+  left: $middlePlayersLeft;
+}
+
+// defensive midfielders
+$defendersMidfieldersBottom: calc($sizeForLine * 6);
+
+.dm {
+  bottom: $defendersMidfieldersBottom;
+  left: $middlePlayersLeft;
+}
+
+// defenders
+$defendersBottom: calc($sizeForLine * 3.05);
+
+.cb {
+  bottom: $defendersBottom;
+  left: $middlePlayersLeft;
+}
+
+// goalkeepers
+$goalKeepersBottom: calc($sizeForLine / 1.9);
+
+.gk {
+  bottom: $goalKeepersBottom;
+  left: $middlePlayersLeft;
+}
+
+.gkAdvanced {
+  bottom: calc($sizeForLine);
+}
+
+.gkDrawn {
+  bottom: 0;
+}
+
+// common
+.cbl, .lcm, .lst, .ldm, .lam {
+  left: $betweenExtremeAndMiddlePosition;
+}
+
+.rcm, .cbr, .rst, .rdm, .ram {
+  left: calc(100% - $betweenExtremeAndMiddlePosition);
+}
+
+.lb,  .lm, .lwb, .lw {
+  left: $extremePosition;
+}
+
+.rb, .rm, .rwb, .rw {
+  left: calc(100% - $extremePosition);
+}

@@ -6,7 +6,7 @@
   margin: 0 auto;
   cursor: pointer;
   fill: $white;
-  transition: $hover-transition;
+  transition: $hoverTransition;
 
   &:hover {
     transform: scale(1.2);

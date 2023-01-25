@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.options {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+

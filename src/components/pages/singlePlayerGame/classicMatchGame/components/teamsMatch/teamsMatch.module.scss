@@ -1,0 +1,39 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.teamsMatch {
+  display: grid;
+  gap: 40px;
+  width: fit-content;
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+.team {
+  display: grid;
+  gap: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: $grid;
+  gap: 5px;
+  font-family: $primaryFont;
+  font-size: $sTextSize;
+  color: $white;
+  text-align: left;
+  letter-spacing: 1px;
+
+  div {
+    text-align: center;
+  }
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  font-family: $primaryFont;
+  font-size: $lTextSize;
+  color: $white;
+  letter-spacing: 1px;
+}

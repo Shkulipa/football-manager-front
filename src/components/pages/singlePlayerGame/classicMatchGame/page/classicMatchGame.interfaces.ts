@@ -1,0 +1,7 @@
+export enum ETabsMenuClassicMatch {
+	MATCH = 'MATCH',
+	STATISTIC = 'STATISTIC',
+	TEAMS = 'TEAMS',
+	TACTICKS = 'TACTICKS',
+	OPTIONS = 'OPTIONS'
+}

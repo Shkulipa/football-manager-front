@@ -12,7 +12,6 @@ export function Menus() {
 			return (
 				<div className={styles.content}>
 					<ButtonMenu to="/classic-match">Classic Match</ButtonMenu>
-					<ButtonMenu to="/career">Career</ButtonMenu>
 				</div>
 			);
 		}

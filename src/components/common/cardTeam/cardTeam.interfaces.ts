@@ -3,7 +3,7 @@ import { ITeam } from 'src/interfaces';
 export interface ICardTeamProps {
 	title: string;
 	team?: ITeam;
-	setTeam: React.Dispatch<React.SetStateAction<ITeam | undefined>>;
+	handlerTeam: (team: ITeam) => void;
 }
 
 export enum ESliderActions {

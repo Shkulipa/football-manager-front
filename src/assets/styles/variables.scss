@@ -7,18 +7,19 @@ $red: red;
 $green: lawngreen;
 
 // text
-$l-text-size: 24px;
-$m-text-size: 20px;
-$s-text-size: 16px;
+$lTextSize: 24px;
+$mTextSize: 20px;
+$sTextSize: 16px;
 
 // animation
 $transition: all 0.2s ease-in;
-$hover-transition: all 0.15s ease-out;
+$hoverTransition: all 0.15s ease-out;
 
 // media
-$s-mobile: 360px;
-$m-mobile: 414px;
-$l-mobile: 480px;
-$s-tablet: 565px;
+$sMobile: 360px;
+$mMobile: 414px;
+$lMobile: 480px;
+$sTablet: 565px;
 $tablet: 768px;
 $laptop: 1024px;
+$grid: 0.5fr 5fr 3fr 2fr repeat(2, 3.5fr) repeat(2, 1.5fr);

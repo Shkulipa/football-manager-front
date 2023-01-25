@@ -1,0 +1,17 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+.statisticItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 0; 
+  border-radius: 20px;
+}
+
+.statisticItemTitle, .statisticText {
+  font-family: $primaryFont;
+  font-size: $lTextSize;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+}

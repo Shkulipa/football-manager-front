@@ -4,7 +4,7 @@
   cursor: pointer;
   background: none;
   border: none;
-  transition: $hover-transition;
+  transition: $hoverTransition;
 
   &:hover {
     transform: scale(1.1);

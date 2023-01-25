@@ -1,0 +1,4288 @@
+[
+  {
+    "name": "Stefan Ortega",
+    "number": 4,
+    "position": "GK",
+    "skill": {
+      "passing": 51,
+      "shooting": 24,
+      "saving": 56,
+      "tackling": 22,
+      "agility": 62,
+      "strength": 74,
+      "penalty_taking": 79,
+      "jumping": 68
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 1,
+    "teamId": 1
+  },
+  {
+    "name": "Scott Carson",
+    "number": 8,
+    "position": "GK",
+    "skill": {
+      "passing": 42,
+      "shooting": 6,
+      "saving": 57,
+      "tackling": 5,
+      "agility": 60,
+      "strength": 76,
+      "penalty_taking": 61,
+      "jumping": 58
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 2,
+    "teamId": 1
+  },
+  {
+    "name": "Mikki van Sas",
+    "number": 13,
+    "position": "GK",
+    "skill": {
+      "passing": 32,
+      "shooting": 14,
+      "saving": 52,
+      "tackling": 22,
+      "agility": 56,
+      "strength": 28,
+      "penalty_taking": 25,
+      "jumping": 59
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 3,
+    "teamId": 1
+  },
+  {
+    "name": "Josh McNamara",
+    "number": 65,
+    "position": "GK",
+    "skill": {
+      "passing": 50,
+      "shooting": 23,
+      "saving": 18,
+      "tackling": 9,
+      "agility": 53,
+      "strength": 17,
+      "penalty_taking": 20,
+      "jumping": 52
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 4,
+    "teamId": 1
+  },
+  {
+    "name": "Kyle Walker",
+    "number": 95,
+    "position": "RB",
+    "skill": {
+      "passing": 82,
+      "shooting": 76,
+      "saving": 25,
+      "tackling": 88,
+      "agility": 77,
+      "strength": 87,
+      "penalty_taking": 8,
+      "jumping": 82
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 5,
+    "teamId": 1
+  },
+  {
+    "name": "Sergio Gómez",
+    "number": 88,
+    "position": "LB",
+    "skill": {
+      "passing": 62,
+      "shooting": 54,
+      "saving": 5,
+      "tackling": 72,
+      "agility": 80,
+      "strength": 75,
+      "penalty_taking": 11,
+      "jumping": 59
+    },
+    "currentPOS": [
+      75,
+      175
+    ],
+    "_id": 6,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Josh Wilson-Esbrand",
+    "number": 59,
+    "position": "LB",
+    "skill": {
+      "passing": 43,
+      "shooting": 65,
+      "saving": 13,
+      "tackling": 44,
+      "agility": 38,
+      "strength": 70,
+      "penalty_taking": 11,
+      "jumping": 64
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 7,
+    "teamId": 1
+  },
+  {
+    "name": "João Cancelo",
+    "number": 7,
+    "position": "RB",
+    "skill": {
+      "passing": 87,
+      "shooting": 85,
+      "saving": 15,
+      "tackling": 84,
+      "agility": 83,
+      "strength": 81,
+      "penalty_taking": 15,
+      "jumping": 84
+    },
+    "currentPOS": [
+      575,
+      175
+    ],
+    "_id": 8,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Nathan Aké",
+    "number": 72,
+    "position": "CB",
+    "skill": {
+      "passing": 93,
+      "shooting": 94,
+      "saving": 9,
+      "tackling": 60,
+      "agility": 81,
+      "strength": 61,
+      "penalty_taking": 5,
+      "jumping": 73
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 9,
+    "teamId": 1
+  },
+  {
+    "name": "Aymeric Laporte",
+    "number": 44,
+    "position": "CB",
+    "skill": {
+      "passing": 73,
+      "shooting": 99,
+      "saving": 6,
+      "tackling": 65,
+      "agility": 99,
+      "strength": 82,
+      "penalty_taking": 24,
+      "jumping": 86
+    },
+    "currentPOS": [
+      450,
+      85
+    ],
+    "_id": 10,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Shea Charles",
+    "number": 92,
+    "position": "CB",
+    "skill": {
+      "passing": 58,
+      "shooting": 40,
+      "saving": 20,
+      "tackling": 41,
+      "agility": 57,
+      "strength": 68,
+      "penalty_taking": 9,
+      "jumping": 30
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 11,
+    "teamId": 1
+  },
+  {
+    "name": "Manuel Akanji",
+    "number": 53,
+    "position": "CB",
+    "skill": {
+      "passing": 84,
+      "shooting": 61,
+      "saving": 25,
+      "tackling": 95,
+      "agility": 70,
+      "strength": 86,
+      "penalty_taking": 9,
+      "jumping": 72
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 12,
+    "teamId": 1
+  },
+  {
+    "name": "John Stones",
+    "number": 30,
+    "position": "CB",
+    "skill": {
+      "passing": 82,
+      "shooting": 97,
+      "saving": 18,
+      "tackling": 93,
+      "agility": 65,
+      "strength": 69,
+      "penalty_taking": 7,
+      "jumping": 80
+    },
+    "currentPOS": [
+      200,
+      85
+    ],
+    "_id": 13,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Finley Burns",
+    "number": 63,
+    "position": "CB",
+    "skill": {
+      "passing": 44,
+      "shooting": 60,
+      "saving": 13,
+      "tackling": 68,
+      "agility": 57,
+      "strength": 47,
+      "penalty_taking": 22,
+      "jumping": 36
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 14,
+    "teamId": 1
+  },
+  {
+    "name": "Rúben Dias",
+    "number": 75,
+    "position": "CB",
+    "skill": {
+      "passing": 91,
+      "shooting": 85,
+      "saving": 10,
+      "tackling": 73,
+      "agility": 99,
+      "strength": 91,
+      "penalty_taking": 19,
+      "jumping": 83
+    },
+    "currentPOS": [
+      325,
+      85
+    ],
+    "_id": 15,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Rowan McDonald",
+    "number": 11,
+    "position": "CM",
+    "skill": {
+      "passing": 45,
+      "shooting": 43,
+      "saving": 13,
+      "tackling": 47,
+      "agility": 31,
+      "strength": 35,
+      "penalty_taking": 9,
+      "jumping": 33
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 16,
+    "teamId": 1
+  },
+  {
+    "name": "Kalvin Phillips",
+    "number": 18,
+    "position": "CM",
+    "skill": {
+      "passing": 80,
+      "shooting": 96,
+      "saving": 13,
+      "tackling": 72,
+      "agility": 56,
+      "strength": 67,
+      "penalty_taking": 10,
+      "jumping": 85
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 17,
+    "teamId": 1
+  },
+  {
+    "name": "Iker Pozo",
+    "number": 93,
+    "position": "CM",
+    "skill": {
+      "passing": 42,
+      "shooting": 33,
+      "saving": 24,
+      "tackling": 58,
+      "agility": 51,
+      "strength": 49,
+      "penalty_taking": 16,
+      "jumping": 67
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 18,
+    "teamId": 1
+  },
+  {
+    "name": "Rodri",
+    "number": 94,
+    "position": "CM",
+    "skill": {
+      "passing": 78,
+      "shooting": 99,
+      "saving": 8,
+      "tackling": 80,
+      "agility": 99,
+      "strength": 96,
+      "penalty_taking": 24,
+      "jumping": 76
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 19,
+    "teamId": 1
+  },
+  {
+    "name": "İlkay Gündogan",
+    "number": 24,
+    "position": "CM",
+    "skill": {
+      "passing": 77,
+      "shooting": 83,
+      "saving": 5,
+      "tackling": 82,
+      "agility": 84,
+      "strength": 83,
+      "penalty_taking": 9,
+      "jumping": 89
+    },
+    "currentPOS": [
+      200,
+      265
+    ],
+    "_id": 20,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Kevin De Bruyne",
+    "number": 17,
+    "position": "CM",
+    "skill": {
+      "passing": 99,
+      "shooting": 99,
+      "saving": 23,
+      "tackling": 99,
+      "agility": 86,
+      "strength": 99,
+      "penalty_taking": 25,
+      "jumping": 88
+    },
+    "currentPOS": [
+      450,
+      265
+    ],
+    "_id": 21,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Riyad Mahrez",
+    "number": 2,
+    "position": "ST",
+    "skill": {
+      "passing": 64,
+      "shooting": 95,
+      "saving": 22,
+      "tackling": 79,
+      "agility": 96,
+      "strength": 81,
+      "penalty_taking": 7,
+      "jumping": 65
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 22,
+    "teamId": 1
+  },
+  {
+    "name": "Bernardo Silva",
+    "number": 82,
+    "position": "CM",
+    "skill": {
+      "passing": 82,
+      "shooting": 86,
+      "saving": 25,
+      "tackling": 99,
+      "agility": 99,
+      "strength": 94,
+      "penalty_taking": 11,
+      "jumping": 68
+    },
+    "currentPOS": [
+      575,
+      350
+    ],
+    "_id": 23,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Jack Grealish",
+    "number": 10,
+    "position": "ST",
+    "skill": {
+      "passing": 69,
+      "shooting": 97,
+      "saving": 17,
+      "tackling": 95,
+      "agility": 71,
+      "strength": 73,
+      "penalty_taking": 11,
+      "jumping": 93
+    },
+    "currentPOS": [
+      75,
+      350
+    ],
+    "_id": 24,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Liam Smith",
+    "number": 43,
+    "position": "ST",
+    "skill": {
+      "passing": 25,
+      "shooting": 43,
+      "saving": 15,
+      "tackling": 15,
+      "agility": 54,
+      "strength": 17,
+      "penalty_taking": 9,
+      "jumping": 50
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 25,
+    "teamId": 1
+  },
+  {
+    "name": "Oscar Bobb",
+    "number": 85,
+    "position": "ST",
+    "skill": {
+      "passing": 42,
+      "shooting": 64,
+      "saving": 13,
+      "tackling": 47,
+      "agility": 59,
+      "strength": 70,
+      "penalty_taking": 7,
+      "jumping": 36
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 26,
+    "teamId": 1
+  },
+  {
+    "name": "Micah Hamilton",
+    "number": 5,
+    "position": "ST",
+    "skill": {
+      "passing": 51,
+      "shooting": 65,
+      "saving": 15,
+      "tackling": 33,
+      "agility": 31,
+      "strength": 63,
+      "penalty_taking": 25,
+      "jumping": 45
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 27,
+    "teamId": 1
+  },
+  {
+    "name": "Carlos Borges",
+    "number": 69,
+    "position": "ST",
+    "skill": {
+      "passing": 49,
+      "shooting": 47,
+      "saving": 13,
+      "tackling": 57,
+      "agility": 39,
+      "strength": 28,
+      "penalty_taking": 7,
+      "jumping": 68
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 28,
+    "teamId": 1
+  },
+  {
+    "name": "Kian Breckin",
+    "number": 66,
+    "position": "CM",
+    "skill": {
+      "passing": 60,
+      "shooting": 26,
+      "saving": 15,
+      "tackling": 41,
+      "agility": 45,
+      "strength": 35,
+      "penalty_taking": 8,
+      "jumping": 51
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 29,
+    "teamId": 1
+  },
+  {
+    "name": "Terrell Agyemang",
+    "number": 1,
+    "position": "CM",
+    "skill": {
+      "passing": 28,
+      "shooting": 31,
+      "saving": 24,
+      "tackling": 15,
+      "agility": 46,
+      "strength": 38,
+      "penalty_taking": 23,
+      "jumping": 22
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 30,
+    "teamId": 1
+  },
+  {
+    "name": "Josh Adam",
+    "number": 23,
+    "position": "ST",
+    "skill": {
+      "passing": 28,
+      "shooting": 51,
+      "saving": 13,
+      "tackling": 54,
+      "agility": 31,
+      "strength": 61,
+      "penalty_taking": 5,
+      "jumping": 21
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 31,
+    "teamId": 1
+  },
+  {
+    "name": "Alex Robertson",
+    "number": 51,
+    "position": "ST",
+    "skill": {
+      "passing": 43,
+      "shooting": 49,
+      "saving": 7,
+      "tackling": 37,
+      "agility": 43,
+      "strength": 53,
+      "penalty_taking": 17,
+      "jumping": 33
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 32,
+    "teamId": 1
+  },
+  {
+    "name": "Cole Palmer",
+    "number": 80,
+    "position": "ST",
+    "skill": {
+      "passing": 51,
+      "shooting": 59,
+      "saving": 5,
+      "tackling": 85,
+      "agility": 77,
+      "strength": 74,
+      "penalty_taking": 16,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 33,
+    "teamId": 1
+  },
+  {
+    "name": "Phil Foden",
+    "number": 41,
+    "position": "ST",
+    "skill": {
+      "passing": 81,
+      "shooting": 99,
+      "saving": 6,
+      "tackling": 83,
+      "agility": 81,
+      "strength": 86,
+      "penalty_taking": 8,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 34,
+    "teamId": 1
+  },
+  {
+    "name": "Ben Knight",
+    "number": 54,
+    "position": "ST",
+    "skill": {
+      "passing": 36,
+      "shooting": 58,
+      "saving": 15,
+      "tackling": 61,
+      "agility": 42,
+      "strength": 39,
+      "penalty_taking": 5,
+      "jumping": 64
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 35,
+    "teamId": 1
+  },
+  {
+    "name": "Morgan Rogers",
+    "number": 3,
+    "position": "ST",
+    "skill": {
+      "passing": 74,
+      "shooting": 42,
+      "saving": 19,
+      "tackling": 49,
+      "agility": 67,
+      "strength": 78,
+      "penalty_taking": 12,
+      "jumping": 38
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 36,
+    "teamId": 1
+  },
+  {
+    "name": "Julián Álvarez",
+    "number": 42,
+    "position": "ST",
+    "skill": {
+      "passing": 67,
+      "shooting": 71,
+      "saving": 16,
+      "tackling": 75,
+      "agility": 79,
+      "strength": 60,
+      "penalty_taking": 19,
+      "jumping": 86
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 37,
+    "teamId": 1
+  },
+  {
+    "name": "Dire Mebude",
+    "number": 77,
+    "position": "ST",
+    "skill": {
+      "passing": 63,
+      "shooting": 35,
+      "saving": 7,
+      "tackling": 59,
+      "agility": 64,
+      "strength": 39,
+      "penalty_taking": 13,
+      "jumping": 34
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 38,
+    "teamId": 1
+  },
+  {
+    "name": "Erling Haaland",
+    "number": 76,
+    "position": "ST",
+    "skill": {
+      "passing": 99,
+      "shooting": 96,
+      "saving": 20,
+      "tackling": 93,
+      "agility": 93,
+      "strength": 78,
+      "penalty_taking": 9,
+      "jumping": 99
+    },
+    "currentPOS": [
+      325,
+      435
+    ],
+    "_id": 39,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Tai Sodje",
+    "number": 90,
+    "position": "ST",
+    "skill": {
+      "passing": 25,
+      "shooting": 22,
+      "saving": 23,
+      "tackling": 52,
+      "agility": 34,
+      "strength": 49,
+      "penalty_taking": 9,
+      "jumping": 40
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 40,
+    "teamId": 1
+  },
+  {
+    "name": "Ederson",
+    "number": 31,
+    "position": "GK",
+    "skill": {
+      "passing": 99,
+      "shooting": 16,
+      "saving": 85,
+      "tackling": 13,
+      "agility": 89,
+      "strength": 99,
+      "penalty_taking": 69,
+      "jumping": 87
+    },
+    "currentPOS": [
+      325,
+      15
+    ],
+    "_id": 41,
+    "teamId": 1,
+    "role": "main"
+  },
+  {
+    "name": "Matt Turner",
+    "number": 50,
+    "position": "GK",
+    "skill": {
+      "passing": 76,
+      "shooting": 22,
+      "saving": 87,
+      "tackling": 23,
+      "agility": 71,
+      "strength": 60,
+      "penalty_taking": 49,
+      "jumping": 65
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 42,
+    "teamId": 2
+  },
+  {
+    "name": "Karl Jakob Hein",
+    "number": 59,
+    "position": "GK",
+    "skill": {
+      "passing": 64,
+      "shooting": 7,
+      "saving": 38,
+      "tackling": 24,
+      "agility": 70,
+      "strength": 44,
+      "penalty_taking": 44,
+      "jumping": 64
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 43,
+    "teamId": 2
+  },
+  {
+    "name": "Hubert Graczyk",
+    "number": 29,
+    "position": "GK",
+    "skill": {
+      "passing": 53,
+      "shooting": 23,
+      "saving": 68,
+      "tackling": 5,
+      "agility": 30,
+      "strength": 28,
+      "penalty_taking": 43,
+      "jumping": 66
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 44,
+    "teamId": 2
+  },
+  {
+    "name": "James Hillson",
+    "number": 88,
+    "position": "GK",
+    "skill": {
+      "passing": 36,
+      "shooting": 21,
+      "saving": 50,
+      "tackling": 24,
+      "agility": 36,
+      "strength": 25,
+      "penalty_taking": 61,
+      "jumping": 50
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 45,
+    "teamId": 2
+  },
+  {
+    "name": "Kieran Tierney",
+    "number": 53,
+    "position": "LB",
+    "skill": {
+      "passing": 88,
+      "shooting": 90,
+      "saving": 5,
+      "tackling": 88,
+      "agility": 62,
+      "strength": 64,
+      "penalty_taking": 14,
+      "jumping": 64
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 46,
+    "teamId": 2
+  },
+  {
+    "name": "Oleksandr Zinchenko",
+    "number": 39,
+    "position": "LB",
+    "skill": {
+      "passing": 78,
+      "shooting": 78,
+      "saving": 14,
+      "tackling": 87,
+      "agility": 69,
+      "strength": 78,
+      "penalty_taking": 6,
+      "jumping": 78
+    },
+    "currentPOS": [
+      575,
+      85
+    ],
+    "_id": 47,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Henry Jeffcott",
+    "number": 47,
+    "position": "CB",
+    "skill": {
+      "passing": 21,
+      "shooting": 33,
+      "saving": 10,
+      "tackling": 47,
+      "agility": 51,
+      "strength": 29,
+      "penalty_taking": 9,
+      "jumping": 59
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 48,
+    "teamId": 2
+  },
+  {
+    "name": "Takehiro Tomiyasu",
+    "number": 80,
+    "position": "RB",
+    "skill": {
+      "passing": 89,
+      "shooting": 59,
+      "saving": 16,
+      "tackling": 67,
+      "agility": 81,
+      "strength": 88,
+      "penalty_taking": 18,
+      "jumping": 60
+    },
+    "currentPOS": [
+      75,
+      85
+    ],
+    "_id": 49,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Cédric",
+    "number": 38,
+    "position": "RB",
+    "skill": {
+      "passing": 85,
+      "shooting": 77,
+      "saving": 15,
+      "tackling": 85,
+      "agility": 51,
+      "strength": 51,
+      "penalty_taking": 20,
+      "jumping": 59
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 50,
+    "teamId": 2
+  },
+  {
+    "name": "Granit Xhaka",
+    "number": 70,
+    "position": "CM",
+    "skill": {
+      "passing": 60,
+      "shooting": 71,
+      "saving": 11,
+      "tackling": 66,
+      "agility": 82,
+      "strength": 71,
+      "penalty_taking": 9,
+      "jumping": 76
+    },
+    "currentPOS": [
+      450,
+      265
+    ],
+    "_id": 51,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Bukayo Saka",
+    "number": 8,
+    "position": "ST",
+    "skill": {
+      "passing": 94,
+      "shooting": 80,
+      "saving": 25,
+      "tackling": 68,
+      "agility": 82,
+      "strength": 94,
+      "penalty_taking": 8,
+      "jumping": 68
+    },
+    "currentPOS": [
+      200,
+      435
+    ],
+    "_id": 52,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Ben Cottrell",
+    "number": 31,
+    "position": "ST",
+    "skill": {
+      "passing": 29,
+      "shooting": 65,
+      "saving": 17,
+      "tackling": 27,
+      "agility": 63,
+      "strength": 38,
+      "penalty_taking": 22,
+      "jumping": 54
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 53,
+    "teamId": 2
+  },
+  {
+    "name": "Benjamin White",
+    "number": 79,
+    "position": "CB",
+    "skill": {
+      "passing": 79,
+      "shooting": 77,
+      "saving": 16,
+      "tackling": 69,
+      "agility": 71,
+      "strength": 79,
+      "penalty_taking": 18,
+      "jumping": 69
+    },
+    "currentPOS": [
+      450,
+      85
+    ],
+    "_id": 54,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "William Saliba",
+    "number": 73,
+    "position": "CB",
+    "skill": {
+      "passing": 69,
+      "shooting": 90,
+      "saving": 18,
+      "tackling": 91,
+      "agility": 56,
+      "strength": 55,
+      "penalty_taking": 12,
+      "jumping": 77
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 55,
+    "teamId": 2
+  },
+  {
+    "name": "Rob Holding",
+    "number": 64,
+    "position": "CB",
+    "skill": {
+      "passing": 82,
+      "shooting": 76,
+      "saving": 14,
+      "tackling": 60,
+      "agility": 49,
+      "strength": 87,
+      "penalty_taking": 6,
+      "jumping": 54
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 56,
+    "teamId": 2
+  },
+  {
+    "name": "Zach Awe",
+    "number": 5,
+    "position": "CB",
+    "skill": {
+      "passing": 59,
+      "shooting": 32,
+      "saving": 15,
+      "tackling": 66,
+      "agility": 50,
+      "strength": 39,
+      "penalty_taking": 11,
+      "jumping": 48
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 57,
+    "teamId": 2
+  },
+  {
+    "name": "Gabriel",
+    "number": 91,
+    "position": "CB",
+    "skill": {
+      "passing": 73,
+      "shooting": 72,
+      "saving": 12,
+      "tackling": 75,
+      "agility": 82,
+      "strength": 76,
+      "penalty_taking": 13,
+      "jumping": 66
+    },
+    "currentPOS": [
+      200,
+      85
+    ],
+    "_id": 58,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Taylor Foran",
+    "number": 82,
+    "position": "CB",
+    "skill": {
+      "passing": 52,
+      "shooting": 52,
+      "saving": 19,
+      "tackling": 33,
+      "agility": 51,
+      "strength": 32,
+      "penalty_taking": 22,
+      "jumping": 32
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 59,
+    "teamId": 2
+  },
+  {
+    "name": "Zane Monlouis",
+    "number": 43,
+    "position": "CB",
+    "skill": {
+      "passing": 40,
+      "shooting": 22,
+      "saving": 9,
+      "tackling": 44,
+      "agility": 39,
+      "strength": 45,
+      "penalty_taking": 10,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 60,
+    "teamId": 2
+  },
+  {
+    "name": "Mohamed Elneny",
+    "number": 67,
+    "position": "CM",
+    "skill": {
+      "passing": 58,
+      "shooting": 89,
+      "saving": 14,
+      "tackling": 78,
+      "agility": 82,
+      "strength": 51,
+      "penalty_taking": 5,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 61,
+    "teamId": 2
+  },
+  {
+    "name": "Thomas Partey",
+    "number": 77,
+    "position": "CM",
+    "skill": {
+      "passing": 80,
+      "shooting": 58,
+      "saving": 23,
+      "tackling": 74,
+      "agility": 92,
+      "strength": 76,
+      "penalty_taking": 23,
+      "jumping": 70
+    },
+    "currentPOS": [
+      200,
+      265
+    ],
+    "_id": 62,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "James Sweet",
+    "number": 58,
+    "position": "CM",
+    "skill": {
+      "passing": 28,
+      "shooting": 66,
+      "saving": 11,
+      "tackling": 59,
+      "agility": 35,
+      "strength": 48,
+      "penalty_taking": 17,
+      "jumping": 46
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 63,
+    "teamId": 2
+  },
+  {
+    "name": "Albert Sambi Lokonga",
+    "number": 18,
+    "position": "CM",
+    "skill": {
+      "passing": 55,
+      "shooting": 66,
+      "saving": 25,
+      "tackling": 68,
+      "agility": 70,
+      "strength": 83,
+      "penalty_taking": 15,
+      "jumping": 72
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 64,
+    "teamId": 2
+  },
+  {
+    "name": "Jack Henry-Francis",
+    "number": 45,
+    "position": "CM",
+    "skill": {
+      "passing": 65,
+      "shooting": 50,
+      "saving": 22,
+      "tackling": 46,
+      "agility": 31,
+      "strength": 33,
+      "penalty_taking": 6,
+      "jumping": 63
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 65,
+    "teamId": 2
+  },
+  {
+    "name": "Mauro Bandeira",
+    "number": 4,
+    "position": "CM",
+    "skill": {
+      "passing": 58,
+      "shooting": 30,
+      "saving": 19,
+      "tackling": 56,
+      "agility": 32,
+      "strength": 26,
+      "penalty_taking": 20,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 66,
+    "teamId": 2
+  },
+  {
+    "name": "Matthew Smith",
+    "number": 21,
+    "position": "CM",
+    "skill": {
+      "passing": 64,
+      "shooting": 61,
+      "saving": 11,
+      "tackling": 46,
+      "agility": 49,
+      "strength": 68,
+      "penalty_taking": 19,
+      "jumping": 42
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 67,
+    "teamId": 2
+  },
+  {
+    "name": "Martin Ødegaard",
+    "number": 86,
+    "position": "ST",
+    "skill": {
+      "passing": 74,
+      "shooting": 72,
+      "saving": 22,
+      "tackling": 86,
+      "agility": 66,
+      "strength": 88,
+      "penalty_taking": 15,
+      "jumping": 94
+    },
+    "currentPOS": [
+      325,
+      265
+    ],
+    "_id": 68,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Reiss Nelson",
+    "number": 61,
+    "position": "ST",
+    "skill": {
+      "passing": 54,
+      "shooting": 80,
+      "saving": 18,
+      "tackling": 63,
+      "agility": 62,
+      "strength": 71,
+      "penalty_taking": 13,
+      "jumping": 72
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 69,
+    "teamId": 2
+  },
+  {
+    "name": "Emile Smith Rowe",
+    "number": 66,
+    "position": "ST",
+    "skill": {
+      "passing": 81,
+      "shooting": 61,
+      "saving": 22,
+      "tackling": 87,
+      "agility": 61,
+      "strength": 67,
+      "penalty_taking": 15,
+      "jumping": 87
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 70,
+    "teamId": 2
+  },
+  {
+    "name": "Joel Ideho",
+    "number": 81,
+    "position": "ST",
+    "skill": {
+      "passing": 64,
+      "shooting": 32,
+      "saving": 11,
+      "tackling": 47,
+      "agility": 61,
+      "strength": 49,
+      "penalty_taking": 22,
+      "jumping": 35
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 71,
+    "teamId": 2
+  },
+  {
+    "name": "Catalin Cîrjan",
+    "number": 60,
+    "position": "ST",
+    "skill": {
+      "passing": 69,
+      "shooting": 62,
+      "saving": 15,
+      "tackling": 40,
+      "agility": 35,
+      "strength": 67,
+      "penalty_taking": 24,
+      "jumping": 33
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 72,
+    "teamId": 2
+  },
+  {
+    "name": "George Lewis",
+    "number": 95,
+    "position": "ST",
+    "skill": {
+      "passing": 58,
+      "shooting": 30,
+      "saving": 20,
+      "tackling": 33,
+      "agility": 55,
+      "strength": 55,
+      "penalty_taking": 21,
+      "jumping": 33
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 73,
+    "teamId": 2
+  },
+  {
+    "name": "Nathan Butler-Oyedeji",
+    "number": 28,
+    "position": "ST",
+    "skill": {
+      "passing": 26,
+      "shooting": 64,
+      "saving": 22,
+      "tackling": 36,
+      "agility": 54,
+      "strength": 43,
+      "penalty_taking": 23,
+      "jumping": 47
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 74,
+    "teamId": 2
+  },
+  {
+    "name": "Marquinhos",
+    "number": 93,
+    "position": "ST",
+    "skill": {
+      "passing": 80,
+      "shooting": 81,
+      "saving": 8,
+      "tackling": 43,
+      "agility": 81,
+      "strength": 44,
+      "penalty_taking": 5,
+      "jumping": 43
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 75,
+    "teamId": 2
+  },
+  {
+    "name": "Eddie Nketiah",
+    "number": 6,
+    "position": "ST",
+    "skill": {
+      "passing": 79,
+      "shooting": 63,
+      "saving": 25,
+      "tackling": 59,
+      "agility": 86,
+      "strength": 75,
+      "penalty_taking": 6,
+      "jumping": 52
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 76,
+    "teamId": 2
+  },
+  {
+    "name": "Fábio Vieira",
+    "number": 44,
+    "position": "ST",
+    "skill": {
+      "passing": 87,
+      "shooting": 90,
+      "saving": 5,
+      "tackling": 59,
+      "agility": 55,
+      "strength": 83,
+      "penalty_taking": 18,
+      "jumping": 52
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 77,
+    "teamId": 2
+  },
+  {
+    "name": "Gabriel Martinelli",
+    "number": 37,
+    "position": "ST",
+    "skill": {
+      "passing": 72,
+      "shooting": 76,
+      "saving": 14,
+      "tackling": 66,
+      "agility": 82,
+      "strength": 61,
+      "penalty_taking": 14,
+      "jumping": 87
+    },
+    "currentPOS": [
+      325,
+      435
+    ],
+    "_id": 78,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Kido Taylor-Hart",
+    "number": 41,
+    "position": "ST",
+    "skill": {
+      "passing": 29,
+      "shooting": 59,
+      "saving": 10,
+      "tackling": 32,
+      "agility": 26,
+      "strength": 56,
+      "penalty_taking": 25,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 79,
+    "teamId": 2
+  },
+  {
+    "name": "Khayon Edwards",
+    "number": 74,
+    "position": "ST",
+    "skill": {
+      "passing": 44,
+      "shooting": 68,
+      "saving": 12,
+      "tackling": 46,
+      "agility": 52,
+      "strength": 30,
+      "penalty_taking": 9,
+      "jumping": 54
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 80,
+    "teamId": 2
+  },
+  {
+    "name": "Gabriel Jesus",
+    "number": 36,
+    "position": "ST",
+    "skill": {
+      "passing": 87,
+      "shooting": 87,
+      "saving": 17,
+      "tackling": 75,
+      "agility": 98,
+      "strength": 75,
+      "penalty_taking": 22,
+      "jumping": 64
+    },
+    "currentPOS": [
+      450,
+      435
+    ],
+    "_id": 81,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Billy Vigar",
+    "number": 94,
+    "position": "ST",
+    "skill": {
+      "passing": 43,
+      "shooting": 37,
+      "saving": 20,
+      "tackling": 24,
+      "agility": 56,
+      "strength": 30,
+      "penalty_taking": 14,
+      "jumping": 50
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 82,
+    "teamId": 2
+  },
+  {
+    "name": "Aaron Ramsdale",
+    "number": 78,
+    "position": "GK",
+    "skill": {
+      "passing": 58,
+      "shooting": 8,
+      "saving": 74,
+      "tackling": 22,
+      "agility": 64,
+      "strength": 86,
+      "penalty_taking": 76,
+      "jumping": 92
+    },
+    "currentPOS": [
+      325,
+      15
+    ],
+    "_id": 83,
+    "teamId": 2,
+    "role": "main"
+  },
+  {
+    "name": "Marc-André ter Stegen",
+    "number": 1,
+    "position": "GK",
+    "skill": {
+      "passing": 82,
+      "shooting": 9,
+      "saving": 79,
+      "tackling": 7,
+      "agility": 95,
+      "strength": 92,
+      "penalty_taking": 99,
+      "jumping": 75
+    },
+    "currentPOS": [
+      325,
+      10
+    ],
+    "_id": 84,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Iñaki Peña",
+    "number": 55,
+    "position": "GK",
+    "skill": {
+      "passing": 75,
+      "shooting": 19,
+      "saving": 85,
+      "tackling": 13,
+      "agility": 45,
+      "strength": 57,
+      "penalty_taking": 55,
+      "jumping": 73
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 85,
+    "teamId": 3
+  },
+  {
+    "name": "Arnau Tenas",
+    "number": 84,
+    "position": "GK",
+    "skill": {
+      "passing": 53,
+      "shooting": 18,
+      "saving": 67,
+      "tackling": 9,
+      "agility": 75,
+      "strength": 55,
+      "penalty_taking": 45,
+      "jumping": 65
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 86,
+    "teamId": 3
+  },
+  {
+    "name": "Nil Ruiz",
+    "number": 72,
+    "position": "GK",
+    "skill": {
+      "passing": 60,
+      "shooting": 12,
+      "saving": 53,
+      "tackling": 7,
+      "agility": 43,
+      "strength": 53,
+      "penalty_taking": 43,
+      "jumping": 36
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 87,
+    "teamId": 3
+  },
+  {
+    "name": "Ander Astrálaga",
+    "number": 20,
+    "position": "GK",
+    "skill": {
+      "passing": 45,
+      "shooting": 23,
+      "saving": 26,
+      "tackling": 16,
+      "agility": 60,
+      "strength": 30,
+      "penalty_taking": 64,
+      "jumping": 45
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 88,
+    "teamId": 3
+  },
+  {
+    "name": "Arnau Rafús",
+    "number": 82,
+    "position": "GK",
+    "skill": {
+      "passing": 58,
+      "shooting": 23,
+      "saving": 25,
+      "tackling": 8,
+      "agility": 28,
+      "strength": 54,
+      "penalty_taking": 32,
+      "jumping": 61
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 89,
+    "teamId": 3
+  },
+  {
+    "name": "Alejandro Ramos",
+    "number": 91,
+    "position": "GK",
+    "skill": {
+      "passing": 43,
+      "shooting": 5,
+      "saving": 32,
+      "tackling": 16,
+      "agility": 58,
+      "strength": 22,
+      "penalty_taking": 37,
+      "jumping": 48
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 90,
+    "teamId": 3
+  },
+  {
+    "name": "Gerard Gonzàlez",
+    "number": 73,
+    "position": "LB",
+    "skill": {
+      "passing": 39,
+      "shooting": 44,
+      "saving": 24,
+      "tackling": 42,
+      "agility": 47,
+      "strength": 46,
+      "penalty_taking": 10,
+      "jumping": 40
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 91,
+    "teamId": 3
+  },
+  {
+    "name": "Román Vega",
+    "number": 61,
+    "position": "LB",
+    "skill": {
+      "passing": 44,
+      "shooting": 52,
+      "saving": 11,
+      "tackling": 51,
+      "agility": 67,
+      "strength": 29,
+      "penalty_taking": 9,
+      "jumping": 45
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 92,
+    "teamId": 3
+  },
+  {
+    "name": "Alejandro Balde",
+    "number": 35,
+    "position": "LB",
+    "skill": {
+      "passing": 82,
+      "shooting": 46,
+      "saving": 17,
+      "tackling": 74,
+      "agility": 82,
+      "strength": 54,
+      "penalty_taking": 16,
+      "jumping": 46
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 93,
+    "teamId": 3
+  },
+  {
+    "name": "Àlex Valle",
+    "number": 34,
+    "position": "LB",
+    "skill": {
+      "passing": 51,
+      "shooting": 62,
+      "saving": 10,
+      "tackling": 25,
+      "agility": 28,
+      "strength": 39,
+      "penalty_taking": 5,
+      "jumping": 65
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 94,
+    "teamId": 3
+  },
+  {
+    "name": "Jordi Alba",
+    "number": 18,
+    "position": "LB",
+    "skill": {
+      "passing": 60,
+      "shooting": 61,
+      "saving": 11,
+      "tackling": 95,
+      "agility": 93,
+      "strength": 94,
+      "penalty_taking": 16,
+      "jumping": 59
+    },
+    "currentPOS": [
+      75,
+      85
+    ],
+    "_id": 95,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Marcos Alonso",
+    "number": 97,
+    "position": "LB",
+    "skill": {
+      "passing": 73,
+      "shooting": 85,
+      "saving": 18,
+      "tackling": 71,
+      "agility": 52,
+      "strength": 59,
+      "penalty_taking": 14,
+      "jumping": 92
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 96,
+    "teamId": 3
+  },
+  {
+    "name": "Alpha Dionkou",
+    "number": 93,
+    "position": "RB",
+    "skill": {
+      "passing": 42,
+      "shooting": 64,
+      "saving": 13,
+      "tackling": 57,
+      "agility": 34,
+      "strength": 72,
+      "penalty_taking": 20,
+      "jumping": 49
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 97,
+    "teamId": 3
+  },
+  {
+    "name": "Sergi Rosanas",
+    "number": 11,
+    "position": "RB",
+    "skill": {
+      "passing": 64,
+      "shooting": 59,
+      "saving": 25,
+      "tackling": 37,
+      "agility": 32,
+      "strength": 58,
+      "penalty_taking": 10,
+      "jumping": 38
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 98,
+    "teamId": 3
+  },
+  {
+    "name": "Pablo López",
+    "number": 69,
+    "position": "RB",
+    "skill": {
+      "passing": 37,
+      "shooting": 57,
+      "saving": 17,
+      "tackling": 39,
+      "agility": 29,
+      "strength": 47,
+      "penalty_taking": 23,
+      "jumping": 19
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 99,
+    "teamId": 3
+  },
+  {
+    "name": "Álex Zalaya",
+    "number": 8,
+    "position": "CB",
+    "skill": {
+      "passing": 42,
+      "shooting": 61,
+      "saving": 14,
+      "tackling": 64,
+      "agility": 27,
+      "strength": 24,
+      "penalty_taking": 12,
+      "jumping": 46
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 100,
+    "teamId": 3
+  },
+  {
+    "name": "Chadi Riad",
+    "number": 90,
+    "position": "CB",
+    "skill": {
+      "passing": 42,
+      "shooting": 54,
+      "saving": 14,
+      "tackling": 58,
+      "agility": 40,
+      "strength": 60,
+      "penalty_taking": 12,
+      "jumping": 46
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 101,
+    "teamId": 3
+  },
+  {
+    "name": "Jules Koundé",
+    "number": 74,
+    "position": "CB",
+    "skill": {
+      "passing": 69,
+      "shooting": 74,
+      "saving": 17,
+      "tackling": 90,
+      "agility": 72,
+      "strength": 88,
+      "penalty_taking": 13,
+      "jumping": 93
+    },
+    "currentPOS": [
+      200,
+      85
+    ],
+    "_id": 102,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Andreas Christensen",
+    "number": 47,
+    "position": "CB",
+    "skill": {
+      "passing": 80,
+      "shooting": 67,
+      "saving": 21,
+      "tackling": 89,
+      "agility": 90,
+      "strength": 66,
+      "penalty_taking": 20,
+      "jumping": 76
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 103,
+    "teamId": 3
+  },
+  {
+    "name": "Arnau Casas",
+    "number": 10,
+    "position": "CB",
+    "skill": {
+      "passing": 44,
+      "shooting": 52,
+      "saving": 17,
+      "tackling": 45,
+      "agility": 44,
+      "strength": 52,
+      "penalty_taking": 21,
+      "jumping": 51
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 104,
+    "teamId": 3
+  },
+  {
+    "name": "Eric García",
+    "number": 76,
+    "position": "CB",
+    "skill": {
+      "passing": 75,
+      "shooting": 69,
+      "saving": 5,
+      "tackling": 60,
+      "agility": 84,
+      "strength": 77,
+      "penalty_taking": 21,
+      "jumping": 67
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 105,
+    "teamId": 3
+  },
+  {
+    "name": "Ronald Araujo",
+    "number": 64,
+    "position": "CB",
+    "skill": {
+      "passing": 74,
+      "shooting": 68,
+      "saving": 14,
+      "tackling": 73,
+      "agility": 86,
+      "strength": 92,
+      "penalty_taking": 16,
+      "jumping": 87
+    },
+    "currentPOS": [
+      450,
+      85
+    ],
+    "_id": 106,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Pelayo",
+    "number": 30,
+    "position": "CB",
+    "skill": {
+      "passing": 62,
+      "shooting": 28,
+      "saving": 5,
+      "tackling": 29,
+      "agility": 65,
+      "strength": 61,
+      "penalty_taking": 5,
+      "jumping": 25
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 107,
+    "teamId": 3
+  },
+  {
+    "name": "Diego Almeida",
+    "number": 17,
+    "position": "CB",
+    "skill": {
+      "passing": 36,
+      "shooting": 64,
+      "saving": 10,
+      "tackling": 31,
+      "agility": 69,
+      "strength": 44,
+      "penalty_taking": 24,
+      "jumping": 56
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 108,
+    "teamId": 3
+  },
+  {
+    "name": "Gerard Piqué",
+    "number": 2,
+    "position": "CB",
+    "skill": {
+      "passing": 95,
+      "shooting": 61,
+      "saving": 22,
+      "tackling": 89,
+      "agility": 94,
+      "strength": 67,
+      "penalty_taking": 6,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 109,
+    "teamId": 3
+  },
+  {
+    "name": "Rubén Cantero",
+    "number": 88,
+    "position": "CB",
+    "skill": {
+      "passing": 27,
+      "shooting": 51,
+      "saving": 6,
+      "tackling": 29,
+      "agility": 54,
+      "strength": 53,
+      "penalty_taking": 6,
+      "jumping": 26
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 110,
+    "teamId": 3
+  },
+  {
+    "name": "Frenkie de Jong",
+    "number": 3,
+    "position": "CM",
+    "skill": {
+      "passing": 74,
+      "shooting": 72,
+      "saving": 5,
+      "tackling": 90,
+      "agility": 92,
+      "strength": 77,
+      "penalty_taking": 22,
+      "jumping": 87
+    },
+    "currentPOS": [
+      200,
+      265
+    ],
+    "_id": 111,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Marc Casadó",
+    "number": 19,
+    "position": "CM",
+    "skill": {
+      "passing": 42,
+      "shooting": 64,
+      "saving": 24,
+      "tackling": 54,
+      "agility": 39,
+      "strength": 57,
+      "penalty_taking": 10,
+      "jumping": 32
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 112,
+    "teamId": 3
+  },
+  {
+    "name": "Álvaro Sanz",
+    "number": 83,
+    "position": "CM",
+    "skill": {
+      "passing": 75,
+      "shooting": 45,
+      "saving": 8,
+      "tackling": 63,
+      "agility": 57,
+      "strength": 79,
+      "penalty_taking": 24,
+      "jumping": 41
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 113,
+    "teamId": 3
+  },
+  {
+    "name": "Sergio Busquets",
+    "number": 60,
+    "position": "CM",
+    "skill": {
+      "passing": 87,
+      "shooting": 67,
+      "saving": 20,
+      "tackling": 76,
+      "agility": 82,
+      "strength": 71,
+      "penalty_taking": 5,
+      "jumping": 91
+    },
+    "currentPOS": [
+      450,
+      265
+    ],
+    "_id": 114,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Franck Kessié",
+    "number": 95,
+    "position": "CM",
+    "skill": {
+      "passing": 70,
+      "shooting": 86,
+      "saving": 20,
+      "tackling": 92,
+      "agility": 64,
+      "strength": 86,
+      "penalty_taking": 19,
+      "jumping": 70
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 115,
+    "teamId": 3
+  },
+  {
+    "name": "Álvaro Núñez",
+    "number": 12,
+    "position": "RB",
+    "skill": {
+      "passing": 36,
+      "shooting": 39,
+      "saving": 12,
+      "tackling": 74,
+      "agility": 48,
+      "strength": 71,
+      "penalty_taking": 16,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 116,
+    "teamId": 3
+  },
+  {
+    "name": "Héctor Bellerín",
+    "number": 80,
+    "position": "RB",
+    "skill": {
+      "passing": 66,
+      "shooting": 77,
+      "saving": 14,
+      "tackling": 67,
+      "agility": 70,
+      "strength": 78,
+      "penalty_taking": 12,
+      "jumping": 74
+    },
+    "currentPOS": [
+      575,
+      85
+    ],
+    "_id": 117,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Sergi Roberto",
+    "number": 78,
+    "position": "CM",
+    "skill": {
+      "passing": 92,
+      "shooting": 56,
+      "saving": 7,
+      "tackling": 90,
+      "agility": 57,
+      "strength": 54,
+      "penalty_taking": 6,
+      "jumping": 89
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 118,
+    "teamId": 3
+  },
+  {
+    "name": "Zacarías Ghailán",
+    "number": 39,
+    "position": "ST",
+    "skill": {
+      "passing": 41,
+      "shooting": 55,
+      "saving": 22,
+      "tackling": 36,
+      "agility": 59,
+      "strength": 60,
+      "penalty_taking": 11,
+      "jumping": 37
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 119,
+    "teamId": 3
+  },
+  {
+    "name": "Àlex Carbonell",
+    "number": 36,
+    "position": "CM",
+    "skill": {
+      "passing": 39,
+      "shooting": 57,
+      "saving": 19,
+      "tackling": 59,
+      "agility": 66,
+      "strength": 50,
+      "penalty_taking": 24,
+      "jumping": 77
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 120,
+    "teamId": 3
+  },
+  {
+    "name": "Fabio Blanco",
+    "number": 29,
+    "position": "ST",
+    "skill": {
+      "passing": 61,
+      "shooting": 49,
+      "saving": 12,
+      "tackling": 43,
+      "agility": 67,
+      "strength": 50,
+      "penalty_taking": 5,
+      "jumping": 60
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 121,
+    "teamId": 3
+  },
+  {
+    "name": "Aleix Garrido",
+    "number": 25,
+    "position": "CM",
+    "skill": {
+      "passing": 64,
+      "shooting": 34,
+      "saving": 12,
+      "tackling": 32,
+      "agility": 45,
+      "strength": 51,
+      "penalty_taking": 20,
+      "jumping": 62
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 122,
+    "teamId": 3
+  },
+  {
+    "name": "Txus Alba",
+    "number": 71,
+    "position": "CM",
+    "skill": {
+      "passing": 46,
+      "shooting": 50,
+      "saving": 22,
+      "tackling": 29,
+      "agility": 67,
+      "strength": 30,
+      "penalty_taking": 14,
+      "jumping": 66
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 123,
+    "teamId": 3
+  },
+  {
+    "name": "Toni Caravaca",
+    "number": 85,
+    "position": "CM",
+    "skill": {
+      "passing": 59,
+      "shooting": 41,
+      "saving": 10,
+      "tackling": 29,
+      "agility": 39,
+      "strength": 51,
+      "penalty_taking": 19,
+      "jumping": 21
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 124,
+    "teamId": 3
+  },
+  {
+    "name": "Emre Demir",
+    "number": 24,
+    "position": "CM",
+    "skill": {
+      "passing": 33,
+      "shooting": 63,
+      "saving": 22,
+      "tackling": 36,
+      "agility": 60,
+      "strength": 51,
+      "penalty_taking": 8,
+      "jumping": 45
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 125,
+    "teamId": 3
+  },
+  {
+    "name": "Pablo Torre",
+    "number": 67,
+    "position": "ST",
+    "skill": {
+      "passing": 63,
+      "shooting": 63,
+      "saving": 16,
+      "tackling": 47,
+      "agility": 79,
+      "strength": 65,
+      "penalty_taking": 15,
+      "jumping": 61
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 126,
+    "teamId": 3
+  },
+  {
+    "name": "Raphinha",
+    "number": 53,
+    "position": "ST",
+    "skill": {
+      "passing": 97,
+      "shooting": 66,
+      "saving": 15,
+      "tackling": 90,
+      "agility": 59,
+      "strength": 90,
+      "penalty_taking": 25,
+      "jumping": 66
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 127,
+    "teamId": 3
+  },
+  {
+    "name": "Ilias Akhomach",
+    "number": 52,
+    "position": "ST",
+    "skill": {
+      "passing": 54,
+      "shooting": 62,
+      "saving": 24,
+      "tackling": 70,
+      "agility": 46,
+      "strength": 73,
+      "penalty_taking": 8,
+      "jumping": 43
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 128,
+    "teamId": 3
+  },
+  {
+    "name": "Ángel Alarcón",
+    "number": 75,
+    "position": "ST",
+    "skill": {
+      "passing": 36,
+      "shooting": 64,
+      "saving": 12,
+      "tackling": 44,
+      "agility": 47,
+      "strength": 56,
+      "penalty_taking": 16,
+      "jumping": 53
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 129,
+    "teamId": 3
+  },
+  {
+    "name": "Ousmane Dembélé",
+    "number": 31,
+    "position": "ST",
+    "skill": {
+      "passing": 95,
+      "shooting": 72,
+      "saving": 11,
+      "tackling": 90,
+      "agility": 93,
+      "strength": 69,
+      "penalty_taking": 17,
+      "jumping": 67
+    },
+    "currentPOS": [
+      450,
+      350
+    ],
+    "_id": 130,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Pedri",
+    "number": 23,
+    "position": "CM",
+    "skill": {
+      "passing": 71,
+      "shooting": 92,
+      "saving": 14,
+      "tackling": 68,
+      "agility": 82,
+      "strength": 89,
+      "penalty_taking": 10,
+      "jumping": 78
+    },
+    "currentPOS": [
+      325,
+      350
+    ],
+    "_id": 131,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Ferran Torres",
+    "number": 48,
+    "position": "ST",
+    "skill": {
+      "passing": 85,
+      "shooting": 79,
+      "saving": 12,
+      "tackling": 75,
+      "agility": 71,
+      "strength": 69,
+      "penalty_taking": 11,
+      "jumping": 83
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 132,
+    "teamId": 3
+  },
+  {
+    "name": "Derek Cuevas",
+    "number": 49,
+    "position": "ST",
+    "skill": {
+      "passing": 60,
+      "shooting": 26,
+      "saving": 19,
+      "tackling": 29,
+      "agility": 48,
+      "strength": 38,
+      "penalty_taking": 5,
+      "jumping": 57
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 133,
+    "teamId": 3
+  },
+  {
+    "name": "Ansu Fati",
+    "number": 41,
+    "position": "ST",
+    "skill": {
+      "passing": 94,
+      "shooting": 87,
+      "saving": 25,
+      "tackling": 63,
+      "agility": 63,
+      "strength": 56,
+      "penalty_taking": 9,
+      "jumping": 87
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 134,
+    "teamId": 3
+  },
+  {
+    "name": "Antonio Aranda",
+    "number": 58,
+    "position": "ST",
+    "skill": {
+      "passing": 40,
+      "shooting": 76,
+      "saving": 24,
+      "tackling": 46,
+      "agility": 71,
+      "strength": 70,
+      "penalty_taking": 15,
+      "jumping": 45
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 135,
+    "teamId": 3
+  },
+  {
+    "name": "Estanis Pedrola",
+    "number": 9,
+    "position": "ST",
+    "skill": {
+      "passing": 56,
+      "shooting": 56,
+      "saving": 20,
+      "tackling": 50,
+      "agility": 46,
+      "strength": 60,
+      "penalty_taking": 12,
+      "jumping": 50
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 136,
+    "teamId": 3
+  },
+  {
+    "name": "Juanda Fuentes",
+    "number": 63,
+    "position": "ST",
+    "skill": {
+      "passing": 49,
+      "shooting": 54,
+      "saving": 13,
+      "tackling": 42,
+      "agility": 61,
+      "strength": 47,
+      "penalty_taking": 21,
+      "jumping": 35
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 137,
+    "teamId": 3
+  },
+  {
+    "name": "Fabián Luzzi",
+    "number": 33,
+    "position": "ST",
+    "skill": {
+      "passing": 45,
+      "shooting": 32,
+      "saving": 19,
+      "tackling": 33,
+      "agility": 57,
+      "strength": 58,
+      "penalty_taking": 15,
+      "jumping": 45
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 138,
+    "teamId": 3
+  },
+  {
+    "name": "Hiroki Abe",
+    "number": 77,
+    "position": "ST",
+    "skill": {
+      "passing": 51,
+      "shooting": 55,
+      "saving": 21,
+      "tackling": 49,
+      "agility": 47,
+      "strength": 45,
+      "penalty_taking": 7,
+      "jumping": 53
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 139,
+    "teamId": 3
+  },
+  {
+    "name": "Memphis Depay",
+    "number": 92,
+    "position": "ST",
+    "skill": {
+      "passing": 93,
+      "shooting": 65,
+      "saving": 16,
+      "tackling": 76,
+      "agility": 93,
+      "strength": 82,
+      "penalty_taking": 20,
+      "jumping": 65
+    },
+    "currentPOS": [
+      250,
+      350
+    ],
+    "_id": 140,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Luismi Cruz",
+    "number": 5,
+    "position": "ST",
+    "skill": {
+      "passing": 58,
+      "shooting": 37,
+      "saving": 20,
+      "tackling": 42,
+      "agility": 60,
+      "strength": 40,
+      "penalty_taking": 20,
+      "jumping": 63
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 141,
+    "teamId": 3
+  },
+  {
+    "name": "Robert Lewandowski",
+    "number": 15,
+    "position": "ST",
+    "skill": {
+      "passing": 99,
+      "shooting": 85,
+      "saving": 8,
+      "tackling": 77,
+      "agility": 99,
+      "strength": 99,
+      "penalty_taking": 9,
+      "jumping": 99
+    },
+    "currentPOS": [
+      325,
+      435
+    ],
+    "_id": 142,
+    "teamId": 3,
+    "role": "main"
+  },
+  {
+    "name": "Roberto Fernández",
+    "number": 79,
+    "position": "ST",
+    "skill": {
+      "passing": 42,
+      "shooting": 63,
+      "saving": 6,
+      "tackling": 53,
+      "agility": 74,
+      "strength": 43,
+      "penalty_taking": 15,
+      "jumping": 73
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 143,
+    "teamId": 3
+  },
+  {
+    "name": "Thibaut Courtois",
+    "number": 73,
+    "position": "GK",
+    "skill": {
+      "passing": 80,
+      "shooting": 25,
+      "saving": 94,
+      "tackling": 6,
+      "agility": 99,
+      "strength": 99,
+      "penalty_taking": 88,
+      "jumping": 86
+    },
+    "currentPOS": [
+      325,
+      10
+    ],
+    "_id": 144,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Andriy Lunin",
+    "number": 6,
+    "position": "GK",
+    "skill": {
+      "passing": 81,
+      "shooting": 23,
+      "saving": 59,
+      "tackling": 22,
+      "agility": 62,
+      "strength": 70,
+      "penalty_taking": 70,
+      "jumping": 78
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 145,
+    "teamId": 4
+  },
+  {
+    "name": "Lucas Cañizares",
+    "number": 13,
+    "position": "GK",
+    "skill": {
+      "passing": 41,
+      "shooting": 14,
+      "saving": 48,
+      "tackling": 13,
+      "agility": 57,
+      "strength": 65,
+      "penalty_taking": 58,
+      "jumping": 49
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 146,
+    "teamId": 4
+  },
+  {
+    "name": "Luis Lopez",
+    "number": 62,
+    "position": "GK",
+    "skill": {
+      "passing": 39,
+      "shooting": 8,
+      "saving": 54,
+      "tackling": 21,
+      "agility": 50,
+      "strength": 58,
+      "penalty_taking": 46,
+      "jumping": 65
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 147,
+    "teamId": 4
+  },
+  {
+    "name": "Mario De Luis",
+    "number": 79,
+    "position": "GK",
+    "skill": {
+      "passing": 47,
+      "shooting": 5,
+      "saving": 43,
+      "tackling": 23,
+      "agility": 42,
+      "strength": 38,
+      "penalty_taking": 52,
+      "jumping": 48
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 148,
+    "teamId": 4
+  },
+  {
+    "name": "Diego Pineiro",
+    "number": 41,
+    "position": "GK",
+    "skill": {
+      "passing": 22,
+      "shooting": 19,
+      "saving": 27,
+      "tackling": 25,
+      "agility": 50,
+      "strength": 45,
+      "penalty_taking": 25,
+      "jumping": 47
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 149,
+    "teamId": 4
+  },
+  {
+    "name": "Guillermo Sunico",
+    "number": 82,
+    "position": "GK",
+    "skill": {
+      "passing": 41,
+      "shooting": 21,
+      "saving": 27,
+      "tackling": 20,
+      "agility": 42,
+      "strength": 44,
+      "penalty_taking": 26,
+      "jumping": 24
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 150,
+    "teamId": 4
+  },
+  {
+    "name": "David Alaba",
+    "number": 4,
+    "position": "LB",
+    "skill": {
+      "passing": 63,
+      "shooting": 82,
+      "saving": 17,
+      "tackling": 79,
+      "agility": 84,
+      "strength": 85,
+      "penalty_taking": 7,
+      "jumping": 99
+    },
+    "currentPOS": [
+      575,
+      85
+    ],
+    "_id": 151,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Ferland Mendy",
+    "number": 36,
+    "position": "LB",
+    "skill": {
+      "passing": 82,
+      "shooting": 80,
+      "saving": 19,
+      "tackling": 74,
+      "agility": 96,
+      "strength": 76,
+      "penalty_taking": 25,
+      "jumping": 60
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 152,
+    "teamId": 4
+  },
+  {
+    "name": "Rafel Obrador",
+    "number": 50,
+    "position": "LB",
+    "skill": {
+      "passing": 62,
+      "shooting": 34,
+      "saving": 19,
+      "tackling": 57,
+      "agility": 68,
+      "strength": 28,
+      "penalty_taking": 9,
+      "jumping": 39
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 153,
+    "teamId": 4
+  },
+  {
+    "name": "Lucas Alcazar",
+    "number": 34,
+    "position": "LB",
+    "skill": {
+      "passing": 41,
+      "shooting": 53,
+      "saving": 12,
+      "tackling": 35,
+      "agility": 30,
+      "strength": 59,
+      "penalty_taking": 16,
+      "jumping": 64
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 154,
+    "teamId": 4
+  },
+  {
+    "name": "Manu Serrano",
+    "number": 86,
+    "position": "CB",
+    "skill": {
+      "passing": 37,
+      "shooting": 43,
+      "saving": 19,
+      "tackling": 32,
+      "agility": 45,
+      "strength": 39,
+      "penalty_taking": 6,
+      "jumping": 50
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 155,
+    "teamId": 4
+  },
+  {
+    "name": "Nacho",
+    "number": 70,
+    "position": "CB",
+    "skill": {
+      "passing": 88,
+      "shooting": 66,
+      "saving": 8,
+      "tackling": 95,
+      "agility": 76,
+      "strength": 59,
+      "penalty_taking": 19,
+      "jumping": 78
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 156,
+    "teamId": 4
+  },
+  {
+    "name": "Dani Carvajal",
+    "number": 98,
+    "position": "RB",
+    "skill": {
+      "passing": 56,
+      "shooting": 96,
+      "saving": 21,
+      "tackling": 57,
+      "agility": 83,
+      "strength": 69,
+      "penalty_taking": 11,
+      "jumping": 95
+    },
+    "currentPOS": [
+      75,
+      85
+    ],
+    "_id": 157,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Eric",
+    "number": 69,
+    "position": "ST",
+    "skill": {
+      "passing": 25,
+      "shooting": 57,
+      "saving": 8,
+      "tackling": 35,
+      "agility": 47,
+      "strength": 40,
+      "penalty_taking": 13,
+      "jumping": 42
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 158,
+    "teamId": 4
+  },
+  {
+    "name": "Antonio Rudiger",
+    "number": 51,
+    "position": "CB",
+    "skill": {
+      "passing": 86,
+      "shooting": 83,
+      "saving": 19,
+      "tackling": 64,
+      "agility": 99,
+      "strength": 83,
+      "penalty_taking": 24,
+      "jumping": 83
+    },
+    "currentPOS": [
+      450,
+      85
+    ],
+    "_id": 159,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Alvaro Odriozola",
+    "number": 56,
+    "position": "RB",
+    "skill": {
+      "passing": 78,
+      "shooting": 64,
+      "saving": 17,
+      "tackling": 59,
+      "agility": 83,
+      "strength": 90,
+      "penalty_taking": 5,
+      "jumping": 52
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 160,
+    "teamId": 4
+  },
+  {
+    "name": "Peter",
+    "number": 59,
+    "position": "ST",
+    "skill": {
+      "passing": 58,
+      "shooting": 40,
+      "saving": 5,
+      "tackling": 34,
+      "agility": 56,
+      "strength": 62,
+      "penalty_taking": 5,
+      "jumping": 38
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 161,
+    "teamId": 4
+  },
+  {
+    "name": "Pablo Ramón",
+    "number": 12,
+    "position": "CB",
+    "skill": {
+      "passing": 47,
+      "shooting": 43,
+      "saving": 18,
+      "tackling": 53,
+      "agility": 69,
+      "strength": 65,
+      "penalty_taking": 21,
+      "jumping": 59
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 162,
+    "teamId": 4
+  },
+  {
+    "name": "Eder Militao",
+    "number": 38,
+    "position": "CB",
+    "skill": {
+      "passing": 92,
+      "shooting": 79,
+      "saving": 12,
+      "tackling": 66,
+      "agility": 68,
+      "strength": 81,
+      "penalty_taking": 13,
+      "jumping": 94
+    },
+    "currentPOS": [
+      200,
+      85
+    ],
+    "_id": 163,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Jesus Vallejo",
+    "number": 72,
+    "position": "CB",
+    "skill": {
+      "passing": 83,
+      "shooting": 69,
+      "saving": 10,
+      "tackling": 51,
+      "agility": 65,
+      "strength": 67,
+      "penalty_taking": 23,
+      "jumping": 67
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 164,
+    "teamId": 4
+  },
+  {
+    "name": "Rafa Marín",
+    "number": 31,
+    "position": "CB",
+    "skill": {
+      "passing": 36,
+      "shooting": 73,
+      "saving": 9,
+      "tackling": 53,
+      "agility": 35,
+      "strength": 55,
+      "penalty_taking": 8,
+      "jumping": 72
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 165,
+    "teamId": 4
+  },
+  {
+    "name": "Alvaro Carrillo",
+    "number": 60,
+    "position": "CB",
+    "skill": {
+      "passing": 47,
+      "shooting": 55,
+      "saving": 23,
+      "tackling": 57,
+      "agility": 47,
+      "strength": 49,
+      "penalty_taking": 23,
+      "jumping": 57
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 166,
+    "teamId": 4
+  },
+  {
+    "name": "Marvel",
+    "number": 21,
+    "position": "CB",
+    "skill": {
+      "passing": 30,
+      "shooting": 61,
+      "saving": 22,
+      "tackling": 60,
+      "agility": 36,
+      "strength": 35,
+      "penalty_taking": 22,
+      "jumping": 66
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 167,
+    "teamId": 4
+  },
+  {
+    "name": "Mario Camero",
+    "number": 65,
+    "position": "CB",
+    "skill": {
+      "passing": 54,
+      "shooting": 44,
+      "saving": 16,
+      "tackling": 38,
+      "agility": 48,
+      "strength": 36,
+      "penalty_taking": 5,
+      "jumping": 56
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 168,
+    "teamId": 4
+  },
+  {
+    "name": "Alfredo Sotres",
+    "number": 43,
+    "position": "CB",
+    "skill": {
+      "passing": 19,
+      "shooting": 57,
+      "saving": 12,
+      "tackling": 26,
+      "agility": 50,
+      "strength": 23,
+      "penalty_taking": 25,
+      "jumping": 53
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 169,
+    "teamId": 4
+  },
+  {
+    "name": "Vinicius Tobias",
+    "number": 16,
+    "position": "RB",
+    "skill": {
+      "passing": 64,
+      "shooting": 55,
+      "saving": 18,
+      "tackling": 43,
+      "agility": 38,
+      "strength": 59,
+      "penalty_taking": 13,
+      "jumping": 47
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 170,
+    "teamId": 4
+  },
+  {
+    "name": "David Jimenez",
+    "number": 2,
+    "position": "RB",
+    "skill": {
+      "passing": 50,
+      "shooting": 48,
+      "saving": 5,
+      "tackling": 38,
+      "agility": 40,
+      "strength": 54,
+      "penalty_taking": 14,
+      "jumping": 34
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 171,
+    "teamId": 4
+  },
+  {
+    "name": "Lucas Vazquez",
+    "number": 47,
+    "position": "RM",
+    "skill": {
+      "passing": 67,
+      "shooting": 60,
+      "saving": 15,
+      "tackling": 79,
+      "agility": 88,
+      "strength": 81,
+      "penalty_taking": 12,
+      "jumping": 69
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 172,
+    "teamId": 4
+  },
+  {
+    "name": "Federico Valverde",
+    "number": 67,
+    "position": "CM",
+    "skill": {
+      "passing": 99,
+      "shooting": 99,
+      "saving": 6,
+      "tackling": 72,
+      "agility": 90,
+      "strength": 80,
+      "penalty_taking": 11,
+      "jumping": 70
+    },
+    "currentPOS": [
+      450,
+      265
+    ],
+    "_id": 173,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Mario Martín",
+    "number": 99,
+    "position": "CM",
+    "skill": {
+      "passing": 65,
+      "shooting": 43,
+      "saving": 7,
+      "tackling": 49,
+      "agility": 46,
+      "strength": 46,
+      "penalty_taking": 18,
+      "jumping": 27
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 174,
+    "teamId": 4
+  },
+  {
+    "name": "Eduardo Camavinga",
+    "number": 90,
+    "position": "CM",
+    "skill": {
+      "passing": 81,
+      "shooting": 67,
+      "saving": 9,
+      "tackling": 88,
+      "agility": 84,
+      "strength": 64,
+      "penalty_taking": 17,
+      "jumping": 60
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 175,
+    "teamId": 4
+  },
+  {
+    "name": "Toni Kroos",
+    "number": 66,
+    "position": "CM",
+    "skill": {
+      "passing": 93,
+      "shooting": 92,
+      "saving": 18,
+      "tackling": 83,
+      "agility": 83,
+      "strength": 74,
+      "penalty_taking": 17,
+      "jumping": 73
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 176,
+    "teamId": 4
+  },
+  {
+    "name": "Rodri",
+    "number": 61,
+    "position": "CM",
+    "skill": {
+      "passing": 19,
+      "shooting": 54,
+      "saving": 16,
+      "tackling": 53,
+      "agility": 17,
+      "strength": 51,
+      "penalty_taking": 14,
+      "jumping": 16
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 177,
+    "teamId": 4
+  },
+  {
+    "name": "Aurelien Tchouameni",
+    "number": 53,
+    "position": "CM",
+    "skill": {
+      "passing": 75,
+      "shooting": 85,
+      "saving": 24,
+      "tackling": 99,
+      "agility": 76,
+      "strength": 61,
+      "penalty_taking": 16,
+      "jumping": 84
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 178,
+    "teamId": 4
+  },
+  {
+    "name": "Javi Villar",
+    "number": 1,
+    "position": "CM",
+    "skill": {
+      "passing": 41,
+      "shooting": 58,
+      "saving": 10,
+      "tackling": 51,
+      "agility": 56,
+      "strength": 36,
+      "penalty_taking": 15,
+      "jumping": 34
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 179,
+    "teamId": 4
+  },
+  {
+    "name": "Luka Modric",
+    "number": 45,
+    "position": "CM",
+    "skill": {
+      "passing": 92,
+      "shooting": 91,
+      "saving": 15,
+      "tackling": 78,
+      "agility": 96,
+      "strength": 84,
+      "penalty_taking": 14,
+      "jumping": 99
+    },
+    "currentPOS": [
+      200,
+      265
+    ],
+    "_id": 180,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Manuel Angel",
+    "number": 3,
+    "position": "CM",
+    "skill": {
+      "passing": 51,
+      "shooting": 46,
+      "saving": 14,
+      "tackling": 30,
+      "agility": 25,
+      "strength": 38,
+      "penalty_taking": 7,
+      "jumping": 38
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 181,
+    "teamId": 4
+  },
+  {
+    "name": "Gonzalo",
+    "number": 55,
+    "position": "ST",
+    "skill": {
+      "passing": 56,
+      "shooting": 59,
+      "saving": 5,
+      "tackling": 34,
+      "agility": 31,
+      "strength": 36,
+      "penalty_taking": 14,
+      "jumping": 54
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 182,
+    "teamId": 4
+  },
+  {
+    "name": "Rafa Llorente",
+    "number": 25,
+    "position": "ST",
+    "skill": {
+      "passing": 28,
+      "shooting": 64,
+      "saving": 6,
+      "tackling": 44,
+      "agility": 48,
+      "strength": 34,
+      "penalty_taking": 15,
+      "jumping": 58
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 183,
+    "teamId": 4
+  },
+  {
+    "name": "Rodrygo",
+    "number": 48,
+    "position": "ST",
+    "skill": {
+      "passing": 73,
+      "shooting": 79,
+      "saving": 17,
+      "tackling": 82,
+      "agility": 70,
+      "strength": 81,
+      "penalty_taking": 17,
+      "jumping": 71
+    },
+    "currentPOS": [
+      75,
+      350
+    ],
+    "_id": 184,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Theo",
+    "number": 26,
+    "position": "CM",
+    "skill": {
+      "passing": 65,
+      "shooting": 67,
+      "saving": 14,
+      "tackling": 39,
+      "agility": 57,
+      "strength": 37,
+      "penalty_taking": 12,
+      "jumping": 47
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 185,
+    "teamId": 4
+  },
+  {
+    "name": "Alvaro Martín",
+    "number": 64,
+    "position": "ST",
+    "skill": {
+      "passing": 49,
+      "shooting": 43,
+      "saving": 5,
+      "tackling": 68,
+      "agility": 36,
+      "strength": 61,
+      "penalty_taking": 7,
+      "jumping": 55
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 186,
+    "teamId": 4
+  },
+  {
+    "name": "Takuhiro Nakai",
+    "number": 74,
+    "position": "CM",
+    "skill": {
+      "passing": 44,
+      "shooting": 34,
+      "saving": 16,
+      "tackling": 60,
+      "agility": 33,
+      "strength": 71,
+      "penalty_taking": 23,
+      "jumping": 70
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 187,
+    "teamId": 4
+  },
+  {
+    "name": "Marco Asensio",
+    "number": 46,
+    "position": "ST",
+    "skill": {
+      "passing": 93,
+      "shooting": 59,
+      "saving": 25,
+      "tackling": 84,
+      "agility": 68,
+      "strength": 93,
+      "penalty_taking": 6,
+      "jumping": 59
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 188,
+    "teamId": 4
+  },
+  {
+    "name": "Sergio Arribas",
+    "number": 5,
+    "position": "ST",
+    "skill": {
+      "passing": 47,
+      "shooting": 66,
+      "saving": 24,
+      "tackling": 60,
+      "agility": 79,
+      "strength": 47,
+      "penalty_taking": 12,
+      "jumping": 79
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 189,
+    "teamId": 4
+  },
+  {
+    "name": "Jordi Martín",
+    "number": 8,
+    "position": "ST",
+    "skill": {
+      "passing": 53,
+      "shooting": 51,
+      "saving": 25,
+      "tackling": 68,
+      "agility": 43,
+      "strength": 36,
+      "penalty_taking": 15,
+      "jumping": 61
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 190,
+    "teamId": 4
+  },
+  {
+    "name": "Eden Hazard",
+    "number": 54,
+    "position": "ST",
+    "skill": {
+      "passing": 69,
+      "shooting": 63,
+      "saving": 8,
+      "tackling": 93,
+      "agility": 87,
+      "strength": 64,
+      "penalty_taking": 11,
+      "jumping": 92
+    },
+    "currentPOS": [
+      325,
+      350
+    ],
+    "_id": 191,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Bruno Iglesias",
+    "number": 7,
+    "position": "ST",
+    "skill": {
+      "passing": 63,
+      "shooting": 53,
+      "saving": 21,
+      "tackling": 59,
+      "agility": 40,
+      "strength": 49,
+      "penalty_taking": 5,
+      "jumping": 72
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 192,
+    "teamId": 4
+  },
+  {
+    "name": "Vinicius Júnior",
+    "number": 94,
+    "position": "ST",
+    "skill": {
+      "passing": 81,
+      "shooting": 99,
+      "saving": 20,
+      "tackling": 69,
+      "agility": 86,
+      "strength": 99,
+      "penalty_taking": 25,
+      "jumping": 88
+    },
+    "currentPOS": [
+      575,
+      350
+    ],
+    "_id": 193,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Borja",
+    "number": 35,
+    "position": "CM",
+    "skill": {
+      "passing": 37,
+      "shooting": 53,
+      "saving": 15,
+      "tackling": 41,
+      "agility": 34,
+      "strength": 49,
+      "penalty_taking": 15,
+      "jumping": 56
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 194,
+    "teamId": 4
+  },
+  {
+    "name": "Dani Ceballos",
+    "number": 33,
+    "position": "CM",
+    "skill": {
+      "passing": 62,
+      "shooting": 56,
+      "saving": 6,
+      "tackling": 76,
+      "agility": 84,
+      "strength": 64,
+      "penalty_taking": 9,
+      "jumping": 78
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 195,
+    "teamId": 4
+  },
+  {
+    "name": "Carlos Dotor",
+    "number": 85,
+    "position": "CM",
+    "skill": {
+      "passing": 57,
+      "shooting": 53,
+      "saving": 16,
+      "tackling": 69,
+      "agility": 56,
+      "strength": 41,
+      "penalty_taking": 11,
+      "jumping": 54
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 196,
+    "teamId": 4
+  },
+  {
+    "name": "Julen Jon Guerrero",
+    "number": 19,
+    "position": "ST",
+    "skill": {
+      "passing": 69,
+      "shooting": 33,
+      "saving": 9,
+      "tackling": 40,
+      "agility": 56,
+      "strength": 62,
+      "penalty_taking": 14,
+      "jumping": 46
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 197,
+    "teamId": 4
+  },
+  {
+    "name": "Oscar Aranda",
+    "number": 52,
+    "position": "ST",
+    "skill": {
+      "passing": 62,
+      "shooting": 70,
+      "saving": 14,
+      "tackling": 38,
+      "agility": 42,
+      "strength": 66,
+      "penalty_taking": 20,
+      "jumping": 46
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 198,
+    "teamId": 4
+  },
+  {
+    "name": "Noel Lopez",
+    "number": 37,
+    "position": "ST",
+    "skill": {
+      "passing": 44,
+      "shooting": 65,
+      "saving": 8,
+      "tackling": 55,
+      "agility": 53,
+      "strength": 43,
+      "penalty_taking": 8,
+      "jumping": 64
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 199,
+    "teamId": 4
+  },
+  {
+    "name": "Karim Benzema",
+    "number": 71,
+    "position": "ST",
+    "skill": {
+      "passing": 94,
+      "shooting": 92,
+      "saving": 11,
+      "tackling": 99,
+      "agility": 89,
+      "strength": 87,
+      "penalty_taking": 17,
+      "jumping": 97
+    },
+    "currentPOS": [
+      325,
+      435
+    ],
+    "_id": 200,
+    "teamId": 4,
+    "role": "main"
+  },
+  {
+    "name": "Mariano",
+    "number": 42,
+    "position": "ST",
+    "skill": {
+      "passing": 57,
+      "shooting": 83,
+      "saving": 11,
+      "tackling": 74,
+      "agility": 66,
+      "strength": 59,
+      "penalty_taking": 22,
+      "jumping": 81
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 201,
+    "teamId": 4
+  },
+  {
+    "name": "Yeray",
+    "number": 88,
+    "position": "ST",
+    "skill": {
+      "passing": 38,
+      "shooting": 24,
+      "saving": 10,
+      "tackling": 52,
+      "agility": 38,
+      "strength": 27,
+      "penalty_taking": 9,
+      "jumping": 49
+    },
+    "currentPOS": [
+      0,
+      0
+    ],
+    "_id": 202,
+    "teamId": 4
+  }
+]
