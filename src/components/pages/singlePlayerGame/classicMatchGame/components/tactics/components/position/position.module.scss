@@ -8,8 +8,11 @@ $size: 45px;
   width:  $size;
   height: $size;
   background-color: rgba($color: $white, $alpha: 60%);
-  border: 2px solid $white;
   border-radius: 50%;
-  box-shadow: calc($size / 15) calc($size / 15) 2px 0 rgba($color: $black, $alpha: 35%);
   transform: translate(-50%, 50%);
+}
+
+.dicoration {
+  border: 2px solid $white;
+  box-shadow: calc($size / 15) calc($size / 15) 2px 0 rgba($color: $black, $alpha: 35%);
 }

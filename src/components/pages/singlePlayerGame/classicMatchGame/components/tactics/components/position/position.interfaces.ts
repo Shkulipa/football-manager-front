@@ -4,5 +4,5 @@ export interface IPositionProps
 	extends PropsWithChildren<
 		DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 	> {
-	positionData: any;
+	player: any;
 }

@@ -5,9 +5,9 @@
     "clubName": "Manchester City",
     "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/167.png",
     "skills": {
-      "att": "99",
-      "mid": "99",
-      "def": "99"
+      "att": 82,
+      "mid": 85,
+      "def": 79
     }
   },
   {
@@ -16,9 +16,9 @@
     "clubName": "Arsenal",
     "logoClub": "https://upload.wikimedia.org/wikipedia/ru/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png",
     "skills": {
-      "att": "98",
-      "mid": "98",
-      "def": "98"
+      "att": 77,
+      "mid": 71,
+      "def": 73
     }
   },
   {
@@ -27,9 +27,9 @@
     "clubName": "Barcelona",
     "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/65.png",
     "skills": {
-      "att": "99",
-      "mid": "99",
-      "def": "99"
+      "att": 81,
+      "mid": 80,
+      "def": 78
     }
   },
   {
@@ -38,9 +38,9 @@
     "clubName": "Real Madrid",
     "logoClub": "https://d2zywfiolv4f83.cloudfront.net/img/teams/52.png",
     "skills": {
-      "att": "98",
-      "mid": "98",
-      "def": "98"
+      "att": 82,
+      "mid": 82,
+      "def": 76
     }
   }
 ]

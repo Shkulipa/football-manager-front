@@ -18,7 +18,8 @@
       0
     ],
     "_id": 1,
-    "teamId": 1
+    "teamId": 1,
+    "role": "bench"
   },
   {
     "name": "Scott Carson",
@@ -188,7 +189,8 @@
       0
     ],
     "_id": 9,
-    "teamId": 1
+    "teamId": 1,
+    "role": "bench"
   },
   {
     "name": "Aymeric Laporte",
@@ -252,7 +254,8 @@
       0
     ],
     "_id": 12,
-    "teamId": 1
+    "teamId": 1,
+    "role": "bench"
   },
   {
     "name": "John Stones",
@@ -359,7 +362,8 @@
       0
     ],
     "_id": 17,
-    "teamId": 1
+    "teamId": 1,
+    "role": "bench"
   },
   {
     "name": "Iker Pozo",
@@ -466,7 +470,8 @@
       0
     ],
     "_id": 22,
-    "teamId": 1
+    "teamId": 1,
+    "role": "bench"
   },
   {
     "name": "Bernardo Silva",
@@ -720,7 +725,8 @@
       0
     ],
     "_id": 34,
-    "teamId": 1
+    "teamId": 1,
+    "role": "bench"
   },
   {
     "name": "Ben Knight",
@@ -783,7 +789,8 @@
       0
     ],
     "_id": 37,
-    "teamId": 1
+    "teamId": 1,
+    "role": "bench"
   },
   {
     "name": "Dire Mebude",
@@ -890,7 +897,8 @@
       0
     ],
     "_id": 42,
-    "teamId": 2
+    "teamId": 2,
+    "role": "bench"
   },
   {
     "name": "Karl Jakob Hein",
@@ -974,7 +982,8 @@
       0
     ],
     "_id": 46,
-    "teamId": 2
+    "teamId": 2,
+    "role": "bench"
   },
   {
     "name": "Oleksandr Zinchenko",
@@ -1168,7 +1177,8 @@
       0
     ],
     "_id": 55,
-    "teamId": 2
+    "teamId": 2,
+    "role": "bench"
   },
   {
     "name": "Rob Holding",
@@ -1189,7 +1199,8 @@
       0
     ],
     "_id": 56,
-    "teamId": 2
+    "teamId": 2,
+    "role": "bench"
   },
   {
     "name": "Zach Awe",
@@ -1295,7 +1306,8 @@
       0
     ],
     "_id": 61,
-    "teamId": 2
+    "teamId": 2,
+    "role": "bench"
   },
   {
     "name": "Thomas Partey",
@@ -1359,7 +1371,8 @@
       0
     ],
     "_id": 64,
-    "teamId": 2
+    "teamId": 2,
+    "role": "bench"
   },
   {
     "name": "Jack Henry-Francis",
@@ -1633,7 +1646,8 @@
       0
     ],
     "_id": 77,
-    "teamId": 2
+    "teamId": 2,
+    "role": "bench"
   },
   {
     "name": "Gabriel Martinelli",
@@ -2037,7 +2051,8 @@
       0
     ],
     "_id": 96,
-    "teamId": 3
+    "teamId": 3,
+    "role": "bench"
   },
   {
     "name": "Alpha Dionkou",
@@ -2185,7 +2200,8 @@
       0
     ],
     "_id": 103,
-    "teamId": 3
+    "teamId": 3,
+    "role": "bench"
   },
   {
     "name": "Arnau Casas",
@@ -2312,7 +2328,8 @@
       0
     ],
     "_id": 109,
-    "teamId": 3
+    "teamId": 3,
+    "role": "bench"
   },
   {
     "name": "Rubén Cantero",
@@ -2440,7 +2457,8 @@
       0
     ],
     "_id": 115,
-    "teamId": 3
+    "teamId": 3,
+    "role": "bench"
   },
   {
     "name": "Álvaro Núñez",
@@ -2693,7 +2711,8 @@
       0
     ],
     "_id": 127,
-    "teamId": 3
+    "teamId": 3,
+    "role": "bench"
   },
   {
     "name": "Ilias Akhomach",
@@ -2800,7 +2819,8 @@
       0
     ],
     "_id": 132,
-    "teamId": 3
+    "teamId": 3,
+    "role": "bench"
   },
   {
     "name": "Derek Cuevas",
@@ -2842,7 +2862,8 @@
       0
     ],
     "_id": 134,
-    "teamId": 3
+    "teamId": 3,
+    "role": "bench"
   },
   {
     "name": "Antonio Aranda",
@@ -3076,7 +3097,8 @@
       0
     ],
     "_id": 145,
-    "teamId": 4
+    "teamId": 4,
+    "role": "bench"
   },
   {
     "name": "Lucas Cañizares",
@@ -3308,7 +3330,8 @@
       0
     ],
     "_id": 156,
-    "teamId": 4
+    "teamId": 4,
+    "role": "bench"
   },
   {
     "name": "Dani Carvajal",
@@ -3605,7 +3628,8 @@
       0
     ],
     "_id": 170,
-    "teamId": 4
+    "teamId": 4,
+    "role": "bench"
   },
   {
     "name": "David Jimenez",
@@ -3711,7 +3735,8 @@
       0
     ],
     "_id": 175,
-    "teamId": 4
+    "teamId": 4,
+    "role": "bench"
   },
   {
     "name": "Toni Kroos",
@@ -3732,7 +3757,8 @@
       0
     ],
     "_id": 176,
-    "teamId": 4
+    "teamId": 4,
+    "role": "bench"
   },
   {
     "name": "Rodri",
@@ -3774,7 +3800,8 @@
       0
     ],
     "_id": 178,
-    "teamId": 4
+    "teamId": 4,
+    "role": "bench"
   },
   {
     "name": "Javi Villar",
@@ -3986,7 +4013,8 @@
       0
     ],
     "_id": 188,
-    "teamId": 4
+    "teamId": 4,
+    "role": "bench"
   },
   {
     "name": "Sergio Arribas",

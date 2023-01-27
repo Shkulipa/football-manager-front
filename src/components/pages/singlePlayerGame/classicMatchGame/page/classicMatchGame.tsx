@@ -22,9 +22,8 @@ import {
 	Tactics,
 	TeamsMatch
 } from 'src/components';
-import { useAppDispatch, useAppSelector, useWindowDimensions } from 'src/hooks';
+import { useAppSelector, useWindowDimensions } from 'src/hooks';
 import { IOptionsMatch } from 'src/interfaces';
-import { matchSlice } from 'src/store/slices';
 import { parseTime, vizualizationIteration } from 'src/utils';
 import { gameLength, timeForOneIteration } from 'src/utils/consts';
 
@@ -32,11 +31,7 @@ import { ETabsMenuClassicMatch } from './classicMatchGame.interfaces';
 import styles from './classicMatchGame.module.scss';
 
 export function ClassicMatchGame() {
-	const { pitchSize, hosts, guests, matchDetailsStore } = useAppSelector(
-		s => s.match
-	);
-	const dispatch = useAppDispatch();
-	const { setMatchDetailsStore } = matchSlice.actions;
+	const { pitchSize, hosts, guests } = useAppSelector(s => s.match);
 
 	const { width } = useWindowDimensions();
 	const [tab, setTab] = useState<ETabsMenuClassicMatch>(
@@ -71,6 +66,18 @@ export function ClassicMatchGame() {
 	useEffect(() => {
 		const hostsPlayers = hosts.players
 			.filter(p => p.role === 'main')
+			.map(p => ({
+				name: p.name,
+				number: p.number,
+				position: p.position,
+				startCoordinates: p.position,
+				rating: p.rating,
+				skill: p.skill,
+				startPOS: [p.currentPOS[0], p.currentPOS[1]],
+				currentPOS: [p.currentPOS[0], p.currentPOS[1]],
+				fitness: p.fitness,
+				injured: p.skill
+			}))
 			.sort(function (a, b) {
 				const order = ['GK', 'LB', 'CB', 'RB', 'LM', 'CM', 'RM', 'ST'];
 				return order.indexOf(a.position) - order.indexOf(b.position);
@@ -101,6 +108,7 @@ export function ClassicMatchGame() {
 				position: p.position,
 				rating: p.rating,
 				skill: p.skill,
+				startPOS: [p.currentPOS[0], p.currentPOS[1]], // need fo tactics
 				currentPOS: [p.currentPOS[0], p.currentPOS[1]],
 				fitness: p.fitness,
 				injured: p.skill
@@ -369,7 +377,12 @@ export function ClassicMatchGame() {
 					<TeamsMatch matchDetails={matchDetails} />
 				)}
 
-				{tab === ETabsMenuClassicMatch.TACTICKS && <Tactics />}
+				{tab === ETabsMenuClassicMatch.TACTICKS && (
+					<Tactics
+						matchDetails={matchDetails}
+						setMatchDetails={setMatchDetails}
+					/>
+				)}
 
 				{tab === ETabsMenuClassicMatch.OPTIONS && (
 					<Options

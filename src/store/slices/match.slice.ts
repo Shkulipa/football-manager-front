@@ -15,7 +15,6 @@ interface IInitialState {
 	guests: any | null;
 	playFor: EPlayFor | null;
 	pitchSize: IPitchSize;
-	matchDetailsStore: any;
 }
 
 const initialState: IInitialState = {
@@ -27,9 +26,7 @@ const initialState: IInitialState = {
 		pitchWidth: 680,
 		pitchHeight: 1050,
 		goalWidth: 90
-	},
-
-	matchDetailsStore: null
+	}
 };
 
 export const matchSlice = createSlice({
@@ -47,9 +44,6 @@ export const matchSlice = createSlice({
 		},
 		setPitchSize(state, action: PayloadAction<IPitchSize>) {
 			state.pitchSize = action.payload;
-		},
-		setMatchDetailsStore(state, action: PayloadAction<any>) {
-			state.matchDetailsStore = action.payload;
 		}
 	}
 });

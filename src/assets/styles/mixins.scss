@@ -1,0 +1,7 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/fonts';
+
+@mixin font {
+  font-family: $primaryFont;
+  letter-spacing: 1px;
+}

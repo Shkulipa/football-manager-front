@@ -1,3 +1,4 @@
+import { PlayerField } from '..';
 import cn from 'classnames';
 import { useDrop } from 'react-dnd';
 
@@ -8,26 +9,38 @@ enum EAccept {
 	PLAYER = 'PLAYER'
 }
 
-export function Position({
-	positionData,
-	className,
-	...props
-}: IPositionProps) {
+export function Position({ player, className, ...props }: IPositionProps) {
 	const [{ isOver }, drop] = useDrop(
 		() => ({
 			accept: 'PLAYER',
 			drop: () => {
-				// console.log('droped: ', positionData);
-				return positionData;
+				// console.log('droped: ', player);
+				return player;
 			},
 			collect: monitor => ({
 				isOver: monitor.isOver()
 			})
 		}),
-		[positionData]
+		[player]
 	);
 
+	// is Value ?
+	const { currentPlayer } = player;
+	const circle = currentPlayer && <PlayerField currentPlayer={currentPlayer} />;
+
 	return (
-		<div className={cn(styles.position, className)} ref={drop} {...props} />
+		<div
+			className={cn(
+				styles.position,
+				{
+					[styles.dicoration]: !currentPlayer
+				},
+				className
+			)}
+			ref={drop}
+			{...props}
+		>
+			{circle}
+		</div>
 	);
 }

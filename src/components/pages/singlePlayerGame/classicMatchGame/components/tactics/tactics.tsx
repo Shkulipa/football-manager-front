@@ -4,128 +4,161 @@ import { useAppSelector } from 'src/hooks';
 import { EPlayFor } from 'src/store/slices';
 
 import { Player, Position } from './components';
+import { ITacticsProps } from './tacticks';
 import styles from './tactics.module.scss';
 
-export function Tactics() {
-	const { hosts, guests, pitchSize, playFor, matchDetails } = useAppSelector(
-		s => s.match
-	);
+const step = 30;
 
-	const teamPlayerPlay = playFor === EPlayFor.HOSTS ? hosts : guests;
+export function Tactics({ matchDetails, setMatchDetails }: ITacticsProps) {
+	const { pitchSize, playFor } = useAppSelector(s => s.match);
+
 	const [positions, setPositions] = useState({
 		lst: {
-			role: '',
+			coordinates: [450, 435],
 			currentPlayer: null
 		},
+
 		st: {
-			role: '',
+			coordinates: [325, 435],
 			currentPlayer: null
 		},
 		rst: {
-			role: '',
+			coordinates: [200, 435],
 			currentPlayer: null
 		},
 
 		lw: {
-			role: '',
+			coordinates: [575, 350],
 			currentPlayer: null
 		},
+
 		lam: {
-			role: '',
+			coordinates: [450, 350],
 			currentPlayer: null
 		},
+
 		am: {
-			role: '',
+			coordinates: [325, 350],
 			currentPlayer: null
 		},
+
 		ram: {
-			role: '',
+			coordinates: [250, 350],
 			currentPlayer: null
 		},
+
 		rw: {
-			role: '',
+			coordinates: [75, 350],
 			currentPlayer: null
 		},
 
 		lm: {
-			role: '',
+			coordinates: [575, 265],
 			currentPlayer: null
 		},
+
 		lcm: {
-			role: '',
+			coordinates: [450, 265],
 			currentPlayer: null
 		},
+
 		cm: {
-			role: '',
+			coordinates: [325, 265],
 			currentPlayer: null
 		},
+
 		rcm: {
-			role: '',
+			coordinates: [200, 265],
 			currentPlayer: null
 		},
+
 		rm: {
-			role: '',
+			coordinates: [75, 265],
 			currentPlayer: null
 		},
 
 		lwb: {
-			role: '',
+			coordinates: [575, 175],
 			currentPlayer: null
 		},
+
 		ldm: {
-			role: '',
+			coordinates: [450, 175],
 			currentPlayer: null
 		},
+
 		dm: {
-			role: '',
+			coordinates: [325, 175],
 			currentPlayer: null
 		},
+
 		rdm: {
-			role: '',
+			coordinates: [200, 175],
 			currentPlayer: null
 		},
+
 		rwb: {
-			role: '',
+			coordinates: [75, 175],
 			currentPlayer: null
 		},
 
 		lb: {
-			role: '',
-			currentPlayer: null
-		},
-		cbl: {
-			role: '',
-			currentPlayer: null
-		},
-		cb: {
-			role: '',
-			currentPlayer: null
-		},
-		cbr: {
-			role: '',
-			currentPlayer: null
-		},
-		rb: {
-			role: '',
+			coordinates: [575, 85],
 			currentPlayer: null
 		},
 
-		// [340, 0-30]
+		cbl: {
+			coordinates: [450, 85],
+			currentPlayer: null
+		},
+
+		cb: {
+			coordinates: [325, 85],
+			currentPlayer: null
+		},
+
+		cbr: {
+			coordinates: [200, 85],
+			currentPlayer: null
+		},
+
+		rb: {
+			coordinates: [75, 85],
+			currentPlayer: null
+		},
+
 		gk: {
-			role: '',
+			coordinates: [325, 15],
 			currentPlayer: null
 		}
 	});
 
-	// console.log(matchDetails);
-
 	useLayoutEffect(() => {
-		const mainPlayers = teamPlayerPlay.players.filter(p => p.role === 'main');
-		/* .sort(function (a, b) {
-				const order = ['GK', 'LB', 'CB', 'RB', 'LM', 'CM', 'RM', 'ST'];
-				return order.indexOf(a.position) - order.indexOf(b.position);
-			}); */
-	}, [teamPlayerPlay.players]);
+		const playerTeam =
+			playFor === EPlayFor.HOSTS
+				? matchDetails.secondTeam.players
+				: matchDetails.kickOffTeam.players;
+
+		const playersPosition: any = Object.assign({}, positions);
+
+		playerTeam.forEach(p => {
+			const x = p.startPOS[0];
+			const y = p.startPOS[1];
+
+			for (const [key, value] of Object.entries(positions)) {
+				if (
+					value.coordinates[0] - step <= x &&
+					value.coordinates[0] + step >= x &&
+					value.coordinates[1] - step <= y &&
+					value.coordinates[1] + step >= y
+				) {
+					playersPosition[key].currentPlayer = p;
+				}
+			}
+		});
+
+		setPositions(s => ({ ...s, ...playersPosition }));
+	}, []);
 
 	/* const mainPlayers = teamPlayerPlay.players
 		.filter(p => p.role === 'main')
@@ -135,108 +168,90 @@ export function Tactics() {
 		})
 		.map(p => <Player key={p._id} player={p} />); */
 
-	const sparePlayers = teamPlayerPlay.players
+	/* 	const sparePlayers = teamPlayerPlay.players
 		.filter(p => p.role === 'spare')
 		.map(p => <div key={p._id}>{p.name}</div>);
 	const reservePlayers = teamPlayerPlay.players
 		.filter(p => p.role === 'reserve')
-		.map(p => <div key={p._id}>{p.name}</div>);
+		.map(p => <div key={p._id}>{p.name}</div>); */
 
 	return (
 		<div className={styles.tactics}>
 			<div
 				className={styles.field}
 				style={{
-					width: pitchSize.pitchWidth / 2,
-					height: pitchSize.pitchHeight / 2
+					width: pitchSize.pitchWidth / 1.8,
+					height: pitchSize.pitchHeight / 1.8
 				}}
 			>
 				{/* attackers */}
 				<Position
 					className={cn(styles.st, styles.lst)}
-					positionData={positions.lst}
+					player={positions.lst}
 				/>
-				<Position className={cn(styles.st)} positionData={positions.st} />
+				<Position className={cn(styles.st)} player={positions.st} />
 				<Position
 					className={cn(styles.st, styles.rst)}
-					positionData={positions.rst}
+					player={positions.rst}
 				/>
 
 				{/* attackers midfielders */}
-				<Position
-					className={cn(styles.am, styles.lw)}
-					positionData={positions.lw}
-				/>
+				<Position className={cn(styles.am, styles.lw)} player={positions.lw} />
 				<Position
 					className={cn(styles.am, styles.lam)}
-					positionData={positions.lam}
+					player={positions.lam}
 				/>
-				<Position className={cn(styles.am)} positionData={positions.am} />
+				<Position className={cn(styles.am)} player={positions.am} />
 				<Position
 					className={cn(styles.am, styles.ram)}
-					positionData={positions.ram}
+					player={positions.ram}
 				/>
-				<Position
-					className={cn(styles.am, styles.rw)}
-					positionData={positions.rw}
-				/>
+				<Position className={cn(styles.am, styles.rw)} player={positions.rw} />
 
 				{/* midfielders */}
-				<Position
-					className={cn(styles.cm, styles.lm)}
-					positionData={positions.lm}
-				/>
+				<Position className={cn(styles.cm, styles.lm)} player={positions.lm} />
 				<Position
 					className={cn(styles.cm, styles.lcm)}
-					positionData={positions.lcm}
+					player={positions.lcm}
 				/>
-				<Position className={cn(styles.cm)} positionData={positions.cm} />
+				<Position className={cn(styles.cm)} player={positions.cm} />
 				<Position
 					className={cn(styles.cm, styles.rcm)}
-					positionData={positions.rcm}
+					player={positions.rcm}
 				/>
-				<Position
-					className={cn(styles.cm, styles.rm)}
-					positionData={positions.rm}
-				/>
+				<Position className={cn(styles.cm, styles.rm)} player={positions.rm} />
 
 				{/* between midfielders & deffenders */}
 				<Position
 					className={cn(styles.dm, styles.lwb)}
-					positionData={positions.lwb}
+					player={positions.lwb}
 				/>
 				<Position
 					className={cn(styles.dm, styles.ldm)}
-					positionData={positions.ldm}
+					player={positions.ldm}
 				/>
-				<Position className={cn(styles.dm)} positionData={positions.dm} />
+				<Position className={cn(styles.dm)} player={positions.dm} />
 				<Position
 					className={cn(styles.dm, styles.rdm)}
-					positionData={positions.rdm}
+					player={positions.rdm}
 				/>
 				<Position
 					className={cn(styles.dm, styles.rwb)}
-					positionData={positions.rwb}
+					player={positions.rwb}
 				/>
 
 				{/* defenders */}
-				<Position
-					className={cn(styles.cb, styles.lb)}
-					positionData={positions.lb}
-				/>
+				<Position className={cn(styles.cb, styles.lb)} player={positions.lb} />
 				<Position
 					className={cn(styles.cb, styles.cbl)}
-					positionData={positions.cbl}
+					player={positions.cbl}
 				/>
-				<Position className={cn(styles.cb)} positionData={positions.cb} />
+				<Position className={cn(styles.cb)} player={positions.cb} />
 				<Position
 					className={cn(styles.cb, styles.cbr)}
-					positionData={positions.cbr}
+					player={positions.cbr}
 				/>
-				<Position
-					className={cn(styles.cb, styles.rb)}
-					positionData={positions.rb}
-				/>
+				<Position className={cn(styles.cb, styles.rb)} player={positions.rb} />
 
 				{/* goalkeeper */}
 				<Position
@@ -244,7 +259,7 @@ export function Tactics() {
 						[styles.gkAdvanced]: false,
 						[styles.gkDrawn]: false
 					})}
-					positionData={positions.gk}
+					player={positions.gk}
 				/>
 			</div>
 
