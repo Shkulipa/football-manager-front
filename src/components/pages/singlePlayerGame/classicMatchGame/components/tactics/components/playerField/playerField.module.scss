@@ -30,3 +30,7 @@ $size: 45px;
   text-align: center;
   pointer-events: none;
 }
+
+.isDragging {
+  opacity: 0.4;
+}

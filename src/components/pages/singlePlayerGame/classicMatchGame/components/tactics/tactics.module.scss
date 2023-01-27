@@ -75,14 +75,6 @@ $goalKeepersBottom: calc($sizeForLine / 1.9);
   left: $middlePlayersLeft;
 }
 
-.gkAdvanced {
-  bottom: calc($sizeForLine);
-}
-
-.gkDrawn {
-  bottom: 0;
-}
-
 // common
 .cbl, .lcm, .lst, .ldm, .lam {
   left: $betweenExtremeAndMiddlePosition;

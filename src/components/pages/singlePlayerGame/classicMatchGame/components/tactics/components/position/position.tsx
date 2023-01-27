@@ -9,31 +9,36 @@ enum EAccept {
 	PLAYER = 'PLAYER'
 }
 
-export function Position({ player, className, ...props }: IPositionProps) {
+export function Position({
+	player,
+	className,
+	setPositions,
+	...props
+}: IPositionProps) {
 	const [{ isOver }, drop] = useDrop(
 		() => ({
 			accept: 'PLAYER',
-			drop: () => {
-				// console.log('droped: ', player);
-				return player;
-			},
+			drop: () => player,
 			collect: monitor => ({
 				isOver: monitor.isOver()
 			})
 		}),
-		[player]
+		[]
 	);
 
 	// is Value ?
 	const { currentPlayer } = player;
-	const circle = currentPlayer && <PlayerField currentPlayer={currentPlayer} />;
+	const circle = currentPlayer && (
+		<PlayerField currentPlayer={currentPlayer} setPositions={setPositions} />
+	);
 
 	return (
 		<div
 			className={cn(
 				styles.position,
 				{
-					[styles.dicoration]: !currentPlayer
+					[styles.dicoration]: !currentPlayer,
+					[styles.isOver]: isOver
 				},
 				className
 			)}

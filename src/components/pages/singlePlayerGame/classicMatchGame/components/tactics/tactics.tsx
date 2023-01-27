@@ -189,7 +189,11 @@ export function Tactics({ matchDetails, setMatchDetails }: ITacticsProps) {
 					className={cn(styles.st, styles.lst)}
 					player={positions.lst}
 				/>
-				<Position className={cn(styles.st)} player={positions.st} />
+				<Position
+					className={cn(styles.st)}
+					player={positions.st}
+					setPositions={setPositions}
+				/>
 				<Position
 					className={cn(styles.st, styles.rst)}
 					player={positions.rst}

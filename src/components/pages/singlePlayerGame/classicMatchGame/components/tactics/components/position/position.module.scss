@@ -16,3 +16,7 @@ $size: 45px;
   border: 2px solid $white;
   box-shadow: calc($size / 15) calc($size / 15) 2px 0 rgba($color: $black, $alpha: 35%);
 }
+
+.isOver {
+  transform: translate(-50%, 50%) scale(1.2);
+}
