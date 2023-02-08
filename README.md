@@ -1,3 +1,13 @@
+# Install
+```
+yarn
+```
+
+# Run
+```
+yarn dev
+```
+
 # Info
 1. teams were taken from: https://www.whoscored.com
 2. skills from and info about players: https://www.fmscout.com/club/arsenal.html
