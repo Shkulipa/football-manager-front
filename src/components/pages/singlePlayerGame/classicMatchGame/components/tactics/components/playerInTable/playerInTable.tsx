@@ -90,21 +90,23 @@ export function PlayerInTable({
 						});
 
 						const getUserTeam = userFor === EUserFor.HOSTS ? hosts : guests;
-						const updatedInitialPlayers = getUserTeam.players.map(player => {
-							if (dropedItem._id === player._id) {
-								return {
-									...player,
-									isChanged: true,
-									fitness: dropResult.currentPlayer.fitness,
-									name: dropResult.currentPlayer.name,
-									number: dropResult.currentPlayer.number,
-									rating: dropResult.currentPlayer.rating,
-									skill: dropResult.currentPlayer.skill
-								};
-							}
+						const updatedInitialPlayers = getUserTeam.players.map(
+							(player: any) => {
+								if (dropedItem._id === player._id) {
+									return {
+										...player,
+										isChanged: true,
+										fitness: dropResult.currentPlayer.fitness,
+										name: dropResult.currentPlayer.name,
+										number: dropResult.currentPlayer.number,
+										rating: dropResult.currentPlayer.rating,
+										skill: dropResult.currentPlayer.skill
+									};
+								}
 
-							return player;
-						});
+								return player;
+							}
+						);
 						const updatedInitialTeam = {
 							...getUserTeam,
 							players: updatedInitialPlayers

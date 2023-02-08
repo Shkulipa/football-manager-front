@@ -178,7 +178,7 @@ export function Tactics() {
 
 	useEffect(() => {
 		const playersPosition: any = JSON.parse(JSON.stringify(initPositions));
-		userTeam.players.forEach(p => {
+		userTeam.players.forEach((p: any) => {
 			const x = p.originPOS[0];
 			const y = p.originPOS[1];
 
@@ -219,7 +219,7 @@ export function Tactics() {
 	const positionsInArr = Object.values(positions);
 	const positionTaken = positionsInArr
 		.filter(val => val.currentPlayer)
-		.sort(function (a, b) {
+		.sort(function (a: any, b: any) {
 			const order = ['GK', 'LB', 'CB', 'RB', 'LM', 'CM', 'RM', 'ST'];
 			return (
 				order.indexOf(a.currentPlayer.position) -
@@ -232,8 +232,8 @@ export function Tactics() {
 
 	const getUserTeam = userFor === EUserFor.HOSTS ? hosts : guests;
 	const benchPlayers = getUserTeam.players
-		.filter(p => p.role === 'bench')
-		.map(p => <PlayerInTable key={p._id} currentPlayer={p} />);
+		.filter((p: any) => p.role === 'bench')
+		.map((p: any) => <PlayerInTable key={p._id} currentPlayer={p} />);
 
 	return (
 		<div className={styles.tactics}>

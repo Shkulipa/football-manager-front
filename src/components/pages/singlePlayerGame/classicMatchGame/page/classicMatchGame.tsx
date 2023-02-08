@@ -65,8 +65,8 @@ export function ClassicMatchGame() {
 	 */
 	useEffect(() => {
 		const hostsPlayers = hosts.players
-			.filter(p => p.role === 'main')
-			.map(p => ({
+			.filter((p: any) => p.role === 'main')
+			.map((p: any) => ({
 				name: p.name,
 				number: p.number,
 				position: p.position,
@@ -77,7 +77,7 @@ export function ClassicMatchGame() {
 				fitness: p.fitness,
 				injured: p.skill
 			}))
-			.sort(function (a, b) {
+			.sort(function (a: any, b: any) {
 				const order = ['GK', 'LB', 'CB', 'RB', 'LM', 'CM', 'RM', 'ST'];
 				return order.indexOf(a.position) - order.indexOf(b.position);
 			});
@@ -100,8 +100,8 @@ export function ClassicMatchGame() {
 		};
 
 		const guestPlayers = guests.players
-			.filter(p => p.role === 'main')
-			.map(p => ({
+			.filter((p: any) => p.role === 'main')
+			.map((p: any) => ({
 				name: p.name,
 				number: p.number,
 				position: p.position,
@@ -111,7 +111,7 @@ export function ClassicMatchGame() {
 				fitness: p.fitness,
 				injured: p.skill
 			}))
-			.sort(function (a, b) {
+			.sort(function (a: any, b: any) {
 				const order = ['GK', 'LB', 'CB', 'RB', 'LM', 'CM', 'RM', 'ST'];
 				return order.indexOf(a.position) - order.indexOf(b.position);
 			});

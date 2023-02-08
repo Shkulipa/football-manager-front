@@ -31,7 +31,7 @@ export function useFirstInit({
 		);
 		setTeamCountry(countryteam);
 		setTeamLeague(leagueteam);
-		setTeamsFromCurrentLeague(teamsFromCurrentLeague);
-		handlerTeam(teamsFromCurrentLeague[0]);
+		setTeamsFromCurrentLeague(teamsFromCurrentLeague as any);
+		handlerTeam(teamsFromCurrentLeague[0] as any);
 	}, []);
 }

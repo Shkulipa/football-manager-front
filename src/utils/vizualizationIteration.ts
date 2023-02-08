@@ -1,8 +1,10 @@
+import ball from 'src/assets/images/logo/logo-350x350.png';
+
 import { IOptionsMatch } from './../interfaces/optionsMatch';
 import { radiusItems } from './consts';
 
 const imageBall = new Image();
-imageBall.src = 'src/assets/images/logo/logo-350x350.png';
+imageBall.src = ball;
 
 function canvas_arrow(ctx: any, fromx: any, fromy: any, tox: any, toy: any) {
 	const headlen = 8; // length of head in pixels

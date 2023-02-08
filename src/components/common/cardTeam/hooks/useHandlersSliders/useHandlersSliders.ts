@@ -79,8 +79,8 @@ export function useHandlersSliders({
 		 * pick a new team
 		 */
 		const teamsFromNewLeague = teams.filter(t => t.leagueId === newLeague?._id);
-		setTeamsFromCurrentLeague(teamsFromNewLeague);
-		handlerTeam(teamsFromNewLeague[0]);
+		setTeamsFromCurrentLeague(teamsFromNewLeague as any);
+		handlerTeam(teamsFromNewLeague[0] as any);
 	};
 
 	/**
@@ -129,8 +129,8 @@ export function useHandlersSliders({
 		 * set new team from new league
 		 */
 		const teamsFromNewLeague = teams.filter(t => t.leagueId === newLeague?._id);
-		setTeamsFromCurrentLeague(teamsFromNewLeague);
-		handlerTeam(teamsFromNewLeague[0]);
+		setTeamsFromCurrentLeague(teamsFromNewLeague as any);
+		handlerTeam(teamsFromNewLeague[0] as any);
 	};
 
 	/**
