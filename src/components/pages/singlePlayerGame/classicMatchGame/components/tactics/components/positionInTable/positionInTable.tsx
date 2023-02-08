@@ -1,4 +1,4 @@
-import { PlayerInField, PlayerInTable } from '..';
+import { PlayerInTable } from '..';
 import cn from 'classnames';
 import { useDrop } from 'react-dnd';
 

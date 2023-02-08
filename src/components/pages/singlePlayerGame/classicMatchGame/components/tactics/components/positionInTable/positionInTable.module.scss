@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables';
+
+.positionInTabe {
+  transition: $transition;
+
+  &.isOver {
+    overflow: hidden;
+    background-color: $green;
+    border-radius: 12px;
+  }
+}

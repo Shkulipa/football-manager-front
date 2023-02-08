@@ -20,7 +20,7 @@ const MemoTitle = memo(Htag);
 
 export function ClassicMatch() {
 	const navigate = useNavigate();
-	const { hosts, guests, userFor } = useAppSelector(s => s.match);
+	const { userFor } = useAppSelector(s => s.match);
 	const dispatch = useAppDispatch();
 	const { setGuests, setHosts, setUserFor } = matchSlice.actions;
 
