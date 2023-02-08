@@ -1,3 +1,5 @@
 export * from './position/position';
-export * from './playerField/playerField';
-export * from './player/player';
+export * from './playerInField/playerInField';
+export * from './playerInTable/playerInTable';
+export * from './positionInTable/positionInTable';
+export * from './tableTitles/tableTitles';

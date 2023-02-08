@@ -11,9 +11,6 @@ export function Home(): JSX.Element {
 					<Menus />
 				</div>
 			</div>
-
-			{/* line from the right of background*/}
-			<div className={styles.path} />
 		</div>
 	);
 }

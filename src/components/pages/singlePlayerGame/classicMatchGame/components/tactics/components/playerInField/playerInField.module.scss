@@ -20,11 +20,11 @@ $size: 45px;
 }
 
 .content {
-  $textSize: $sTextSize / 1.12;
+  $textSize: calc($sTextSize / 1.12);
 
   position: absolute;
   bottom: 125%;
-  font-size: calc($textSize);
+  font-size: $textSize;
   line-height: $textSize;
   color: $black;
   text-align: center;

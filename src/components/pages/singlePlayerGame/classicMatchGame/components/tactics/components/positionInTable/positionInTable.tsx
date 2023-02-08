@@ -1,11 +1,15 @@
-import { PlayerInField } from '..';
+import { PlayerInField, PlayerInTable } from '..';
 import cn from 'classnames';
 import { useDrop } from 'react-dnd';
 
-import { IPositionProps } from './position.interfaces';
-import styles from './position.module.scss';
+import { IPositionInTableProps } from './positionInTable.interfaces';
+import styles from './positionInTable.module.scss';
 
-export function Position({ position, className, ...props }: IPositionProps) {
+export function PositionInTable({
+	position,
+	className,
+	...props
+}: IPositionInTableProps) {
 	const { currentPlayer } = position;
 
 	const [{ isOver }, drop] = useDrop(
@@ -21,15 +25,14 @@ export function Position({ position, className, ...props }: IPositionProps) {
 
 	// is Value ?
 	const circle = currentPlayer && (
-		<PlayerInField currentPlayer={currentPlayer} />
+		<PlayerInTable currentPlayer={currentPlayer} />
 	);
 
 	return (
 		<div
 			className={cn(
-				styles.position,
+				styles.positionInTabe,
 				{
-					[styles.dicoration]: !currentPlayer,
 					[styles.isOver]: isOver
 				},
 				className

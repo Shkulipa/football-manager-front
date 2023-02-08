@@ -7,7 +7,7 @@ export function LogoHome(): JSX.Element {
 		<div className={styles.logoHome}>
 			<img className={styles.logoHomeImg} src={logoHome} alt="logo-home" />
 			<div className={styles.logoHomeText}>
-				Soccer
+				Football
 				<br />
 				Manager
 			</div>

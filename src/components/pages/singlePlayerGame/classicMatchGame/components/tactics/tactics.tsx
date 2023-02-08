@@ -1,276 +1,363 @@
 import cn from 'classnames';
-import { useLayoutEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { useAppSelector } from 'src/hooks';
-import { EPlayFor } from 'src/store/slices';
+import { EUserFor } from 'src/store/slices';
 
-import { Player, Position } from './components';
-import { ITacticsProps } from './tacticks';
+import {
+	PlayerInTable,
+	Position,
+	PositionInTable,
+	TableTitles
+} from './components';
 import styles from './tactics.module.scss';
 
 const step = 30;
 
-export function Tactics({ matchDetails, setMatchDetails }: ITacticsProps) {
-	const { pitchSize, playFor } = useAppSelector(s => s.match);
+const initPositions = {
+	lst: {
+		position: 'ST',
+		coordinates: [455, 435],
+		currentPlayer: null
+	},
 
-	const [positions, setPositions] = useState({
-		lst: {
-			coordinates: [450, 435],
-			currentPlayer: null
-		},
+	st: {
+		position: 'ST',
+		coordinates: [325, 435],
+		currentPlayer: null
+	},
+	rst: {
+		position: 'ST',
+		coordinates: [195, 435],
+		currentPlayer: null
+	},
 
-		st: {
-			coordinates: [325, 435],
-			currentPlayer: null
-		},
-		rst: {
-			coordinates: [200, 435],
-			currentPlayer: null
-		},
+	/* attackers midfielders */
+	lw: {
+		position: 'RL',
+		coordinates: [585, 350],
+		currentPlayer: null
+	},
 
-		lw: {
-			coordinates: [575, 350],
-			currentPlayer: null
-		},
+	lam: {
+		position: 'CM',
+		coordinates: [455, 350],
+		currentPlayer: null
+	},
 
-		lam: {
-			coordinates: [450, 350],
-			currentPlayer: null
-		},
+	am: {
+		position: 'CM',
+		coordinates: [325, 350],
+		currentPlayer: null
+	},
 
-		am: {
-			coordinates: [325, 350],
-			currentPlayer: null
-		},
+	ram: {
+		position: 'CM',
+		coordinates: [250, 350],
+		currentPlayer: null
+	},
 
-		ram: {
-			coordinates: [250, 350],
-			currentPlayer: null
-		},
+	rw: {
+		position: 'RM',
+		coordinates: [65, 350],
+		currentPlayer: null
+	},
 
-		rw: {
-			coordinates: [75, 350],
-			currentPlayer: null
-		},
+	/* midfielders */
+	lm: {
+		position: 'LM',
+		coordinates: [585, 265],
+		currentPlayer: null
+	},
 
-		lm: {
-			coordinates: [575, 265],
-			currentPlayer: null
-		},
+	lcm: {
+		position: 'CM',
+		coordinates: [455, 265],
+		currentPlayer: null
+	},
 
-		lcm: {
-			coordinates: [450, 265],
-			currentPlayer: null
-		},
+	cm: {
+		position: 'CM',
+		coordinates: [325, 265],
+		currentPlayer: null
+	},
 
-		cm: {
-			coordinates: [325, 265],
-			currentPlayer: null
-		},
+	rcm: {
+		position: 'CM',
+		coordinates: [195, 265],
+		currentPlayer: null
+	},
 
-		rcm: {
-			coordinates: [200, 265],
-			currentPlayer: null
-		},
+	rm: {
+		position: 'RM',
+		coordinates: [65, 265],
+		currentPlayer: null
+	},
 
-		rm: {
-			coordinates: [75, 265],
-			currentPlayer: null
-		},
+	/* between midfielders & deffenders */
+	lwb: {
+		position: 'LB',
+		coordinates: [585, 175],
+		currentPlayer: null
+	},
 
-		lwb: {
-			coordinates: [575, 175],
-			currentPlayer: null
-		},
+	ldm: {
+		position: 'CB',
+		coordinates: [455, 175],
+		currentPlayer: null
+	},
 
-		ldm: {
-			coordinates: [450, 175],
-			currentPlayer: null
-		},
+	dm: {
+		position: 'CB',
+		coordinates: [325, 175],
+		currentPlayer: null
+	},
 
-		dm: {
-			coordinates: [325, 175],
-			currentPlayer: null
-		},
+	rdm: {
+		position: 'CB',
+		coordinates: [195, 175],
+		currentPlayer: null
+	},
 
-		rdm: {
-			coordinates: [200, 175],
-			currentPlayer: null
-		},
+	rwb: {
+		position: 'RB',
+		coordinates: [65, 175],
+		currentPlayer: null
+	},
 
-		rwb: {
-			coordinates: [75, 175],
-			currentPlayer: null
-		},
+	// defenders
+	lb: {
+		position: 'LB',
+		coordinates: [585, 85],
+		currentPlayer: null
+	},
 
-		lb: {
-			coordinates: [575, 85],
-			currentPlayer: null
-		},
+	cbl: {
+		position: 'CB',
+		coordinates: [455, 85],
+		currentPlayer: null
+	},
 
-		cbl: {
-			coordinates: [450, 85],
-			currentPlayer: null
-		},
+	cb: {
+		position: 'CB',
+		coordinates: [325, 85],
+		currentPlayer: null
+	},
 
-		cb: {
-			coordinates: [325, 85],
-			currentPlayer: null
-		},
+	cbr: {
+		position: 'CB',
+		coordinates: [195, 85],
+		currentPlayer: null
+	},
 
-		cbr: {
-			coordinates: [200, 85],
-			currentPlayer: null
-		},
+	rb: {
+		position: 'RB',
+		coordinates: [65, 85],
+		currentPlayer: null
+	},
 
-		rb: {
-			coordinates: [75, 85],
-			currentPlayer: null
-		},
+	gk: {
+		position: 'GK',
+		coordinates: [325, 15],
+		currentPlayer: null
+	}
+};
 
-		gk: {
-			coordinates: [325, 15],
-			currentPlayer: null
-		}
-	});
+const TableTitlesMemo = memo(TableTitles);
 
-	useLayoutEffect(() => {
-		const playerTeam =
-			playFor === EPlayFor.HOSTS
-				? matchDetails.secondTeam.players
-				: matchDetails.kickOffTeam.players;
+export function Tactics() {
+	const { hosts, guests, pitchSize, userFor, matchDetails } = useAppSelector(
+		s => s.match
+	);
 
-		const playersPosition: any = Object.assign({}, positions);
+	const [positions, setPositions] = useState(initPositions);
 
-		playerTeam.forEach(p => {
-			const x = p.startPOS[0];
-			const y = p.startPOS[1];
+	const userTeam =
+		userFor === EUserFor.HOSTS
+			? matchDetails.secondTeam
+			: matchDetails.kickOffTeam;
 
-			for (const [key, value] of Object.entries(positions)) {
-				if (
-					value.coordinates[0] - step <= x &&
-					value.coordinates[0] + step >= x &&
-					value.coordinates[1] - step <= y &&
-					value.coordinates[1] + step >= y
-				) {
-					playersPosition[key].currentPlayer = p;
+	useEffect(() => {
+		const playersPosition: any = JSON.parse(JSON.stringify(initPositions));
+		userTeam.players.forEach(p => {
+			const x = p.originPOS[0];
+			const y = p.originPOS[1];
+
+			if (userFor === EUserFor.HOSTS) {
+				const halfPitchHeight = pitchSize.pitchHeight / 2;
+
+				for (const [key, value] of Object.entries(initPositions)) {
+					const yHosts = value.coordinates[1];
+					const parseYPosition = halfPitchHeight - yHosts;
+					const yHostsPosition = halfPitchHeight + parseYPosition;
+
+					if (
+						value.coordinates[0] - step <= x &&
+						value.coordinates[0] + step >= x &&
+						yHostsPosition - step <= y &&
+						yHostsPosition + step >= y
+					) {
+						playersPosition[key].currentPlayer = p;
+					}
+				}
+			} else {
+				for (const [key, value] of Object.entries(initPositions)) {
+					if (
+						value.coordinates[0] - step <= x &&
+						value.coordinates[0] + step >= x &&
+						value.coordinates[1] - step <= y &&
+						value.coordinates[1] + step >= y
+					) {
+						playersPosition[key].currentPlayer = p;
+					}
 				}
 			}
 		});
 
-		setPositions(s => ({ ...s, ...playersPosition }));
-	}, []);
+		setPositions(playersPosition);
+	}, [userTeam.players]);
 
-	/* const mainPlayers = teamPlayerPlay.players
-		.filter(p => p.role === 'main')
+	const positionsInArr = Object.values(positions);
+	const positionTaken = positionsInArr
+		.filter(val => val.currentPlayer)
 		.sort(function (a, b) {
 			const order = ['GK', 'LB', 'CB', 'RB', 'LM', 'CM', 'RM', 'ST'];
-			return order.indexOf(a.position) - order.indexOf(b.position);
-		})
-		.map(p => <Player key={p._id} player={p} />); */
+			return (
+				order.indexOf(a.currentPlayer.position) -
+				order.indexOf(b.currentPlayer.position)
+			);
+		});
+	const mainPlayers = positionTaken.map((position, index) => (
+		<PositionInTable key={index} position={position} />
+	));
 
-	/* 	const sparePlayers = teamPlayerPlay.players
-		.filter(p => p.role === 'spare')
-		.map(p => <div key={p._id}>{p.name}</div>);
-	const reservePlayers = teamPlayerPlay.players
-		.filter(p => p.role === 'reserve')
-		.map(p => <div key={p._id}>{p.name}</div>); */
+	const getUserTeam = userFor === EUserFor.HOSTS ? hosts : guests;
+	const benchPlayers = getUserTeam.players
+		.filter(p => p.role === 'bench')
+		.map(p => <PlayerInTable key={p._id} currentPlayer={p} />);
 
 	return (
 		<div className={styles.tactics}>
-			<div
-				className={styles.field}
-				style={{
-					width: pitchSize.pitchWidth / 1.8,
-					height: pitchSize.pitchHeight / 1.8
-				}}
-			>
-				{/* attackers */}
-				<Position
-					className={cn(styles.st, styles.lst)}
-					player={positions.lst}
-				/>
-				<Position
-					className={cn(styles.st)}
-					player={positions.st}
-					setPositions={setPositions}
-				/>
-				<Position
-					className={cn(styles.st, styles.rst)}
-					player={positions.rst}
-				/>
+			<div className={styles.title}>{userTeam.name}</div>
 
-				{/* attackers midfielders */}
-				<Position className={cn(styles.am, styles.lw)} player={positions.lw} />
-				<Position
-					className={cn(styles.am, styles.lam)}
-					player={positions.lam}
-				/>
-				<Position className={cn(styles.am)} player={positions.am} />
-				<Position
-					className={cn(styles.am, styles.ram)}
-					player={positions.ram}
-				/>
-				<Position className={cn(styles.am, styles.rw)} player={positions.rw} />
+			<div className={styles.content}>
+				<div
+					className={styles.field}
+					style={{
+						width: pitchSize.pitchWidth / 1.8,
+						height: pitchSize.pitchHeight / 1.8
+					}}
+				>
+					{/* attackers */}
+					<Position
+						className={cn(styles.st, styles.lst)}
+						position={positions.lst}
+					/>
+					<Position className={cn(styles.st)} position={positions.st} />
+					<Position
+						className={cn(styles.st, styles.rst)}
+						position={positions.rst}
+					/>
 
-				{/* midfielders */}
-				<Position className={cn(styles.cm, styles.lm)} player={positions.lm} />
-				<Position
-					className={cn(styles.cm, styles.lcm)}
-					player={positions.lcm}
-				/>
-				<Position className={cn(styles.cm)} player={positions.cm} />
-				<Position
-					className={cn(styles.cm, styles.rcm)}
-					player={positions.rcm}
-				/>
-				<Position className={cn(styles.cm, styles.rm)} player={positions.rm} />
+					{/* attackers midfielders */}
+					<Position
+						className={cn(styles.am, styles.lw)}
+						position={positions.lw}
+					/>
+					<Position
+						className={cn(styles.am, styles.lam)}
+						position={positions.lam}
+					/>
+					<Position className={cn(styles.am)} position={positions.am} />
+					<Position
+						className={cn(styles.am, styles.ram)}
+						position={positions.ram}
+					/>
+					<Position
+						className={cn(styles.am, styles.rw)}
+						position={positions.rw}
+					/>
 
-				{/* between midfielders & deffenders */}
-				<Position
-					className={cn(styles.dm, styles.lwb)}
-					player={positions.lwb}
-				/>
-				<Position
-					className={cn(styles.dm, styles.ldm)}
-					player={positions.ldm}
-				/>
-				<Position className={cn(styles.dm)} player={positions.dm} />
-				<Position
-					className={cn(styles.dm, styles.rdm)}
-					player={positions.rdm}
-				/>
-				<Position
-					className={cn(styles.dm, styles.rwb)}
-					player={positions.rwb}
-				/>
+					{/* midfielders */}
+					<Position
+						className={cn(styles.cm, styles.lm)}
+						position={positions.lm}
+					/>
+					<Position
+						className={cn(styles.cm, styles.lcm)}
+						position={positions.lcm}
+					/>
+					<Position className={cn(styles.cm)} position={positions.cm} />
+					<Position
+						className={cn(styles.cm, styles.rcm)}
+						position={positions.rcm}
+					/>
+					<Position
+						className={cn(styles.cm, styles.rm)}
+						position={positions.rm}
+					/>
 
-				{/* defenders */}
-				<Position className={cn(styles.cb, styles.lb)} player={positions.lb} />
-				<Position
-					className={cn(styles.cb, styles.cbl)}
-					player={positions.cbl}
-				/>
-				<Position className={cn(styles.cb)} player={positions.cb} />
-				<Position
-					className={cn(styles.cb, styles.cbr)}
-					player={positions.cbr}
-				/>
-				<Position className={cn(styles.cb, styles.rb)} player={positions.rb} />
+					{/* between midfielders & deffenders */}
+					<Position
+						className={cn(styles.dm, styles.lwb)}
+						position={positions.lwb}
+					/>
+					<Position
+						className={cn(styles.dm, styles.ldm)}
+						position={positions.ldm}
+					/>
+					<Position className={cn(styles.dm)} position={positions.dm} />
+					<Position
+						className={cn(styles.dm, styles.rdm)}
+						position={positions.rdm}
+					/>
+					<Position
+						className={cn(styles.dm, styles.rwb)}
+						position={positions.rwb}
+					/>
 
-				{/* goalkeeper */}
-				<Position
-					className={cn(styles.gk, {
-						[styles.gkAdvanced]: false,
-						[styles.gkDrawn]: false
-					})}
-					player={positions.gk}
-				/>
-			</div>
+					{/* defenders */}
+					<Position
+						className={cn(styles.cb, styles.lb)}
+						position={positions.lb}
+					/>
+					<Position
+						className={cn(styles.cb, styles.cbl)}
+						position={positions.cbl}
+					/>
+					<Position className={cn(styles.cb)} position={positions.cb} />
+					<Position
+						className={cn(styles.cb, styles.cbr)}
+						position={positions.cbr}
+					/>
+					<Position
+						className={cn(styles.cb, styles.rb)}
+						position={positions.rb}
+					/>
 
-			<div className={styles.team}>
-				{/* {mainPlayers} */}
-				{/* {sparePlayers}
-				{reservePlayers} */}
+					{/* goalkeeper */}
+					<Position
+						className={cn(styles.gk, {
+							[styles.gkAdvanced]: false,
+							[styles.gkDrawn]: false
+						})}
+						position={positions.gk}
+					/>
+				</div>
+
+				{/* https://www.cssportal.com/style-input-range/  for ranges inputs */}
+
+				<div className={styles.players}>
+					<div className={styles.playersTable}>
+						<div className={styles.player}>Main</div>
+						<TableTitlesMemo />
+						{mainPlayers}
+					</div>
+
+					<div className={styles.playersTable}>
+						<div className={styles.player}>Bench</div>
+						{benchPlayers}
+					</div>
+				</div>
 			</div>
 		</div>
 	);

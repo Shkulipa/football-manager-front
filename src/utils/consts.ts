@@ -2,7 +2,7 @@
  * @info
  * using for matches
  */
-export const gameLength = 14000;
+export const gameLength = 12002;
 export const timeForOneIteration = 5400 / gameLength;
 export const radiusItems = 18;
 export const pitchJSON = {

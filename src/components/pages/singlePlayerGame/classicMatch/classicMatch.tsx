@@ -12,7 +12,7 @@ import {
 } from 'src/components';
 import { useAppDispatch, useAppSelector } from 'src/hooks';
 import { ITeam } from 'src/interfaces';
-import { EPlayFor, matchSlice } from 'src/store/slices';
+import { EUserFor, matchSlice } from 'src/store/slices';
 
 import styles from './classicMatch.module.scss';
 
@@ -20,9 +20,9 @@ const MemoTitle = memo(Htag);
 
 export function ClassicMatch() {
 	const navigate = useNavigate();
-	const { hosts, guests, playFor } = useAppSelector(s => s.match);
+	const { hosts, guests, userFor } = useAppSelector(s => s.match);
 	const dispatch = useAppDispatch();
-	const { setGuests, setHosts, setPlayFor } = matchSlice.actions;
+	const { setGuests, setHosts, setUserFor } = matchSlice.actions;
 
 	const [hostsLocal, setHostsLocal] = useState<ITeam>();
 	const [guestsLocal, setGuestsLocal] = useState<ITeam>();
@@ -35,9 +35,9 @@ export function ClassicMatch() {
 		setGuestsLocal(guests);
 	};
 
-	const handlerMove = (team: EPlayFor) => {
-		if (!playFor) dispatch(setPlayFor(team));
-		else dispatch(setPlayFor(null));
+	const handlerMove = (team: EUserFor) => {
+		if (!userFor) dispatch(setUserFor(team));
+		else dispatch(setUserFor(null));
 	};
 
 	const handlerPlay = () => {
@@ -99,7 +99,7 @@ export function ClassicMatch() {
 		navigate('/classic-match-game');
 	};
 
-	const isAvailablePlay = playFor ? (
+	const isAvailablePlay = userFor ? (
 		<Button onClick={handlerPlay}>Play</Button>
 	) : (
 		<Gamepad className={styles.gamepad} />
@@ -131,24 +131,24 @@ export function ClassicMatch() {
 
 						<div className={styles.playWrapper}>
 							<div className={styles.hosts}>
-								{playFor === EPlayFor.HOSTS && (
+								{userFor === EUserFor.HOSTS && (
 									<Gamepad className={styles.gamepad} />
 								)}
 							</div>
 							<div className={styles.manage}>
 								<ArrowSlider
-									onClick={() => handlerMove(EPlayFor.HOSTS)}
+									onClick={() => handlerMove(EUserFor.HOSTS)}
 									isFlip
-									isDisabled={playFor === EPlayFor.HOSTS}
+									isDisabled={userFor === EUserFor.HOSTS}
 								/>
 								<div className={styles.isAvailablePlay}>{isAvailablePlay}</div>
 								<ArrowSlider
-									onClick={() => handlerMove(EPlayFor.GUESTS)}
-									isDisabled={playFor === EPlayFor.GUESTS}
+									onClick={() => handlerMove(EUserFor.GUESTS)}
+									isDisabled={userFor === EUserFor.GUESTS}
 								/>
 							</div>
 							<div className={styles.guests}>
-								{playFor === EPlayFor.GUESTS && (
+								{userFor === EUserFor.GUESTS && (
 									<Gamepad className={styles.gamepad} />
 								)}
 							</div>

@@ -115,12 +115,12 @@
       "saving": 5,
       "tackling": 72,
       "agility": 80,
-      "strength": 75,
+      "strength": 65,
       "penalty_taking": 11,
       "jumping": 59
     },
     "currentPOS": [
-      75,
+      65,
       175
     ],
     "_id": 6,
@@ -163,7 +163,7 @@
       "jumping": 84
     },
     "currentPOS": [
-      575,
+      585,
       175
     ],
     "_id": 8,
@@ -207,7 +207,7 @@
       "jumping": 86
     },
     "currentPOS": [
-      450,
+      455,
       85
     ],
     "_id": 10,
@@ -272,7 +272,7 @@
       "jumping": 80
     },
     "currentPOS": [
-      200,
+      195,
       85
     ],
     "_id": 13,
@@ -302,7 +302,7 @@
   },
   {
     "name": "Rúben Dias",
-    "number": 75,
+    "number": 65,
     "position": "CB",
     "skill": {
       "passing": 91,
@@ -422,7 +422,7 @@
       "jumping": 89
     },
     "currentPOS": [
-      200,
+      195,
       265
     ],
     "_id": 20,
@@ -444,7 +444,7 @@
       "jumping": 88
     },
     "currentPOS": [
-      450,
+      455,
       265
     ],
     "_id": 21,
@@ -488,7 +488,7 @@
       "jumping": 68
     },
     "currentPOS": [
-      575,
+      585,
       350
     ],
     "_id": 23,
@@ -510,7 +510,7 @@
       "jumping": 93
     },
     "currentPOS": [
-      75,
+      65,
       350
     ],
     "_id": 24,
@@ -778,7 +778,7 @@
       "passing": 67,
       "shooting": 71,
       "saving": 16,
-      "tackling": 75,
+      "tackling": 65,
       "agility": 79,
       "strength": 60,
       "penalty_taking": 19,
@@ -1000,7 +1000,7 @@
       "jumping": 78
     },
     "currentPOS": [
-      575,
+      585,
       85
     ],
     "_id": 47,
@@ -1043,7 +1043,7 @@
       "jumping": 60
     },
     "currentPOS": [
-      75,
+      65,
       85
     ],
     "_id": 49,
@@ -1086,7 +1086,7 @@
       "jumping": 76
     },
     "currentPOS": [
-      450,
+      455,
       265
     ],
     "_id": 51,
@@ -1108,7 +1108,7 @@
       "jumping": 68
     },
     "currentPOS": [
-      200,
+      195,
       435
     ],
     "_id": 52,
@@ -1151,7 +1151,7 @@
       "jumping": 69
     },
     "currentPOS": [
-      450,
+      455,
       85
     ],
     "_id": 54,
@@ -1231,14 +1231,14 @@
       "passing": 73,
       "shooting": 72,
       "saving": 12,
-      "tackling": 75,
+      "tackling": 65,
       "agility": 82,
       "strength": 76,
       "penalty_taking": 13,
       "jumping": 66
     },
     "currentPOS": [
-      200,
+      195,
       85
     ],
     "_id": 58,
@@ -1324,7 +1324,7 @@
       "jumping": 70
     },
     "currentPOS": [
-      200,
+      195,
       265
     ],
     "_id": 62,
@@ -1603,7 +1603,7 @@
       0,
       0
     ],
-    "_id": 75,
+    "_id": 65,
     "teamId": 2
   },
   {
@@ -1616,7 +1616,7 @@
       "saving": 25,
       "tackling": 59,
       "agility": 86,
-      "strength": 75,
+      "strength": 65,
       "penalty_taking": 6,
       "jumping": 52
     },
@@ -1721,14 +1721,14 @@
       "passing": 87,
       "shooting": 87,
       "saving": 17,
-      "tackling": 75,
+      "tackling": 65,
       "agility": 98,
-      "strength": 75,
+      "strength": 65,
       "penalty_taking": 22,
       "jumping": 64
     },
     "currentPOS": [
-      450,
+      455,
       435
     ],
     "_id": 81,
@@ -1805,7 +1805,7 @@
     "number": 55,
     "position": "GK",
     "skill": {
-      "passing": 75,
+      "passing": 65,
       "shooting": 19,
       "saving": 85,
       "tackling": 13,
@@ -1830,7 +1830,7 @@
       "shooting": 18,
       "saving": 67,
       "tackling": 9,
-      "agility": 75,
+      "agility": 65,
       "strength": 55,
       "penalty_taking": 45,
       "jumping": 65
@@ -2025,7 +2025,7 @@
       "jumping": 59
     },
     "currentPOS": [
-      75,
+      65,
       85
     ],
     "_id": 95,
@@ -2174,7 +2174,7 @@
       "jumping": 93
     },
     "currentPOS": [
-      200,
+      195,
       85
     ],
     "_id": 102,
@@ -2229,7 +2229,7 @@
     "number": 76,
     "position": "CB",
     "skill": {
-      "passing": 75,
+      "passing": 65,
       "shooting": 69,
       "saving": 5,
       "tackling": 60,
@@ -2260,7 +2260,7 @@
       "jumping": 87
     },
     "currentPOS": [
-      450,
+      455,
       85
     ],
     "_id": 106,
@@ -2367,7 +2367,7 @@
       "jumping": 87
     },
     "currentPOS": [
-      200,
+      195,
       265
     ],
     "_id": 111,
@@ -2400,7 +2400,7 @@
     "number": 83,
     "position": "CM",
     "skill": {
-      "passing": 75,
+      "passing": 65,
       "shooting": 45,
       "saving": 8,
       "tackling": 63,
@@ -2431,7 +2431,7 @@
       "jumping": 91
     },
     "currentPOS": [
-      450,
+      455,
       265
     ],
     "_id": 114,
@@ -2496,7 +2496,7 @@
       "jumping": 74
     },
     "currentPOS": [
-      575,
+      585,
       85
     ],
     "_id": 117,
@@ -2737,7 +2737,7 @@
   },
   {
     "name": "Ángel Alarcón",
-    "number": 75,
+    "number": 65,
     "position": "ST",
     "skill": {
       "passing": 36,
@@ -2771,7 +2771,7 @@
       "jumping": 67
     },
     "currentPOS": [
-      450,
+      455,
       350
     ],
     "_id": 130,
@@ -2808,7 +2808,7 @@
       "passing": 85,
       "shooting": 79,
       "saving": 12,
-      "tackling": 75,
+      "tackling": 65,
       "agility": 71,
       "strength": 69,
       "penalty_taking": 11,
@@ -3220,7 +3220,7 @@
       "jumping": 99
     },
     "currentPOS": [
-      575,
+      585,
       85
     ],
     "_id": 151,
@@ -3348,7 +3348,7 @@
       "jumping": 95
     },
     "currentPOS": [
-      75,
+      65,
       85
     ],
     "_id": 157,
@@ -3391,7 +3391,7 @@
       "jumping": 83
     },
     "currentPOS": [
-      450,
+      455,
       85
     ],
     "_id": 159,
@@ -3476,7 +3476,7 @@
       "jumping": 94
     },
     "currentPOS": [
-      200,
+      195,
       85
     ],
     "_id": 163,
@@ -3688,7 +3688,7 @@
       "jumping": 70
     },
     "currentPOS": [
-      450,
+      455,
       265
     ],
     "_id": 173,
@@ -3734,7 +3734,7 @@
       0,
       0
     ],
-    "_id": 175,
+    "_id": 165,
     "teamId": 4,
     "role": "bench"
   },
@@ -3786,7 +3786,7 @@
     "number": 53,
     "position": "CM",
     "skill": {
-      "passing": 75,
+      "passing": 65,
       "shooting": 85,
       "saving": 24,
       "tackling": 99,
@@ -3839,7 +3839,7 @@
       "jumping": 99
     },
     "currentPOS": [
-      200,
+      195,
       265
     ],
     "_id": 180,
@@ -3924,7 +3924,7 @@
       "jumping": 71
     },
     "currentPOS": [
-      75,
+      65,
       350
     ],
     "_id": 184,
@@ -4116,7 +4116,7 @@
       "jumping": 88
     },
     "currentPOS": [
-      575,
+      585,
       350
     ],
     "_id": 193,
@@ -4267,7 +4267,7 @@
       325,
       435
     ],
-    "_id": 200,
+    "_id": 195,
     "teamId": 4,
     "role": "main"
   },

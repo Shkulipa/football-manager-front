@@ -5,10 +5,6 @@ import {
 	startSecondHalf
 } from 'footballsimulationengine';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
-import team1 from 'src/assets/data/match/team1.json';
-import team2 from 'src/assets/data/match/team2.json';
 import { ReactComponent as Forward } from 'src/assets/icons/media/forward.svg';
 import { ReactComponent as Pause } from 'src/assets/icons/media/pause.svg';
 import { ReactComponent as Play } from 'src/assets/icons/media/play.svg';
@@ -22,8 +18,9 @@ import {
 	Tactics,
 	TeamsMatch
 } from 'src/components';
-import { useAppSelector, useWindowDimensions } from 'src/hooks';
+import { useAppDispatch, useAppSelector, useWindowDimensions } from 'src/hooks';
 import { IOptionsMatch } from 'src/interfaces';
+import { matchSlice } from 'src/store/slices';
 import { parseTime, vizualizationIteration } from 'src/utils';
 import { gameLength, timeForOneIteration } from 'src/utils/consts';
 
@@ -31,7 +28,11 @@ import { ETabsMenuClassicMatch } from './classicMatchGame.interfaces';
 import styles from './classicMatchGame.module.scss';
 
 export function ClassicMatchGame() {
-	const { pitchSize, hosts, guests } = useAppSelector(s => s.match);
+	const { pitchSize, hosts, guests, matchDetails } = useAppSelector(
+		s => s.match
+	);
+	const dispatch = useAppDispatch();
+	const { setMatchDetails } = matchSlice.actions;
 
 	const { width } = useWindowDimensions();
 	const [tab, setTab] = useState<ETabsMenuClassicMatch>(
@@ -39,7 +40,6 @@ export function ClassicMatchGame() {
 	);
 
 	const canvasRef = useRef<HTMLCanvasElement>(null);
-	const [matchDetails, setMatchDetails] = useState<any>();
 	const [currentIteration, setCurrentIteration] = useState(0);
 	const [isPlay, setIsPlay] = useState(false);
 
@@ -73,7 +73,6 @@ export function ClassicMatchGame() {
 				startCoordinates: p.position,
 				rating: p.rating,
 				skill: p.skill,
-				startPOS: [p.currentPOS[0], p.currentPOS[1]],
 				currentPOS: [p.currentPOS[0], p.currentPOS[1]],
 				fitness: p.fitness,
 				injured: p.skill
@@ -108,7 +107,6 @@ export function ClassicMatchGame() {
 				position: p.position,
 				rating: p.rating,
 				skill: p.skill,
-				startPOS: [p.currentPOS[0], p.currentPOS[1]], // need fo tactics
 				currentPOS: [p.currentPOS[0], p.currentPOS[1]],
 				fitness: p.fitness,
 				injured: p.skill
@@ -139,37 +137,38 @@ export function ClassicMatchGame() {
 				pitchSize.pitchWidth / 2
 			) {
 				initiateGame(guestTeam, hostsTeam, pitchSize).then(
-					(matchDetails: any) => setMatchDetails(matchDetails)
+					(matchDetails: any) => dispatch(setMatchDetails(matchDetails))
 				);
 				return;
 			}
 
 			setCurrentIteration(0);
 			setTime(0);
-			setMatchDetails(matchDetails);
+			dispatch(setMatchDetails(matchDetails));
 		});
 
 		return () => {
-			setMatchDetails(null);
+			dispatch(setMatchDetails(null));
 			setCurrentIteration(0);
 			setTime(0);
 		};
 	}, []);
 
-	const play = useCallback(
-		() =>
-			playIteration(matchDetails)
-				.then(function (matchDetails: any) {
-					setCurrentIteration((i: number) => ++i);
-					// 90 minutes is equel 5400 seconds
-					setTime((t: number) => t + timeForOneIteration);
-					setMatchDetails(matchDetails);
-				})
-				.catch(function (error: any) {
-					console.error('Error: ', error);
-				}),
-		[matchDetails]
-	);
+	const play = useCallback(() => {
+		// because matchDetails from redux isn't editable
+		const matchDetailsEditable = JSON.parse(JSON.stringify(matchDetails));
+
+		playIteration(matchDetailsEditable)
+			.then(function (matchDetails: any) {
+				setCurrentIteration((i: number) => ++i);
+				// 90 minutes is equel 5400 seconds
+				setTime((t: number) => t + timeForOneIteration);
+				dispatch(setMatchDetails(matchDetails));
+			})
+			.catch(function (error: any) {
+				console.error('Error: ', error);
+			});
+	}, [matchDetails]);
 
 	/**
 	 * @info
@@ -194,10 +193,21 @@ export function ClassicMatchGame() {
 				play();
 				return;
 			} else if (isHalfTime) {
-				startSecondHalf(matchDetails)
+				/**
+				 * @Todo
+				 * 1. create custom second half function
+				 * 2. reset all position for all players
+				 * 3. make correct position for players
+				 * 4. ball position reset
+				 * 5. save fitness
+				 */
+
+				// because matchDetails from redux isn't editable
+				const matchDetailsEditable = JSON.parse(JSON.stringify(matchDetails));
+				startSecondHalf(matchDetailsEditable)
 					.then(function (newMatchDetails: any) {
-						setMatchDetails(newMatchDetails);
-						play();
+						dispatch(setMatchDetails(newMatchDetails));
+						setCurrentIteration((i: number) => ++i);
 					})
 					.catch(function (error: any) {
 						console.error('Error: ', error);
@@ -377,12 +387,7 @@ export function ClassicMatchGame() {
 					<TeamsMatch matchDetails={matchDetails} />
 				)}
 
-				{tab === ETabsMenuClassicMatch.TACTICKS && (
-					<Tactics
-						matchDetails={matchDetails}
-						setMatchDetails={setMatchDetails}
-					/>
-				)}
+				{tab === ETabsMenuClassicMatch.TACTICKS && <Tactics />}
 
 				{tab === ETabsMenuClassicMatch.OPTIONS && (
 					<Options

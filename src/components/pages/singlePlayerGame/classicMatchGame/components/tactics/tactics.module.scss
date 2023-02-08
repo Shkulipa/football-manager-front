@@ -2,18 +2,37 @@
 @import 'src/assets/styles/fonts';
 
 .tactics {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  display: grid;
+  gap: 15px;
   justify-content: center;
   margin: 0 auto;
 }
 
-.player {
+.title, .player {
   font-family: $primaryFont;
   font-size: $lTextSize;
   color: $white;
   letter-spacing: 1px;
+}
+
+.title {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.playersTable {
+  display: grid;
+  gap: 10px;
+}
+
+.players {
+  display: grid;
+  gap: 30px;
 }
 
 .field {
