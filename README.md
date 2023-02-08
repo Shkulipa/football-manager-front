@@ -1,3 +1,8 @@
+# Status
+Production(brunch: prod): [![Netlify Status](https://api.netlify.com/api/v1/badges/b3cf4f3c-0e67-455b-9a61-54e1f01b50dd/deploy-status)](https://app.netlify.com/sites/football-manager-prod/deploys)
+
+Staging(brunch: dev): [![Netlify Status](https://api.netlify.com/api/v1/badges/89ca9dfc-1b35-4053-92ca-58b3fee6d8bf/deploy-status)](https://app.netlify.com/sites/football-manager-dev/deploys)
+
 # Install
 ```
 yarn
