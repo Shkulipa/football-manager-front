@@ -1,3 +1,6 @@
+# Links
+[Production(brunch: prod)](https://football-manager-prod.netlify.app)
+[Staging(brunch: dev)](https://football-manager-dev.netlify.app)
 # Status
 Production(brunch: prod): [![Netlify Status](https://api.netlify.com/api/v1/badges/b3cf4f3c-0e67-455b-9a61-54e1f01b50dd/deploy-status)](https://app.netlify.com/sites/football-manager-prod/deploys)
 
