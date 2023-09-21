@@ -1,0 +1,33 @@
+@import './variables';
+
+html,
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: $s-text-size;
+  font-weight: 400;
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

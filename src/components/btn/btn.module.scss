@@ -1,0 +1,38 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@include hoverScale('btn', 1.1);
+@include hoverScale('secondaryBtn', 1.1);
+
+.btn {
+  padding: 10px 15px;
+  font-size: $s-text-size;
+  font-weight: 700;
+  color: $primary-color;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $quinary-color;
+  border: 0;
+  border-radius: 10px;
+  transition: $hover-transition;
+}
+
+.secondaryBtn {
+  padding: 7px 10px;
+  margin: 0 0 0 20px;
+  font-size: $s-text-size;
+  font-weight: 700;
+  color: $primary-color;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $quinary-color;
+  border: 0;
+  border-radius: 8px;
+  transition: $hover-transition;
+  transform: translateY(1px);
+}
+
+.btn.disabled {
+  color: rgba($color: $gray, $alpha: 30%);
+  cursor: not-allowed;
+  background-color: rgba($color: $gray, $alpha: 20%);
+}

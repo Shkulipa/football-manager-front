@@ -1,0 +1,5 @@
+@mixin hoverScale($element, $scale) {
+  .#{$element}:hover {
+    transform: scale($scale);
+  }
+}
