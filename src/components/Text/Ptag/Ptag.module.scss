@@ -1,0 +1,20 @@
+@import '@/styles/variables';
+
+.p {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.l {
+  font-size: $l-text-size;
+}
+
+.m {
+  font-size: $m-text-size;
+}
+
+.s {
+  font-size: $s-text-size;
+}

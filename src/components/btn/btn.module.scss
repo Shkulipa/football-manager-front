@@ -4,21 +4,6 @@
 @include hoverScale('secondaryBtn', 1.1);
 
 .btn {
-  padding: 10px 15px;
-  font-size: $s-text-size;
-  font-weight: 700;
-  color: $primary-color;
-  text-transform: uppercase;
-  cursor: pointer;
-  background-color: $quinary-color;
-  border: 0;
-  border-radius: 10px;
-  transition: $hover-transition;
-}
-
-.secondaryBtn {
-  padding: 7px 10px;
-  margin: 0 0 0 20px;
   font-size: $s-text-size;
   font-weight: 700;
   color: $primary-color;
@@ -27,8 +12,24 @@
   background-color: $quinary-color;
   border: 0;
   border-radius: 8px;
+  margin: 0;
   transition: $hover-transition;
   transform: translateY(1px);
+  color: $primary-color;
+}
+
+.primaryBtn {
+  padding: 7px 10px;
+  border: 1px solid $primary-color; 
+
+  &:hover {
+    color: $quinary-color;
+    background-color: $secondary-color;
+  }
+}
+
+.secondaryBtn {
+  padding: 7px 10px;
 }
 
 .btn.disabled {

@@ -1,0 +1,12 @@
+.block {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  width: 70%;
+  display: grid;
+  gap: 5px;
+}

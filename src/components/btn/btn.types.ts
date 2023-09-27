@@ -1,8 +1,17 @@
-import { TPropsChildren } from '@/types/props-children.type';
+import {
+	DetailedHTMLProps,
+	ButtonHTMLAttributes,
+	PropsWithChildren
+} from 'react';
 
 type BtnType = 'primary' | 'secondary';
 
 export interface IBtn
-	extends TPropsChildren {
+	extends PropsWithChildren<
+		DetailedHTMLProps<
+			ButtonHTMLAttributes<HTMLButtonElement>,
+			HTMLButtonElement
+		>
+	> {
 	appearance?: BtnType;
 }

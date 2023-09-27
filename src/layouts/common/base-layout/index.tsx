@@ -1,76 +1,44 @@
 'use client';
 import cn from 'classnames';
-import Image from 'next/image';
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import { IBaseLayoutProps } from './base-layout.interfaces';
-import Link from 'next/link';
+import { IBaseLayoutProps } from './base-layout.types';
 import styles from './base-layout.module.scss';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Header, Sidebar } from '@/components';
+import { ContentContainer } from '@/containers';
 
 export default function BaseLayout({
 	children
 }: IBaseLayoutProps): JSX.Element {
-	const [isCollapseSidebar, setCollapseSidebar] = useState<boolean>(false);
+	const headerRef = useRef<HTMLDivElement>(null);
+	const [headerHeight, setHeaderHeigh] = useState<number>(0);
+	const [isCollapseSidebar, setCollapseSidebar] = useState<boolean>(true);
+
+	const callbackCollapseSidebar = useCallback(() => {
+		setCollapseSidebar(s => !s);
+	}, []);
+
+	useEffect(() => {
+		if (headerRef?.current) {
+			setHeaderHeigh(headerRef.current.offsetHeight);
+		}
+	}, [headerRef]);
 
 	return (
 		<div className={cn(styles.baseLayoutWrapper)}>
-			<div className={cn(styles.sidebarWrapper)}>
-				<button
-					type="button"
-					onClick={() => setCollapseSidebar(s => !s)}
-					className={cn(styles.collapseBtn)}
-				>
-					c
-				</button>
-				<Sidebar collapsed={isCollapseSidebar} className={cn(styles.sidebar)}>
-					<Menu>
-						<MenuItem
-							icon={
-								<Image
-									src="icons/single-match.svg"
-									alt="single-match"
-									width="30"
-									height="30"
-								/>
-							}
-							component={<Link href="/single-match" />}
-						>
-							Single Match
-						</MenuItem>
-						<MenuItem
-							icon={
-								<Image
-									src="icons/teams.svg"
-									alt="teams"
-									width="40"
-									height="40"
-								/>
-							}
-							component={<Link href="/teams" />}
-						>
-							Teams
-						</MenuItem>
-						<MenuItem
-							icon={
-								<Image
-									src="icons/login.svg"
-									alt="login"
-									width="32"
-									height="32"
-								/>
-							}
-							component={<Link href="/auth" />}
-						>
-							Log in
-						</MenuItem>
-					</Menu>
-				</Sidebar>
-			</div>
+			<Sidebar
+				isCollapseSidebar={isCollapseSidebar}
+				setCollapseSidebar={callbackCollapseSidebar}
+			/>
 
-			<div>
-				<header>header</header>
-				<main>{children}</main>
-			</div>
+			<ContentContainer>
+				<Header ref={headerRef}>header</Header>
+				<main
+					className={cn(styles.main)}
+					style={{ height: `calc(100% - ${headerHeight}px)` }}
+				>
+					{children}
+				</main>
+			</ContentContainer>
 		</div>
 	);
 }

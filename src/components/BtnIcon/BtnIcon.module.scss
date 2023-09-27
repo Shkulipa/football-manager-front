@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+
+.btnIcon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+  background-color: $quinary-color;
+  border: 1px solid $quaternary-color;
+  border-radius: 50%;
+  transition: $transition;
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

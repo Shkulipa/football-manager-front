@@ -1,11 +1,10 @@
 {
   "name": "football-manager-front",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "start:prod": "NODE_ENV=production next dev",
     "start:stag": "NODE_ENV=staging next dev",
-    "start:dev": "NODE_ENV=development next dev",
+    "start:dev": "NODE_ENV=development next dev -p 5173",
     "build": "next build",
     "start": "next start",
     "eslint:check": "next lint",
@@ -18,9 +17,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.6",
     "@types/node": "20.6.2",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "axios": "^1.5.0",
     "classnames": "^2.3.2",
     "eslint": "^8.49.0",
     "eslint-config-next": "13.4.19",
@@ -28,6 +29,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
+    "react-redux": "^8.1.2",
+    "redux-persist": "^6.0.0",
+    "swr": "^2.2.4",
     "typescript": "5.2.2"
   },
   "devDependencies": {
@@ -54,8 +58,6 @@
     "stylelint": "^15.10.3",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-recommended-scss": "^13.0.0",
-    "stylelint-order": "^6.0.3",
-    "stylelint-stylistic": "^0.4.3",
-    "stylelint-webpack-plugin": "^4.1.1"
+    "stylelint-order": "^6.0.3"
   }
 }

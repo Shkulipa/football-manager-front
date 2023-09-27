@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
-// const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const nextConfig = {
-  webpack: (config, options) => {
-    config.plugins.push(new StylelintPlugin());
-    return config;
-  }
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'football-manager-dev.s3.eu-central-1.amazonaws.com',
+        pathname: '/public/**',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
