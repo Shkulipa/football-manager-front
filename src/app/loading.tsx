@@ -4,7 +4,7 @@ import { LoaderContainer } from '@/containers';
 const Loading = () => {
 	return (
 		<LoaderContainer>
-			<Loader size="l" />;
+			<Loader size="l" />
 		</LoaderContainer>
 	);
 };

@@ -1,12 +1,11 @@
-import ball from 'src/assets/images/logo/logo-350x350.png';
-
-import { IOptionsMatch } from './../interfaces/optionsMatch';
-import { radiusItems } from './consts';
+import { radiusItems } from '@/constants';
+import { ERolePlayer } from '@/constants/rolePlayer.enum';
+import { IOptionsMatch } from '../types/optionsMatch.type';
 
 const imageBall = new Image();
-imageBall.src = ball;
+imageBall.src = '/images/ball.png';
 
-function canvas_arrow(ctx: any, fromx: any, fromy: any, tox: any, toy: any) {
+/* function canvas_arrow(ctx: any, fromx: any, fromy: any, tox: any, toy: any) {
 	const headlen = 8; // length of head in pixels
 	const dx = tox - fromx;
 	const dy = toy - fromy;
@@ -24,7 +23,7 @@ function canvas_arrow(ctx: any, fromx: any, fromy: any, tox: any, toy: any) {
 		toy - headlen * Math.sin(angle + Math.PI / 6)
 	);
 	ctx.stroke();
-}
+} */
 
 export const vizualizationIteration = (
 	canvas: HTMLCanvasElement,
@@ -107,7 +106,10 @@ export const vizualizationIteration = (
 		}
 		ctx.restore();
 
-		/* if (optionsMatch?.isShowChanged) {
+		if (
+			optionsMatch?.isShowChanged &&
+			player.squadStart === ERolePlayer.BENCH
+		) {
 			// arc
 			ctx.beginPath();
 			ctx.save();
@@ -143,7 +145,7 @@ export const vizualizationIteration = (
 			ctx.fill(path);
 			ctx.restore();
 			ctx.closePath();
-		} */
+		}
 
 		/**
 		 * @info

@@ -1,0 +1,13 @@
+.stadiumWrapper {
+  overflow: hidden;
+  border: 2px solid gray;
+}
+
+.stadium {
+  width: 100%;
+  background-image: url('/images/pitch.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+}

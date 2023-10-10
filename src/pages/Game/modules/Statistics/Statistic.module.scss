@@ -1,0 +1,13 @@
+@import '@/styles/variables';
+
+.statisticTab {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.statisticItem:nth-child(even) {
+  background-color: rgba($color: $black, $alpha: 10%);
+}

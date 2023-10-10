@@ -1,0 +1,15 @@
+@import '@/styles/variables';
+
+.statisticItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 0; 
+  border-radius: 20px;
+}
+
+.statisticItemTitle, .statisticText {
+  font-size: $l-text-size;
+  color: $black;
+  text-align: center;
+  letter-spacing: 1px;
+}

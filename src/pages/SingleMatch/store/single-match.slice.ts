@@ -1,31 +1,18 @@
 import { EMatchSide } from '@/constants/match-sides.enum';
+import { IMatchDetails } from '@/types/football-simulator-engine/match-details.interface';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-
-interface IPitchSize {
-	pitchWidth: number;
-	pitchHeight: number;
-	goalWidth: number;
-}
 
 interface IInitialState {
 	hosts: any | null;
 	guests: any | null;
 	userFor: EMatchSide | null;
-	pitchSize: IPitchSize;
-	matchDetails: any | null;
+	matchDetails: IMatchDetails | null;
 }
 
 const initialState: IInitialState = {
 	hosts: null,
 	guests: null,
 	userFor: null,
-
-	pitchSize: {
-		pitchWidth: 680,
-		pitchHeight: 1050,
-		goalWidth: 90
-	},
-
 	matchDetails: null
 };
 
@@ -42,11 +29,14 @@ export const singleMatchSlice = createSlice({
 		setUserFor(state, action: PayloadAction<EMatchSide | null>) {
 			state.userFor = action.payload;
 		},
-		setPitchSize(state, action: PayloadAction<IPitchSize>) {
-			state.pitchSize = action.payload;
-		},
-		setMatchDetails(state, action: PayloadAction<any | null>) {
+		setMatchDetails(state, action: PayloadAction<IMatchDetails | null>) {
 			state.matchDetails = action.payload;
+		},
+		reset(state) {
+			state.hosts = null;
+			state.guests = null;
+			state.userFor = null;
+			state.matchDetails = null;
 		}
 	}
 });

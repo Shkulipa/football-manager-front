@@ -2,13 +2,24 @@ import cn from 'classnames';
 import styles from './Loader.module.scss';
 import { ILoaderProps } from './Loader.types';
 
-export function Loader({ className, size, ...props }: ILoaderProps): JSX.Element {
+export function Loader({
+	className,
+	size,
+	...props
+}: ILoaderProps): JSX.Element {
 	return (
-		<div className={cn(styles.loaderWrapper, {
-      [styles.s]: size === 's',
-      [styles.m]: size === 'm',
-      [styles.l]: size === 'l',
-    }, className)} {...props}>
+		<div
+			className={cn(
+				styles.loaderWrapper,
+				{
+					[styles.s]: size === 's',
+					[styles.m]: size === 'm',
+					[styles.l]: size === 'l'
+				},
+				className
+			)}
+			{...props}
+		>
 			<div className={styles.loader}>
 				<svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
 					<svg

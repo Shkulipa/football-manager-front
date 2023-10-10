@@ -11,12 +11,12 @@
 }
 
 .collapseBtn {
-  width: 30px;
-  height: 30px;
   position: absolute;
   top: 35px;
   right: 0;
   z-index: 1000;
+  width: 30px;
+  height: 30px;
   transition: $transition;
   transform: translate(50%, 0) rotateZ(0);
 }

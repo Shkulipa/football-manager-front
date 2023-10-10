@@ -1,0 +1,18 @@
+@import '@/styles/variables';
+
+.option {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 25px;
+}
+
+.text {
+  font-size: $l-text-size;
+  color: $black;
+  letter-spacing: 1px;
+}
+
+.btnIcon {
+  width: 40px;
+  height: 40px;
+}

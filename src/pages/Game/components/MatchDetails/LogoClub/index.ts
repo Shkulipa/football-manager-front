@@ -1,0 +1,1 @@
+export { LogoClub } from './LogoClub';

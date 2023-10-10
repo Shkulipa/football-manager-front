@@ -1,0 +1,16 @@
+.gameWrapper {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.matchTabContent {
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+}
+
+.control {
+  display: flex;
+  gap: 25px;
+}

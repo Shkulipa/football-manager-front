@@ -1,25 +1,73 @@
 'use client';
 
-import { SWRFetcher } from '@/SWR/SWR.fetcher';
-import { useAppSelector } from '@/hooks/redux';
-import { useRouter } from 'next/navigation';
-import useSWR from 'swr';
+import styles from './Game.module.scss';
+import { useValidateMatch } from './hooks/useValidateMatch';
+import { useSimulateSingleMatch } from './hooks/useSimulateSingleMatch';
+import { Tabs } from './components/Tabs/Tabs';
+import { useState } from 'react';
+import { Match, Options, Statistics, Teams } from './modules';
 
 export function Game(): JSX.Element {
-	const state = useAppSelector(state => state.singleMatchReducer);
-	const router = useRouter();
+	useValidateMatch();
+	const {
+		matchDetails,
+		speed,
+		speedDown,
+		speedUp,
+		isPlay,
+		isOverMatch,
+		handlerPlayback,
+		optionsMatch,
+		optionsMatchHandler,
+		currentIteration,
+		time
+	} = useSimulateSingleMatch();
 
-	// if teams weren't picked -> redirect to single-match page
-	if (!state.hosts || !state.guests) router.push('/single-match');
+	const [tab, setTab] = useState(1);
+	const tabHandler = (tab: number) => {
+		setTab(tab);
+	};
 
-	// get full info about teams
-	const urlHosts = `/real-team/${state.hosts._id}`;
-	const urlGuests = `/real-team/${state.guests._id}`;
-	const cacheTime = 3600000 * 24 * 7; // 1 week
-	const hostsFullData = useSWR(urlHosts, () => SWRFetcher(urlHosts, cacheTime));
-	const guestsFullData = useSWR(urlGuests, () =>
-		SWRFetcher(urlGuests, cacheTime)
+	let tabContent: React.ReactNode;
+	switch (tab) {
+		case 1:
+			tabContent = (
+				<Match
+					currentIteration={currentIteration}
+					handlerPlayback={handlerPlayback}
+					isOverMatch={isOverMatch}
+					isPlay={isPlay}
+					matchDetails={matchDetails}
+					optionsMatch={optionsMatch}
+					speed={speed}
+					speedDown={speedDown}
+					speedUp={speedUp}
+					time={time}
+				/>
+			);
+			break;
+		case 2:
+			tabContent = <Statistics matchDetails={matchDetails} />;
+			break;
+		case 3:
+			tabContent = <Teams matchDetails={matchDetails} />;
+			break;
+		case 5:
+			tabContent = (
+				<Options
+					optionsMatch={optionsMatch}
+					optionsMatchHandler={optionsMatchHandler}
+				/>
+			);
+			break;
+		default:
+			<></>;
+	}
+
+	return (
+		<div className={styles.gameWrapper}>
+			<Tabs tabHandler={tabHandler} />
+			{tabContent}
+		</div>
 	);
-
-	return <div>{JSON.stringify(hostsFullData)}</div>;
 }

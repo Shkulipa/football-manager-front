@@ -1,0 +1,29 @@
+@import '@/styles/variables';
+
+.team {
+    display: grid;
+    gap: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 2fr 1fr 3.5fr repeat(2, 1fr) 3.5fr;
+    gap: 5px;
+    padding: 0 5px;
+    font-size: $s-text-size;
+    color: $black;
+    text-align: left;
+    letter-spacing: 1px;
+
+    div {
+        text-align: center;
+    }
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    font-size: $l-text-size;
+    color: $black;
+    letter-spacing: 1px;
+}

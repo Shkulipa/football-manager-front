@@ -8,7 +8,14 @@ import { TextBlock } from '../../TextBlock';
 export function Country({ img, text }: IContentProps): JSX.Element {
 	return (
 		<>
-			<Image className={styles.img} src={img} width={64} height={38} alt="" />
+			<Image
+				priority={true}
+				className={styles.img}
+				src={img}
+				width={64}
+				height={38}
+				alt=""
+			/>
 			<TextBlock>{text}</TextBlock>
 		</>
 	);

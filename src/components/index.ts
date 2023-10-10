@@ -1,4 +1,4 @@
-export * from './Btn';
+export * from './Button';
 export * from './BtnIcon';
 export * from './Sidebar';
 export * from './Loader';

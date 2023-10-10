@@ -1,9 +1,9 @@
-import { Btn } from '@/components';
+import { Button } from '@/components';
 
 export default function Home() {
 	return (
 		<div>
-			<Btn>Some Text</Btn>
+			<Button>Some Text</Button>
 		</div>
 	);
 }

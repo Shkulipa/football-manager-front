@@ -7,7 +7,7 @@ const week = 3600000 * 24 * 7;
 export const SWRFetcher = async (url: string, maxAge = week) => {
 	const cachedData = localStorage.getItem('app-cache');
 
-	const parsedData = JSON.parse(cachedData || `[]`) as TStorageData[];
+	const parsedData = (await JSON.parse(cachedData || `[]`)) as TStorageData[];
 
 	// check cached data
 	const data = parsedData.find(([key]: TStorageData) => key === url);
@@ -17,7 +17,7 @@ export const SWRFetcher = async (url: string, maxAge = week) => {
 		const now = Date.now();
 
 		if (now - cacheAge < maxAge) {
-			const parsedCachedData = JSON.parse(cachedData);
+			const parsedCachedData = await JSON.parse(cachedData);
 			return parsedCachedData;
 		}
 	}
@@ -29,5 +29,5 @@ export const SWRFetcher = async (url: string, maxAge = week) => {
 	parsedData.push([url, JSON.stringify(responseData), timestamp]);
 	localStorage.setItem('app-cache', JSON.stringify(parsedData));
 
-	return response;
+	return responseData;
 };

@@ -1,4 +1,4 @@
-interface ISkillsAttrs {
+export interface ISkillsAttrs {
 	readonly att: number;
 	readonly mid: number;
 	readonly def: number;

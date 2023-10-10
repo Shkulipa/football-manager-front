@@ -1,0 +1,22 @@
+@import '@/styles/variables';
+
+.playerData {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 2fr 1fr 3.5fr repeat(2, 1fr) 3.5fr;
+  gap: 5px;
+  align-items: center;
+  padding: 5px;
+  font-size: $s-text-size;
+  color: $black;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 12px;
+
+  &:nth-child(even) {
+    background-color: rgba($color: $black, $alpha: 10%);
+  }
+}
+
+.ratingInStars {
+  margin: 0 auto;
+}

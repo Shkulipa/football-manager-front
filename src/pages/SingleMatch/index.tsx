@@ -19,8 +19,14 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 
 	// init teams
 	const { hosts, guests } = useAppSelector(state => state.singleMatchReducer);
-	const initHosts = useMemo(() => initTeam({ currTeam: hosts, teams }), []);
-	const initGuests = useMemo(() => initTeam({ currTeam: guests, teams }), []);
+	const initHosts = useMemo(
+		() => initTeam({ currTeam: hosts, teams }),
+		[hosts]
+	);
+	const initGuests = useMemo(
+		() => initTeam({ currTeam: guests, teams }),
+		[guests]
+	);
 
 	useEffect(() => {
 		if (initHosts && initGuests) {

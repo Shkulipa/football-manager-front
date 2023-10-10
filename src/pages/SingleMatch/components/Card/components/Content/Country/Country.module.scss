@@ -1,7 +1,7 @@
 @import '@/styles/variables';
 
 .img {
-  border-radius: 6px;
-  border: 1px solid $quaternary-color;
   margin: 0 auto;
+  border: 1px solid $quaternary-color;
+  border-radius: 6px;
 }

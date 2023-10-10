@@ -1,0 +1,21 @@
+@import '@/styles/variables';
+
+.tabs {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid $black;
+}
+
+.tab {
+    padding: 15px;
+    font-size: $m-text-size;
+    cursor: pointer;
+    background-color: rgba($quaternary-color, 0.2);
+    border: none;
+    transition: $transition;
+
+    &:hover {
+        background-color: rgba($quaternary-color, 0.7);
+    }
+}

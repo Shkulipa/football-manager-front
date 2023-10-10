@@ -5,3 +5,5 @@ export * from './Teams';
 export * from './Stars/StarFilled';
 export * from './Stars/StarHalfFilled';
 export * from './Stars/StarOutline';
+export * from './EyeShow';
+export * from './EyeClose';

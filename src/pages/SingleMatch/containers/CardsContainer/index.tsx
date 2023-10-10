@@ -4,5 +4,5 @@ import styles from './CardsContainer.module.scss';
 export function CardsContainer({
 	children
 }: ICardsContainerProps): JSX.Element {
-	return <div className={styles.CardsContainer}>{children}</div>;
+	return <div className={styles.cardsContainer}>{children}</div>;
 }

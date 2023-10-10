@@ -1,9 +1,9 @@
 import cn from 'classnames';
 
-import { IBtn } from './Btn.types';
-import styles from './Btn.module.scss';
+import { IBtn } from './Button.types';
+import styles from './Button.module.scss';
 
-export function Btn({
+export function Button({
 	children,
 	className,
 	disabled,

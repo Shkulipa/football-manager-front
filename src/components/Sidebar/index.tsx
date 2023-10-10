@@ -7,6 +7,7 @@ import Link from 'next/link';
 import styles from './Sidebar.module.scss';
 import { ISidebarProps } from './Sidebar.types';
 import { BtnIcon } from '..';
+import { ROUTES } from '@/constants/routes.enum';
 
 export function Sidebar({
 	isCollapseSidebar,
@@ -31,19 +32,19 @@ export function Sidebar({
 				<Menu>
 					<MenuItem
 						icon={<SingleMatch width={32} height={32} />}
-						component={<Link href="/single-match" />}
+						component={<Link href={ROUTES.SINGLE_MATCH} />}
 					>
 						Single Match
 					</MenuItem>
 					<MenuItem
 						icon={<Teams width={50} height={50} />}
-						component={<Link href="/teams" />}
+						component={<Link href={ROUTES.TEAMS} />}
 					>
 						Teams
 					</MenuItem>
 					<MenuItem
 						icon={<Login width={30} height={30} />}
-						component={<Link href="/auth" />}
+						component={<Link href={ROUTES.AUTH_SIGN_IN} />}
 					>
 						Log in
 					</MenuItem>

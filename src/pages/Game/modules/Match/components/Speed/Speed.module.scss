@@ -1,0 +1,29 @@
+@import '@/styles/variables';
+
+.speed {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.speedText {
+  width: 30px;
+  font-size: $l-text-size;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+.forwardIcon, .playbackIcon {
+  width: 100%;
+  max-width: 25px;
+  border: none;
+}
+
+.speedDown {
+  rotate: 90deg;
+}
+
+.speedUp {
+  rotate: -90deg;
+}
