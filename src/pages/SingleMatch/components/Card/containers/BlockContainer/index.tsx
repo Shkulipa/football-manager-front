@@ -13,11 +13,11 @@ export default function BlockContainer({
 	return (
 		<div className={styles.block}>
 			<BtnIcon onClick={onPrevClick} disabled={isDisabledPrevBtn}>
-				<Arrow direction="left" />
+				<Arrow direction="down" width={18} height={18} />
 			</BtnIcon>
 			<div className={styles.content}>{children}</div>
 			<BtnIcon onClick={onNextClick} disabled={isDisabledNextBtn}>
-				<Arrow direction="right" />
+				<Arrow direction="top" width={18} height={18} />
 			</BtnIcon>
 		</div>
 	);

@@ -11,6 +11,7 @@ import { initTeam } from './utils/initTeam/initTeam';
 import { Card } from './components/Card';
 import { SingleMatchActions } from './components/SingleMatchActions';
 import { EMatchSide } from '@/constants/match-sides.enum';
+import { PaddingContainer } from '@/containers';
 
 export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 	const router = useRouter();
@@ -69,24 +70,26 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 	};
 
 	return (
-		<SingleMatchContainer>
-			<CardsContainer>
-				<Card
-					teams={teams}
-					onChangeTeam={onChangeTeamHosts}
-					initData={initHosts}
+		<PaddingContainer>
+			<SingleMatchContainer>
+				<CardsContainer>
+					<Card
+						teams={teams}
+						onChangeTeam={onChangeTeamHosts}
+						initData={initHosts}
+					/>
+					<Card
+						teams={teams}
+						onChangeTeam={onChangeTeamGuests}
+						initData={initGuests}
+					/>
+				</CardsContainer>
+				<SingleMatchActions
+					hostsHandler={hostsHandler}
+					aiHandler={aiHandler}
+					guestsHandler={guestsHandler}
 				/>
-				<Card
-					teams={teams}
-					onChangeTeam={onChangeTeamGuests}
-					initData={initGuests}
-				/>
-			</CardsContainer>
-			<SingleMatchActions
-				hostsHandler={hostsHandler}
-				aiHandler={aiHandler}
-				guestsHandler={guestsHandler}
-			/>
-		</SingleMatchContainer>
+			</SingleMatchContainer>
+		</PaddingContainer>
 	);
 }

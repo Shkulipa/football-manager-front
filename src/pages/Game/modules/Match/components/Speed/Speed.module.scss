@@ -1,4 +1,8 @@
 @import '@/styles/variables';
+@import '@/styles/mixins';
+
+@include hoverScale('forwardIcon', 1.15);
+@include hoverScale('playbackIcon', 1.15);
 
 .speed {
   display: flex;
@@ -7,17 +11,16 @@
 }
 
 .speedText {
-  width: 30px;
+  width: 35px;
   font-size: $l-text-size;
   text-align: center;
-  letter-spacing: 1px;
   cursor: default;
 }
 
 .forwardIcon, .playbackIcon {
-  width: 100%;
-  max-width: 25px;
-  border: none;
+  width: 35px;
+  height: 35px;
+  padding: 7px !important;
 }
 
 .speedDown {

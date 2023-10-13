@@ -1,4 +1,4 @@
-import { IMatchDetails } from '@/types/football-simulator-engine/match-details.interface';
+import { IMatchDetails } from 'footballsimulationengine';
 
 export interface IMatchDetailsProps {
 	matchDetails: IMatchDetails;

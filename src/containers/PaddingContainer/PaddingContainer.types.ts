@@ -1,9 +1,6 @@
-import { IPlayer } from 'footballsimulationengine';
 import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
 
-export interface IPlayerProps
+export interface IPaddingContainerProps
 	extends PropsWithChildren<
 		DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
-	> {
-	player: IPlayer;
-}
+	> {}

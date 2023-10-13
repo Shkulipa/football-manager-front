@@ -1,9 +1,8 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
 .playbackBtn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 35px;
   height: 35px;
-  border: none;
+  padding: 7px !important;
 }

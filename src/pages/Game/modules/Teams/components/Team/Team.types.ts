@@ -1,4 +1,4 @@
-import { ITeam } from '@/types/football-simulator-engine/team.interface';
+import { ITeam } from 'footballsimulationengine';
 
 export interface ITeamProps {
 	team: ITeam;

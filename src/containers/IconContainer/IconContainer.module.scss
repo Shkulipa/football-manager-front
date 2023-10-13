@@ -9,6 +9,10 @@
   height: 100%;
 }
 
+.top {
+  transform: rotate(0deg);
+}
+
 .right {
   transform: rotate(90deg);
 }
@@ -17,10 +21,6 @@
   transform: rotate(-90deg);
 }
 
-.top {
-  transform: rotate(0deg);
-}
-
 .down {
-  transform: rotate(270deg);
+  transform: rotate(180deg);
 }

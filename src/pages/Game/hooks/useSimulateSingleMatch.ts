@@ -1,4 +1,5 @@
 import {
+	IMatchDetails,
 	initiateGame,
 	playIteration,
 	startSecondHalf
@@ -10,7 +11,6 @@ import { singleMatchSlice } from '@/pages/SingleMatch/store/single-match.slice';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
 import { parsePlayersHelper } from '../utils/parsePlayers.helper';
-import { IMatchDetails } from '@/types/football-simulator-engine/match-details.interface';
 import { IRealTeamFullInfo } from '@/types/real-team-full-info';
 import { IOptionsMatch } from '../modules/Match/components/FootballField/types/optionsMatch.type';
 
@@ -101,14 +101,14 @@ export function useSimulateSingleMatch(): IUseSimulateSingleMatchRes {
 
 			// it is helping for fix TypeError: Cannot delete property '1' of [object Array]
 			const hostTeamDeepClone = JSON.parse(JSON.stringify(hostsTeam));
-			const guestTeamdeepClone = JSON.parse(JSON.stringify(guestTeam));
+			const guestTeamDeepClone = JSON.parse(JSON.stringify(guestTeam));
 
 			/**
 			 * @info
 			 * pitch standard 105x68
 			 * https://footballwhispers.com/ru/blog/futbolnoe-pole-razmer-razmery-igroki/
 			 */
-			initiateGame(guestTeamdeepClone, hostTeamDeepClone, pitchSize).then(
+			initiateGame(guestTeamDeepClone, hostTeamDeepClone, pitchSize).then(
 				(matchDetails: IMatchDetails) => {
 					/**
 					 * @info
@@ -118,7 +118,7 @@ export function useSimulateSingleMatch(): IUseSimulateSingleMatchRes {
 						matchDetails.secondTeam.players[0].currentPOS[1] <
 						pitchSize.pitchWidth / 2
 					) {
-						initiateGame(guestTeam, hostsTeam, pitchSize).then(
+						initiateGame(guestTeamDeepClone, hostTeamDeepClone, pitchSize).then(
 							(matchDetails: IMatchDetails) =>
 								dispatch(setMatchDetails(matchDetails))
 						);

@@ -1,17 +1,42 @@
 @import '@/styles/variables';
 
 .btnIcon {
-  width: 30px;
-  height: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
   padding: 0;
   cursor: pointer;
   background-color: $quinary-color;
+  border: none;
   border: 1px solid $quaternary-color;
   border-radius: 50%;
-  transition: $transition;
+
+  svg path {
+    fill: $black;
+  }
+
+  &:hover {
+    svg path {
+      fill: $white;
+    }
+    background-color: $black;
+    transition: $transition;
+  }
 
   &:disabled {
     cursor: not-allowed;
     opacity: 0.2;
+  }
+
+  &:hover:disabled {
+    svg path {
+      fill: $black;
+    }
+    background-color: transparent;
+    transition: none;
+    transform: scale(1);
   }
 }

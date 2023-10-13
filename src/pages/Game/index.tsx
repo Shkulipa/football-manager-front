@@ -6,6 +6,7 @@ import { useSimulateSingleMatch } from './hooks/useSimulateSingleMatch';
 import { Tabs } from './components/Tabs/Tabs';
 import { useState } from 'react';
 import { Match, Options, Statistics, Teams } from './modules';
+import { PaddingContainer } from '@/containers';
 
 export function Game(): JSX.Element {
 	useValidateMatch();
@@ -65,9 +66,13 @@ export function Game(): JSX.Element {
 	}
 
 	return (
-		<div className={styles.gameWrapper}>
-			<Tabs tabHandler={tabHandler} />
-			{tabContent}
+		<div className={styles.game}>
+			<PaddingContainer>
+				<div className={styles.match}>
+					<Tabs tabHandler={tabHandler} />
+					{tabContent}
+				</div>
+			</PaddingContainer>
 		</div>
 	);
 }

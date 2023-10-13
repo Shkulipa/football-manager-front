@@ -1,4 +1,10 @@
-.gameWrapper {
+.game {
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(255,255,255, 0.95) 0 100%), url('/images/bg-stadium.jpeg');
+  background-size: cover;
+}
+
+.match {
   display: grid;
   gap: 10px;
   justify-content: center;

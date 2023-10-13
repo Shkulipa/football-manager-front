@@ -34,7 +34,7 @@ export default function BaseLayout({
 				<Header ref={headerRef}>header</Header>
 				<main
 					className={cn(styles.main)}
-					style={{ height: `calc(100% - ${headerHeight}px)` }}
+					style={{ height: `calc(100vh - ${headerHeight}px)` }}
 				>
 					{children}
 				</main>

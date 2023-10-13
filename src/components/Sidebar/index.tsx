@@ -1,7 +1,12 @@
 'use client';
 import cn from 'classnames';
 // https://www.npmjs.com/package/react-pro-sidebar
-import { Sidebar as SideBarReactPro, Menu, MenuItem } from 'react-pro-sidebar';
+import {
+	Sidebar as SideBarReactPro,
+	Menu,
+	MenuItem,
+	sidebarClasses
+} from 'react-pro-sidebar';
 import { Arrow, SingleMatch, Teams, Login } from '@/icons';
 import Link from 'next/link';
 import styles from './Sidebar.module.scss';
@@ -21,13 +26,18 @@ export function Sidebar({
 					[styles.flip]: isCollapseSidebar
 				})}
 			>
-				<Arrow direction="left" />
+				<Arrow direction="top" />
 			</BtnIcon>
 			<SideBarReactPro
 				collapsed={isCollapseSidebar}
 				className={cn(styles.sidebar)}
 				backgroundColor="#FFFFFF"
 				width={'205px'}
+				rootStyles={{
+					[`.${sidebarClasses.container}`]: {
+						borderRight: 'none'
+					}
+				}}
 			>
 				<Menu>
 					<MenuItem

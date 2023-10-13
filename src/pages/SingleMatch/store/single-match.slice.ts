@@ -1,6 +1,6 @@
 import { EMatchSide } from '@/constants/match-sides.enum';
-import { IMatchDetails } from '@/types/football-simulator-engine/match-details.interface';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { IMatchDetails } from 'footballsimulationengine';
 
 interface IInitialState {
 	hosts: any | null;
