@@ -5,6 +5,19 @@ import { ISkillsAttrs } from './skills.types';
 
 export type TSquadRealTeam = Record<EPlayerPositionName, IRealPlayer>;
 
+export interface IRealPlayerNotMain
+	extends Pick<
+		IRealPlayer,
+		| '_id'
+		| 'skills'
+		| 'rating'
+		| 'positions'
+		| 'number'
+		| 'name'
+		| 'country'
+		| 'age'
+	> {}
+
 export interface IRealTeamFullInfo {
 	_id: string;
 	league: ILeague;
@@ -12,5 +25,5 @@ export interface IRealTeamFullInfo {
 	logoClub: string;
 	skills: ISkillsAttrs;
 	main: TSquadRealTeam;
-	bench: IRealPlayer[];
+	bench: IRealPlayerNotMain[];
 }

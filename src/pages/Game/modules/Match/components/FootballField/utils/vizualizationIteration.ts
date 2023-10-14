@@ -1,45 +1,18 @@
 import { radiusItems } from '@/constants';
-import { ERolePlayer } from '@/constants/rolePlayer.enum';
 import { IOptionsMatch } from '../types/optionsMatch.type';
+import { IMatchDetails, ITeam } from 'footballsimulationengine';
 
 const imageBall = new Image();
 imageBall.src = '/images/ball.png';
 
-/* function canvas_arrow(ctx: any, fromx: any, fromy: any, tox: any, toy: any) {
-	const headlen = 8; // length of head in pixels
-	const dx = tox - fromx;
-	const dy = toy - fromy;
-	const angle = Math.atan2(dy, dx);
-	ctx.lineWidth = 1.8;
-	ctx.moveTo(fromx, fromy);
-	ctx.lineTo(tox, toy);
-	ctx.lineTo(
-		tox - headlen * Math.cos(angle - Math.PI / 6),
-		toy - headlen * Math.sin(angle - Math.PI / 6)
-	);
-	ctx.moveTo(tox, toy);
-	ctx.lineTo(
-		tox - headlen * Math.cos(angle + Math.PI / 6),
-		toy - headlen * Math.sin(angle + Math.PI / 6)
-	);
-	ctx.stroke();
-} */
-
-export const vizualizationIteration = (
-	canvas: HTMLCanvasElement,
-	matchDetails: any,
+function drawTeamPlayers(
+	ctx: CanvasRenderingContext2D,
+	team: ITeam,
+	teamColor: string,
 	optionsMatch?: IOptionsMatch
-) => {
-	const { pitchSize, ball, kickOffTeam, secondTeam } = matchDetails;
-	const ctx = canvas.getContext('2d')!;
-	ctx.canvas.width = pitchSize[0];
-	ctx.canvas.height = pitchSize[1];
+) {
+	const { players, replacements } = team;
 
-	const players = [...secondTeam.players, ...kickOffTeam.players];
-	/**
-	 * @info
-	 * postions of players
-	 */
 	for (let i = 0; i < players.length; i++) {
 		const player = players[i];
 		const playerPositionX = player.currentPOS[0];
@@ -65,17 +38,15 @@ export const vizualizationIteration = (
 		ctx.moveTo(playerPositionX, playerPositionY);
 		ctx.arc(playerPositionX, playerPositionY, radiusItems, 0, 2 * Math.PI);
 
-		if (i < players.length / 2) {
-			ctx.fillStyle = 'orange';
-		} else {
-			ctx.fillStyle = 'blue';
-		}
+		// color form of team
+		ctx.fillStyle = teamColor;
+
 		ctx.fill();
 		ctx.closePath();
 
 		// options
 		ctx.save();
-		ctx.font = '26px minako';
+		ctx.font = '28px minako';
 		ctx.fillStyle = 'white';
 		ctx.moveTo(playerPositionX, playerPositionY);
 		ctx.translate(playerPositionX + radiusItems / 2, playerPositionY);
@@ -100,16 +71,15 @@ export const vizualizationIteration = (
 				ctx.fillText(position, 0, -radiusItems - additionalIndent); // in the up
 			}
 
-			optionsMatch?.isShowNumber && ctx.fillText(players[i].number, 0, 0); // in the middle
+			optionsMatch?.isShowNumber &&
+				ctx.fillText(String(players[i].number), 0, 0); // in the middle
 			optionsMatch?.isShowFitness &&
 				ctx.fillText(players[i].fitness.toFixed() + '%', 0, radiusItems + 20);
 		}
 		ctx.restore();
 
-		if (
-			optionsMatch?.isShowChanged &&
-			player.squadStart === ERolePlayer.BENCH
-		) {
+		const isChangedOnPlayer = replacements.find(p => p.on === player._id);
+		if (optionsMatch?.isShowChanged && isChangedOnPlayer) {
 			// arc
 			ctx.beginPath();
 			ctx.save();
@@ -146,20 +116,38 @@ export const vizualizationIteration = (
 			ctx.restore();
 			ctx.closePath();
 		}
-
-		/**
-		 * @info
-		 * ball
-		 */
-		const radiusBall = radiusItems + 4;
-		const ballPositionX = ball.position[0];
-		const ballPositionY = ball.position[1];
-		ctx.drawImage(
-			imageBall,
-			ballPositionX - radiusBall / 2,
-			ballPositionY - radiusBall / 2,
-			radiusBall,
-			radiusBall
-		);
 	}
+}
+
+export const visualizationIteration = (
+	canvas: HTMLCanvasElement,
+	matchDetails: IMatchDetails,
+	optionsMatch?: IOptionsMatch
+) => {
+	const { pitchSize, ball, kickOffTeam, secondTeam } = matchDetails;
+	const ctx = canvas.getContext('2d')!;
+	ctx.canvas.width = pitchSize[0];
+	ctx.canvas.height = pitchSize[1];
+
+	/**
+	 * @info
+	 * postions of players
+	 */
+	drawTeamPlayers(ctx, secondTeam, 'orange', optionsMatch);
+	drawTeamPlayers(ctx, kickOffTeam, 'blue', optionsMatch);
+
+	/**
+	 * @info
+	 * ball
+	 */
+	const radiusBall = radiusItems + 4;
+	const ballPositionX = ball.position[0];
+	const ballPositionY = ball.position[1];
+	ctx.drawImage(
+		imageBall,
+		ballPositionX - radiusBall / 2,
+		ballPositionY - radiusBall / 2,
+		radiusBall,
+		radiusBall
+	);
 };

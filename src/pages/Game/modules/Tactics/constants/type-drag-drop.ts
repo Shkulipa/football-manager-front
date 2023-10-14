@@ -1,0 +1,4 @@
+export enum ETypeDragDrop {
+	PLAYER_MAIN = 'PLAYER_MAIN',
+	PLAYER_BENCH = 'PLAYER_BENCH'
+}

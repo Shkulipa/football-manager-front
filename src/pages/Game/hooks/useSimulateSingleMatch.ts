@@ -10,12 +10,19 @@ import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { singleMatchSlice } from '@/pages/SingleMatch/store/single-match.slice';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
-import { parsePlayersHelper } from '../utils/parsePlayers.helper';
+import {
+	parsePlayersMainHelper,
+	parsePlayersNotMainHelper
+} from '../utils/parsePlayers.helper';
 import { IRealTeamFullInfo } from '@/types/real-team-full-info';
 import { IOptionsMatch } from '../modules/Match/components/FootballField/types/optionsMatch.type';
+import { useValidateMatch } from './useValidateMatch';
+import { IRealTeamShortInfo } from '@/types/real-team-short-info';
+import { EMatchSide } from '@/constants/match-sides.enum';
 
 export interface IUseSimulateSingleMatchRes {
 	matchDetails?: IMatchDetails | null;
+	userFor: EMatchSide | null;
 	currentIteration: number;
 	isPlay: boolean;
 	speed: number;
@@ -29,8 +36,10 @@ export interface IUseSimulateSingleMatchRes {
 }
 
 export function useSimulateSingleMatch(): IUseSimulateSingleMatchRes {
+	useValidateMatch();
+
 	const dispatch = useAppDispatch();
-	const { hosts, guests, matchDetails } = useAppSelector(
+	const { hosts, guests, matchDetails, userFor } = useAppSelector(
 		state => state.singleMatchReducer
 	);
 
@@ -44,9 +53,13 @@ export function useSimulateSingleMatch(): IUseSimulateSingleMatchRes {
 	const isSecondPart = currentIteration > gameLength / 2;
 	const isOverMatch = currentIteration > gameLength;
 
+	// in useValidateMatch(), we have already check those variables
+	const hostsShortInfo = hosts as IRealTeamShortInfo;
+	const guestsShortInfo = guests as IRealTeamShortInfo;
+
 	// get full info about teams
-	const urlHosts = `/real-team/${hosts._id}`;
-	const urlGuests = `/real-team/${guests._id}`;
+	const urlHosts = `/real-team/${hostsShortInfo._id}`;
+	const urlGuests = `/real-team/${guestsShortInfo._id}`;
 	const cacheTime = 3600000 * 24 * 7; // 1 week
 	const hostsFullData = useSWR<IRealTeamFullInfo>(urlHosts, () =>
 		SWRFetcher(urlHosts, cacheTime)
@@ -80,23 +93,33 @@ export function useSimulateSingleMatch(): IUseSimulateSingleMatchRes {
 			!guestsFullData.isLoading
 		) {
 			// convert data of 2 team in valid data for engine
-			const hostPlayers = parsePlayersHelper(hostsFullData.data.main);
-			const guestsPlayers = parsePlayersHelper(guestsFullData.data.main);
+			const hostPlayers = parsePlayersMainHelper(hostsFullData.data.main);
+			const guestsPlayers = parsePlayersMainHelper(guestsFullData.data.main);
+
+			// save bench
+			const hostBench = parsePlayersNotMainHelper(hostsFullData.data.bench);
+			const guestsBench = parsePlayersNotMainHelper(guestsFullData.data.bench);
+
+			const commonData = { replacements: [] };
 
 			const hostsTeam = {
-				teamID: hosts._id,
-				logoClub: hosts.logoClub,
-				name: hosts.clubName,
-				manager: hosts.clubName,
-				players: hostPlayers
+				...commonData,
+				teamID: hostsFullData.data._id,
+				logoClub: hostsFullData.data.logoClub,
+				name: hostsFullData.data.clubName,
+				manager: hostsFullData.data.clubName,
+				players: hostPlayers,
+				bench: hostBench
 			};
 
 			const guestTeam = {
-				teamID: guests._id,
-				logoClub: guests.logoClub,
-				name: guests.clubName,
-				manager: guests.clubName,
-				players: guestsPlayers
+				...commonData,
+				teamID: guestsFullData.data._id,
+				logoClub: guestsFullData.data.logoClub,
+				name: guestsFullData.data.clubName,
+				manager: guestsFullData.data.clubName,
+				players: guestsPlayers,
+				bench: guestsBench
 			};
 
 			// it is helping for fix TypeError: Cannot delete property '1' of [object Array]
@@ -243,6 +266,7 @@ export function useSimulateSingleMatch(): IUseSimulateSingleMatchRes {
 	}, []);
 
 	return {
+		userFor,
 		speed,
 		isPlay,
 		currentIteration,

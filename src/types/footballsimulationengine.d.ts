@@ -5,7 +5,12 @@ declare module 'footballsimulationengine' {
 		goalWidth: number;
 	}
 
+	export interface IReplacement {
+		on: string;
+		off: string;
+	}
 	export interface ITeam {
+		bench: IRealPlayerNotMain[];
 		name: string;
 		manager: string;
 		players: IPlayer[];
@@ -13,6 +18,7 @@ declare module 'footballsimulationengine' {
 		intent: string;
 		teamID: number;
 		logoClub: string;
+		replacements: IReplacement[];
 	}
 
 	export interface IMatchDetails {
@@ -27,11 +33,56 @@ declare module 'footballsimulationengine' {
 		iterationLog: string[];
 	}
 
-	export interface IPlayer {
-		realPlayerId: string;
+	export enum EPlayerPositionName {
+		// offensive
+		LCF = 'LCF',
+		ST = 'ST',
+		RCF = 'RCF',
+
+		// midfield
+		LWM = 'LWM',
+		AML = 'AML',
+		AMC = 'AMC',
+		AMR = 'AMR',
+		RWM = 'RWM',
+
+		LM = 'LM',
+		LCM = 'LCM',
+		CM = 'CM',
+		RCM = 'RCM',
+		RM = 'RM',
+
+		// defensive
+		LWB = 'LWB',
+		LDM = 'LDM',
+		CDM = 'CDM',
+		RDM = 'RDM',
+		RWB = 'RWB',
+
+		LB = 'LB',
+		LCB = 'LCB',
+		CB = 'CB',
+		RCB = 'RCB',
+		RB = 'RB',
+
+		// GK
+		GK = 'GK'
+	}
+
+	export interface ICountry {
+		_id: string;
 		name: string;
+		flag: string;
+	}
+
+	export interface IPlayer {
+		_id: string;
+		name: string;
+		age: number;
+		country: ICountry;
 		rating: number;
 		position: string;
+		positions: EPlayerPositionName;
 		skill: IPlayerSkills;
 		currentPOS: number[];
 		fitness: number;
@@ -45,6 +96,32 @@ declare module 'footballsimulationengine' {
 		stats: IStats;
 		number: number;
 	}
+
+	export interface IPlayerSkills {
+		passing: number;
+		shooting: number;
+		saving: number;
+		tackling: number;
+		agility: number;
+		strength: number;
+		penalty_taking: number;
+		jumping: number;
+	}
+
+	export interface IRealPlayerNotMain
+		extends Pick<
+			IPlayer,
+			| '_id'
+			| 'rating'
+			| 'skill'
+			| 'positions'
+			| 'number'
+			| 'name'
+			| 'country'
+			| 'age'
+			| 'fitness'
+			| 'injured'
+		> {}
 
 	export interface IBall {
 		position: number[];

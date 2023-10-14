@@ -1,4 +1,5 @@
 @import '@/styles/variables';
+@import '@/styles/fonts';
 
 .tabs {
     display: flex;
@@ -9,6 +10,7 @@
 
 .tab {
     padding: 15px;
+    font-family: $primaryFont;
     font-size: $m-text-size;
     cursor: pointer;
     background-color: rgba($quaternary-color, 0.2);

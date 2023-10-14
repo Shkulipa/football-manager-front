@@ -13,7 +13,7 @@ export function MatchDetails({
 				<span>{matchDetails.secondTeamStatistics.goals}</span>
 			</div>
 
-			<span>:</span>
+			<span className={styles.colon}>:</span>
 
 			<div className={styles.teamsNames}>
 				<span>{matchDetails.kickOffTeamStatistics.goals}</span>

@@ -1,5 +1,7 @@
 export const defaultIconSize = 24;
 
+export const limitReplacements = 3;
+
 /**
  * @info
  * revalidate for fetching of requests from nextjs in server components

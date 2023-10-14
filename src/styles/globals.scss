@@ -1,4 +1,6 @@
 @import './variables';
+@import './fonts';
+@import './fonts/fonts';
 
 html,
 body {
@@ -6,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  font-family: $primaryFont;
   font-size: $s-text-size;
   font-weight: 400;
   color: $primary-color;

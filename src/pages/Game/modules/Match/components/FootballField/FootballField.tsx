@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import styles from './FootballField.module.scss';
 import { pitchSize } from '@/constants';
 import { IFootballFieldProps } from './types/FootballField.types';
-import { vizualizationIteration } from './utils/vizualizationIteration';
+import { visualizationIteration } from './utils/vizualizationIteration';
 
 const widthStaticField = 850;
 
@@ -25,7 +25,7 @@ export function FootballField({
 	 */
 	useEffect(() => {
 		if (matchDetails && canvasRef.current) {
-			vizualizationIteration(canvasRef.current, matchDetails, optionsMatch);
+			visualizationIteration(canvasRef.current, matchDetails, optionsMatch);
 		}
 	}, [matchDetails, canvasRef, optionsMatch]);
 

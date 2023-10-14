@@ -1,10 +1,12 @@
 @import '@/styles/variables';
 @import '@/styles/mixins';
+@import '@/styles/fonts';
 @include hoverScale('btn', 1.1);
 @include hoverScale('secondaryBtn', 1.1);
 
 .btn {
   margin: 0;
+  font-family: $primaryFont;
   font-size: $s-text-size;
   font-weight: 700;
   color: $primary-color;

@@ -1,10 +1,11 @@
 import { EMatchSide } from '@/constants/match-sides.enum';
+import { IRealTeamShortInfo } from '@/types/real-team-short-info';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { IMatchDetails } from 'footballsimulationengine';
 
 interface IInitialState {
-	hosts: any | null;
-	guests: any | null;
+	hosts: IRealTeamShortInfo | null;
+	guests: IRealTeamShortInfo | null;
 	userFor: EMatchSide | null;
 	matchDetails: IMatchDetails | null;
 }
@@ -20,10 +21,10 @@ export const singleMatchSlice = createSlice({
 	name: 'single-match',
 	initialState,
 	reducers: {
-		setHosts(state, action: PayloadAction<any>) {
+		setHosts(state, action: PayloadAction<IRealTeamShortInfo>) {
 			state.hosts = action.payload;
 		},
-		setGuests(state, action: PayloadAction<any>) {
+		setGuests(state, action: PayloadAction<IRealTeamShortInfo>) {
 			state.guests = action.payload;
 		},
 		setUserFor(state, action: PayloadAction<EMatchSide | null>) {

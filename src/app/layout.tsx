@@ -1,12 +1,9 @@
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import BaseLayout from '@/layouts/common/base-layout';
 import { PropsWithChildren, DetailedHTMLProps, HTMLAttributes } from 'react';
 import ReduxProvider from '@/store/provider';
 import SWRProvider from '@/SWR/SWR.provider';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'FM',
@@ -21,7 +18,14 @@ interface IRootLayoutProps
 export default function RootLayout({ children }: IRootLayoutProps) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body>
+				<link
+					rel="preload"
+					href="/fonts/minako/minako.ttf"
+					as="font"
+					type="font/ttf"
+					crossOrigin="anonymous"
+				/>
 				<ReduxProvider>
 					<SWRProvider>
 						<BaseLayout>{children}</BaseLayout>

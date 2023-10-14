@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+
+.positionTable {
+  transition: $transition;
+}
+
+.position {
+  text-align: center;
+}
+
+.player {
+  width: 100%;
+}
+
+.isOver {
+  background-color: $green;
+}

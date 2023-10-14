@@ -1,15 +1,13 @@
 'use client';
 
 import styles from './Game.module.scss';
-import { useValidateMatch } from './hooks/useValidateMatch';
 import { useSimulateSingleMatch } from './hooks/useSimulateSingleMatch';
 import { Tabs } from './components/Tabs/Tabs';
 import { useState } from 'react';
-import { Match, Options, Statistics, Teams } from './modules';
+import { Match, Options, Statistics, Tactics, Teams } from './modules';
 import { PaddingContainer } from '@/containers';
 
 export function Game(): JSX.Element {
-	useValidateMatch();
 	const {
 		matchDetails,
 		speed,
@@ -52,6 +50,9 @@ export function Game(): JSX.Element {
 			break;
 		case 3:
 			tabContent = <Teams matchDetails={matchDetails} />;
+			break;
+		case 4:
+			tabContent = <Tactics />;
 			break;
 		case 5:
 			tabContent = (

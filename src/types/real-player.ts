@@ -5,7 +5,7 @@ import { IRealTeamShortInfo } from './real-team-short-info';
 
 export interface IRealPlayer {
 	_id: string;
-	countryId: ICountry;
+	country: ICountry;
 	positions: EPlayerPositionName[];
 	realTeam: IRealTeamShortInfo;
 	name: string;

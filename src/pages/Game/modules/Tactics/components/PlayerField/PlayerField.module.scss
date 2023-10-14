@@ -1,0 +1,35 @@
+@import '@/styles/variables';
+
+$size: 45px;
+
+.value {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: $m-text-size;
+  color: $white;
+  letter-spacing: 1px;
+  cursor: grab;
+  background-color: $black;
+  border: 2px solid $white;
+  border-radius: 50%;
+}
+
+.content {
+  $textSize: calc($s-text-size / 1.12);
+
+  position: absolute;
+  bottom: 125%;
+  font-size: $textSize;
+  line-height: $textSize;
+  color: $black;
+  text-align: center;
+  pointer-events: none;
+}
+
+.isDragging {
+  cursor: grabbing;
+  opacity: 0.4;
+}
