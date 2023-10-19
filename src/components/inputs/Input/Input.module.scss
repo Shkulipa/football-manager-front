@@ -1,0 +1,28 @@
+@import '@/styles/variables'; 
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 5px;
+  font-size: $s-text-size;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $primary-color;
+  outline: none;
+
+  &.error {
+    border-bottom-color: $error-color;
+  }
+}
+
+.errorMsg {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  font-size: $xs-text-size;
+  transform: translate(0, 100%);
+}

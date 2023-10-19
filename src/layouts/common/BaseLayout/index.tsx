@@ -1,7 +1,7 @@
 'use client';
 import cn from 'classnames';
-import { IBaseLayoutProps } from './base-layout.types';
-import styles from './base-layout.module.scss';
+import { IBaseLayoutProps } from './BaseLayout.types';
+import styles from './BaseLayout.module.scss';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Header, Sidebar } from '@/components';
 import { ContentContainer } from '@/containers';

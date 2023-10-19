@@ -1,7 +1,5 @@
-import { Loader } from '@/components';
+import { ContentLoader } from '@/components';
 
-const Loading = () => {
-	return <Loader />;
-};
+const Loading = () => <ContentLoader />;
 
 export default Loading;

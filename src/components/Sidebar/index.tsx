@@ -7,17 +7,24 @@ import {
 	MenuItem,
 	sidebarClasses
 } from 'react-pro-sidebar';
-import { Arrow, SingleMatch, Teams, Login } from '@/icons';
+import { Arrow, SingleMatch, Teams } from '@/icons';
 import Link from 'next/link';
 import styles from './Sidebar.module.scss';
 import { ISidebarProps } from './Sidebar.types';
 import { BtnIcon } from '..';
 import { ROUTES } from '@/constants/routes.enum';
+import { useAppSelector } from '@/hooks/redux';
+import { Logout } from './components/Logout/Logout';
+import { Login } from './components/Login/Login';
 
 export function Sidebar({
 	isCollapseSidebar,
 	setCollapseSidebar
 }: ISidebarProps): JSX.Element {
+	const { user } = useAppSelector(state => state.userReducer);
+
+	const authorization = user ? <Logout /> : <Login />;
+
 	return (
 		<div className={cn(styles.sidebarWrapper)}>
 			<BtnIcon
@@ -52,12 +59,7 @@ export function Sidebar({
 					>
 						Teams
 					</MenuItem>
-					<MenuItem
-						icon={<Login width={30} height={30} />}
-						component={<Link href={ROUTES.AUTH_SIGN_IN} />}
-					>
-						Log in
-					</MenuItem>
+					{authorization}
 				</Menu>
 			</SideBarReactPro>
 		</div>

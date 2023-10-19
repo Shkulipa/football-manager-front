@@ -13,5 +13,6 @@ export interface IBtn
 			HTMLButtonElement
 		>
 	> {
+	isLoading?: boolean;
 	appearance?: BtnType;
 }

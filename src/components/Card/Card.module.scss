@@ -1,0 +1,9 @@
+@import '@/styles/variables';
+
+.card {
+    width: 100%;
+    padding: $primary-indent;
+    border: 1px solid $tertiary-color;
+    border-radius: 12px;
+    box-shadow: $box-shadow;
+}

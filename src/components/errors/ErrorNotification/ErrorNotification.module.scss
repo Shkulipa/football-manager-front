@@ -1,0 +1,19 @@
+@import "@/styles/variables";
+
+.errorNotificationWrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.icon {
+    width: fit-content;
+}
+
+.message {
+    font-size: $s-text-size;
+    color: $error-color;
+
+    &:first-letter {
+        text-transform: capitalize;
+    }
+}

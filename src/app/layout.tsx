@@ -1,19 +1,19 @@
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
-import BaseLayout from '@/layouts/common/base-layout';
-import { PropsWithChildren, DetailedHTMLProps, HTMLAttributes } from 'react';
-import ReduxProvider from '@/store/provider';
+import BaseLayout from '@/layouts/common/BaseLayout';
 import SWRProvider from '@/SWR/SWR.provider';
+import { NetworkError, GlobalError } from '@/modules';
+import ReduxProvider from '@/providers/ReduxProvider/ReduxProvider';
+import { ICommonBasePropsWithChildren } from '@/types/commonProps';
+import { AuthLayout } from '@/layouts/common/AuthLayout/AuthLayout';
 
 export const metadata: Metadata = {
 	title: 'FM',
-	description: 'Football Manager'
+	description:
+		'Experience the thrill of managing your own football team. Football Manager lets you make strategic decisions, build your dream team, and lead them to victory. Take control of every aspect of the game and become a true football manager.'
 };
 
-interface IRootLayoutProps
-	extends PropsWithChildren<
-		DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
-	> {}
+interface IRootLayoutProps extends ICommonBasePropsWithChildren {}
 
 export default function RootLayout({ children }: IRootLayoutProps) {
 	return (
@@ -28,7 +28,11 @@ export default function RootLayout({ children }: IRootLayoutProps) {
 				/>
 				<ReduxProvider>
 					<SWRProvider>
-						<BaseLayout>{children}</BaseLayout>
+						<NetworkError />
+						<GlobalError />
+						<BaseLayout>
+							<AuthLayout>{children}</AuthLayout>
+						</BaseLayout>
 					</SWRProvider>
 				</ReduxProvider>
 			</body>

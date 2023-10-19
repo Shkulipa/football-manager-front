@@ -1,3 +1,7 @@
+// server
+export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
+export const AXIOS_TIMEOUT = 1000 * 30;
+
 export const defaultIconSize = 24;
 
 export const limitReplacements = 3;

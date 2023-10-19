@@ -8,39 +8,30 @@ export function Button({
 	className,
 	disabled,
 	appearance = 'primary',
+	isLoading,
 	...props
 }: IBtn): JSX.Element {
+	const loading = isLoading ? 'Loading...' : children;
+
 	switch (appearance) {
 		case 'primary':
 			return (
 				<button
-					className={cn(
-						styles.btn,
-						styles.primaryBtn,
-						{
-							[styles.disabled]: disabled
-						},
-						className
-					)}
+					className={cn(styles.btn, styles.primaryBtn, className)}
+					disabled={isLoading || disabled}
 					{...props}
 				>
-					{children}
+					{loading}
 				</button>
 			);
 		case 'secondary':
 			return (
 				<button
-					className={cn(
-						styles.btn,
-						styles.secondaryBtn,
-						{
-							[styles.disabled]: disabled
-						},
-						className
-					)}
+					className={cn(styles.btn, styles.secondaryBtn, className)}
+					disabled={isLoading || disabled}
 					{...props}
 				>
-					{children}
+					{loading}
 				</button>
 			);
 		default:

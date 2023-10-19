@@ -5,10 +5,10 @@ import styles from './Tactics.module.scss';
 import { Position, PositionMainTable, TableTitlesMemo } from './components';
 import { EMatchSide } from '@/constants/match-sides.enum';
 import { useAppSelector } from '@/hooks/redux';
-import { withReactDnd } from '@/providers/react-dnd/react-dnd.hoc';
 import { initPositions, orderedPositions } from './constants/init-positions';
 import { EPlayerPositionName } from '@/constants/player-position-name.enum';
 import { PositionBenchTable } from './components/PositionBenchTable/PositionBenchTable';
+import { withReactDnd } from '@/providers/ReactDnd/ReactDnd.hoc';
 
 const step = 30;
 

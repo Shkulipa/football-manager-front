@@ -1,0 +1,44 @@
+@import '@/styles/variables';
+
+.globalContainer {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.globalModal {
+    position: relative;
+    display: grid;
+    gap: 20px;
+
+    width: 500px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: $box-shadow;
+}
+
+.title {
+    width: 100%;
+    max-width: 80%;
+}
+
+.closeIcon {
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+    width: fit-content;
+    height: fit-content;
+
+    cursor: pointer;
+}

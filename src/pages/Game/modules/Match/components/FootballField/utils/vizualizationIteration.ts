@@ -131,7 +131,7 @@ export const visualizationIteration = (
 
 	/**
 	 * @info
-	 * postions of players
+	 * positions of players
 	 */
 	drawTeamPlayers(ctx, secondTeam, 'orange', optionsMatch);
 	drawTeamPlayers(ctx, kickOffTeam, 'blue', optionsMatch);

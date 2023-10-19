@@ -1,4 +1,5 @@
 export * from './Arrow';
+export * from './Error';
 export * from './SingleMatch';
 export * from './Login';
 export * from './Teams';
