@@ -7,7 +7,6 @@ import { hideGlobalError } from '../../components/GlobalModal/store';
 export const GlobalError = (): JSX.Element => {
 	const dispatch = useAppDispatch();
 	const { globalError } = useAppSelector(state => state.errorReducer);
-
 	const closeGlobalErrorHandler = () => dispatch(hideGlobalError());
 
 	return (

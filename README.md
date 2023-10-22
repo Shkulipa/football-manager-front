@@ -1,8 +1,8 @@
 # Todo
-- [X] login
-- [X] errors fetching
-- refresh token after expired access token for protected BE endpoints
-- [X] Fix tactics in match
+- [X] Login
+- [X] Errors fetching
+- [X] Refresh tokens after expired access token
+- [X] Fix tactics in single match
     - [X] Drag from Football Field
         - [X]  into Football Field(index yourself)
         - [X]  into Main table
@@ -14,35 +14,29 @@
     - [X] Drag from Bench
         - [X] into Football Field
         - [X] into Main Table
-- sign up
-- activation email
-- create user team
-- delete user team
-- rating match (finding...)
-- play rating match
-- make replacements + tactic in rating match
-- [ ] online chat
+- [ ] Sign up
+- [ ] Activation email
+- [ ] Create user team
+- [ ] Delete user team
+- [ ] Rating match (finding...)
+- [ ] Play rating match
+- [ ] Make replacements + tactic in rating match
+- [ ] Online chat
     - [ ] Common Chat
     - [ ] Directs Chat
 - [ ] Social Login
     - [ ] Google
     - [ ] Facebook
-- shop (buy packs)
-- update user team
-- open packs
-- auction create lot
-- auction cancel lot
-- auction buy lot
-- user update password
-- user update username
-- user update email
-- restore forgot pass
-
-admin:
-- [ ] create/update/delete country
-- [ ] create/update/delete league
-- [ ] create/update/delete real team
-- [ ] create/update/delete real player
+- [ ] Shop (buy packs)
+- [ ] Update user team
+- [ ] Open packs
+- [ ] Auction create lot
+- [ ] Auction cancel lot
+- [ ] Auction buy lot
+- [ ] User update password
+- [ ] User update username
+- [ ] User update email
+- [ ] Restore forgot pass
 
 # UI library
 https://primereact.org/carousel/
