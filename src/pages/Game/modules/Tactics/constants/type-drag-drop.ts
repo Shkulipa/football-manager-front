@@ -1,4 +1,5 @@
-export enum ETypeDragDrop {
-	PLAYER_MAIN = 'PLAYER_MAIN',
-	PLAYER_BENCH = 'PLAYER_BENCH'
+export enum ETypeDragTactics {
+	FOOTBALL_FIELD = 'FOOTBALL_FIELD',
+	TABLE_MAIN = 'TABLE_MAIN',
+	TABLE_BENCH = 'TABLE_BENCH'
 }

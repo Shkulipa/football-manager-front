@@ -10,8 +10,8 @@ import { singleMatchSlice } from './store/single-match.slice';
 import { initTeam } from './utils/initTeam/initTeam';
 import { Card } from './components/Card';
 import { SingleMatchActions } from './components/SingleMatchActions';
-import { EMatchSide } from '@/constants/match-sides.enum';
 import { PaddingContainer } from '@/containers';
+import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
 
 export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 	const router = useRouter();

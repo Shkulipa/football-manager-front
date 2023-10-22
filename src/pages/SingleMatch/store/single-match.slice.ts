@@ -1,4 +1,4 @@
-import { EMatchSide } from '@/constants/match-sides.enum';
+import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
 import { IRealTeamShortInfo } from '@/types/real-team-short-info';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { IMatchDetails } from 'footballsimulationengine';

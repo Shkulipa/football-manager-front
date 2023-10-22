@@ -4,7 +4,7 @@ import { useDrop } from 'react-dnd';
 import { IPositionInTableProps } from './PositionMainTable.types';
 import styles from './PositionMainTable.module.scss';
 import { PlayerMainTable } from '..';
-import { ETypeDragDrop } from '../../constants/type-drag-drop';
+import { ETypeDragTactics } from '../../constants/type-drag-drop';
 
 export function PositionMainTable({
 	position,
@@ -15,8 +15,15 @@ export function PositionMainTable({
 
 	const [{ isOver }, drop] = useDrop(
 		() => ({
-			accept: [ETypeDragDrop.PLAYER_MAIN, ETypeDragDrop.PLAYER_BENCH],
-			drop: () => position,
+			accept: [
+				ETypeDragTactics.FOOTBALL_FIELD,
+				ETypeDragTactics.TABLE_MAIN,
+				ETypeDragTactics.TABLE_BENCH
+			],
+			drop: () => ({
+				type: ETypeDragTactics.TABLE_MAIN,
+				data: position
+			}),
 			collect: monitor => ({
 				isOver: monitor.isOver()
 			})

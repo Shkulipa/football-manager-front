@@ -1,8 +1,21 @@
-import { EPlayerPositionName } from '@/constants/player-position-name.enum';
-import { IPlayer } from 'footballsimulationengine';
+import {
+	EPlayerPositionName,
+	IPlayer,
+	IRealPlayerNotMain
+} from 'footballsimulationengine';
+import { ETypeDragTactics } from '../constants/type-drag-drop';
 
-export interface IPosition {
+export interface IDropResultData {
 	position: EPlayerPositionName;
 	coordinates: [number, number];
+	currentPlayer: IPlayer;
+}
+export interface IPosition
+	extends Pick<IDropResultData, 'coordinates' | 'position'> {
 	currentPlayer: IPlayer | null;
+}
+
+export interface IDropResult {
+	data: IDropResultData | IRealPlayerNotMain;
+	type: ETypeDragTactics;
 }

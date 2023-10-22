@@ -18,7 +18,7 @@ import { IRealTeamFullInfo } from '@/types/real-team-full-info';
 import { IOptionsMatch } from '../modules/Match/components/FootballField/types/optionsMatch.type';
 import { useValidateMatch } from './useValidateMatch';
 import { IRealTeamShortInfo } from '@/types/real-team-short-info';
-import { EMatchSide } from '@/constants/match-sides.enum';
+import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
 
 export interface IUseSimulateSingleMatchRes {
 	matchDetails?: IMatchDetails | null;

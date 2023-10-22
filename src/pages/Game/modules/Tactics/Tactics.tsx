@@ -3,23 +3,29 @@ import { useEffect, useState } from 'react';
 import { pitchSize } from '@/constants';
 import styles from './Tactics.module.scss';
 import { Position, PositionMainTable, TableTitlesMemo } from './components';
-import { EMatchSide } from '@/constants/match-sides.enum';
 import { useAppSelector } from '@/hooks/redux';
-import { initPositions, orderedPositions } from './constants/init-positions';
-import { EPlayerPositionName } from '@/constants/player-position-name.enum';
+import {
+	initPositionsHOSTS,
+	initPositionsGUESTS,
+	orderedPositions
+} from './constants/init-positions';
 import { PositionBenchTable } from './components/PositionBenchTable/PositionBenchTable';
 import { withReactDnd } from '@/providers/ReactDnd/ReactDnd.hoc';
+import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
+import { EPlayerPositionName } from '@/constants/footballsimulationengine/player-position-name.enum';
 
 const step = 30;
 
 function Tactics(): JSX.Element {
 	const { matchDetails, userFor } = useAppSelector(s => s.singleMatchReducer);
+	const isUserHosts = userFor === EMatchSide.HOSTS;
+	const initPositions = isUserHosts ? initPositionsHOSTS : initPositionsGUESTS;
+
 	const [positions, setPositions] = useState(initPositions);
 
-	const team =
-		userFor === EMatchSide.HOSTS
-			? matchDetails!.secondTeam
-			: matchDetails!.kickOffTeam;
+	const team = isUserHosts
+		? matchDetails!.secondTeam
+		: matchDetails!.kickOffTeam;
 
 	/**
 	 * @info
@@ -34,42 +40,23 @@ function Tactics(): JSX.Element {
 				const x = p.originPOS[0];
 				const y = p.originPOS[1];
 
-				// if user is playing for Hosts
-				if (userFor === EMatchSide.HOSTS) {
-					const halfPitchHeight = pitchSize.pitchHeight / 2;
-
-					for (const [key, value] of Object.entries(initPositions)) {
-						const yHosts = value.coordinates[1];
-						const parseYPosition = halfPitchHeight - yHosts;
-						const yHostsPosition = halfPitchHeight + parseYPosition;
-
-						if (
-							value.coordinates[0] - step <= x &&
-							value.coordinates[0] + step >= x &&
-							yHostsPosition - step <= y &&
-							yHostsPosition + step >= y
-						) {
-							playersPosition[key].currentPlayer = p;
-						}
-					}
-				} else {
-					// if user is playing for Guests
-					for (const [key, value] of Object.entries(initPositions)) {
-						if (
-							value.coordinates[0] - step <= x &&
-							value.coordinates[0] + step >= x &&
-							value.coordinates[1] - step <= y &&
-							value.coordinates[1] + step >= y
-						) {
-							playersPosition[key].currentPlayer = p;
-						}
+				// detect which position player in field by coordinates
+				for (const [key, value] of Object.entries(initPositions)) {
+					const isXLine =
+						value.coordinates[0] - step <= x &&
+						value.coordinates[0] + step >= x;
+					const isYLine =
+						value.coordinates[1] - step <= y &&
+						value.coordinates[1] + step >= y;
+					if (isXLine && isYLine) {
+						playersPosition[key].currentPlayer = p;
 					}
 				}
 			});
 
 			setPositions(playersPosition);
 		}
-	}, [userFor, matchDetails]);
+	}, [userFor, matchDetails, team.players]);
 
 	const positionsInArr = Object.values(positions);
 	const positionTaken = positionsInArr

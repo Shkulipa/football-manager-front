@@ -1,8 +1,11 @@
-import { EPlayerPositionName } from '@/constants/player-position-name.enum';
-import { playerPositionsFirstTeam } from '@/constants/player-positions';
+import { EPlayerPositionName } from '@/constants/footballsimulationengine/player-position-name.enum';
 import { IPosition } from '../types/position.types';
+import {
+	playerPositionsFirstTeam,
+	playerPositionsSecondTeam
+} from '@/constants/footballsimulationengine/player-positions';
 
-export const initPositions: Record<EPlayerPositionName, IPosition> = {
+export const initPositionsGUESTS: Record<EPlayerPositionName, IPosition> = {
 	[EPlayerPositionName.LCF]: {
 		position: EPlayerPositionName.LCF,
 		coordinates: playerPositionsFirstTeam.LCF,
@@ -150,7 +153,19 @@ export const initPositions: Record<EPlayerPositionName, IPosition> = {
 		currentPlayer: null
 	}
 };
+export const initPositionsHOSTS = Object.fromEntries(
+	Object.entries(initPositionsGUESTS).map(([key, value]) => [
+		key,
+		{
+			...value,
+			position: value.position,
+			coordinates:
+				playerPositionsSecondTeam[EPlayerPositionName[value.position]]
+		}
+	])
+);
 
-export const orderedPositions = Object.values(initPositions).map(
+// make order in this priority: GK, RB, RCB and so on, how it is in initPositionsGUESTS from Down in Up
+export const orderedPositions = Object.values(initPositionsGUESTS).map(
 	pos => pos.position
 );

@@ -5,16 +5,15 @@ import { IPlayerMainTableProps } from './PlayerMainTable.interfaces';
 import styles from './PlayerMainTable.module.scss';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { singleMatchSlice } from '@/pages/SingleMatch/store/single-match.slice';
-import { EMatchSide } from '@/constants/match-sides.enum';
-import { initStats } from '../../constants/init-stats';
-import {
-	IMatchDetails,
-	IRealPlayerNotMain,
-	IReplacement
-} from 'footballsimulationengine';
+import { IMatchDetails, IRealPlayerNotMain } from 'footballsimulationengine';
 import { limitReplacements } from '@/constants';
-import { IPosition } from '../../types/position.types';
-import { ETypeDragDrop } from '../../constants/type-drag-drop';
+
+import { ETypeDragTactics } from '../../constants/type-drag-drop';
+import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
+import { IDropResult, IDropResultData } from '../../types/position.types';
+import { swapPlayers } from '../../utils/swap-players';
+import { movePlayer } from '../../utils/move-player';
+import { replacePlayer } from '../../utils/replace-player';
 
 export function PlayerMainTable({
 	currentPlayer,
@@ -34,61 +33,30 @@ export function PlayerMainTable({
 
 	const [, drag] = useDrag(
 		() => ({
-			type: ETypeDragDrop.PLAYER_MAIN,
+			type: ETypeDragTactics.TABLE_MAIN,
 			item: currentPlayer,
 			end: (droppedItem, monitor) => {
-				const dropResult = monitor.getDropResult<IPosition>();
+				const dropResult = monitor.getDropResult<IDropResult>();
+				if (!dropResult) return;
 
 				const updatedMatchDetails: IMatchDetails = JSON.parse(
 					JSON.stringify(matchDetails)
 				);
 
-				// if player make replacement with bench player(drag from main into bench squad)
-				if (dropResult && !dropResult.currentPlayer) {
-					const benchPlayer = dropResult as unknown as IRealPlayerNotMain;
-					const updatedTeam = userTeam.players.map(player => {
-						// set new position for current player
-						if (player._id === droppedItem._id) {
-							return {
-								...player,
-								...benchPlayer,
-								stats: initStats
-							};
-						}
-
-						return player;
-					});
-
-					/**
-					 * @info
-					 * droppedItem - started selecting by grabbing
-					 * dropResult.currentPlayer - player on hover
-					 */
-					const newReplacement: IReplacement = {
-						on: benchPlayer._id,
-						off: droppedItem._id
-					};
-					const replacements = [...userTeam.replacements, newReplacement];
-
-					// update bench
-					const filteredBenchSquad = userTeam.bench.filter(
-						p => p._id !== benchPlayer._id
+				/**
+				 * @info
+				 * if player make replacement from main table into bench(drag from main into bench squad)
+				 */
+				const isFromMainTableToBenchTable =
+					dropResult.type === ETypeDragTactics.TABLE_BENCH &&
+					monitor.getItemType() === ETypeDragTactics.TABLE_MAIN;
+				if (isFromMainTableToBenchTable) {
+					const benchPlayer = dropResult.data as unknown as IRealPlayerNotMain;
+					const { updatedTeam, newBenchSquad, replacements } = replacePlayer(
+						userTeam,
+						droppedItem,
+						benchPlayer
 					);
-
-					// new bench player (main player that was replaced on player from bench)
-					const benchPlayerData: IRealPlayerNotMain = {
-						_id: droppedItem._id,
-						age: droppedItem.age,
-						country: droppedItem.country,
-						name: droppedItem.name,
-						number: droppedItem.number,
-						positions: droppedItem.positions,
-						rating: droppedItem.rating,
-						skill: droppedItem.skill,
-						fitness: droppedItem.fitness,
-						injured: droppedItem.injured
-					};
-					const newBenchSquad = [...filteredBenchSquad, benchPlayerData];
 
 					if (userFor === EMatchSide.HOSTS) {
 						updatedMatchDetails.secondTeam.players = [...updatedTeam];
@@ -104,30 +72,27 @@ export function PlayerMainTable({
 					return;
 				}
 
-				// if player changed the position, and there is a player yet(replacement between players from main squad)
-				if (dropResult && dropResult.currentPlayer) {
-					let updatedTeam = [];
+				/**
+				 * @info
+				 * if player changed position, and there is a player yet
+				 * changing position between from main table squad into football field
+				 * and changing position between players in main table squad
+				 */
+				const isFromMainTableToFootballField =
+					(dropResult.type === ETypeDragTactics.FOOTBALL_FIELD ||
+						dropResult.type === ETypeDragTactics.TABLE_MAIN) &&
+					monitor.getItemType() === ETypeDragTactics.TABLE_MAIN;
+				if (isFromMainTableToFootballField) {
+					const dropResultData = dropResult.data as IDropResultData;
 
-					// if user want replace player from bench into main squad
-					if (!droppedItem.playerID) {
-						updatedTeam = userTeam.players.map(player => {
-							// set new position for current player
-							if (player.playerID === dropResult!.currentPlayer!.playerID) {
-								return {
-									...player,
-									_id: droppedItem._id,
-									fitness: droppedItem.fitness,
-									injured: droppedItem.injured,
-									name: droppedItem.name,
-									number: droppedItem.number,
-									rating: droppedItem.rating,
-									skill: droppedItem.skill,
-									stats: droppedItem.stats
-								};
-							}
-
-							return player;
-						});
+					// from main table into football field where is places a player yet
+					const isPlaceTaken = dropResultData.currentPlayer;
+					if (isPlaceTaken) {
+						const updatedTeam = swapPlayers(
+							userTeam,
+							dropResultData,
+							droppedItem
+						);
 
 						if (userFor === EMatchSide.HOSTS) {
 							updatedMatchDetails.secondTeam.players = [...updatedTeam];
@@ -137,30 +102,22 @@ export function PlayerMainTable({
 
 						dispatch(setMatchDetails(updatedMatchDetails));
 						return;
-					} else {
-						// set new position for current player
-						updatedTeam = userTeam.players.map(player => {
-							if (player._id === droppedItem._id) {
-								return {
-									...player,
-									_id: player._id,
-									stats: initStats,
-									originPOS: dropResult.currentPlayer!.originPOS,
-									position: dropResult.currentPlayer!.position
-								};
-							} else if (
-								player.playerID === dropResult.currentPlayer!.playerID
-							) {
-								return {
-									...player,
-									_id: player._id,
-									originPOS: droppedItem.originPOS,
-									position: droppedItem.position
-								};
-							}
+					}
 
-							return player;
-						});
+					/**
+					 * @info
+					 * from main table into football field where place is empty
+					 */
+					if (!isPlaceTaken) {
+						const dropResultData = dropResult.data as IDropResultData;
+						const footballEmptyField = dropResultData;
+						const player = droppedItem;
+
+						const updatedTeam = movePlayer(
+							userTeam,
+							footballEmptyField,
+							player
+						);
 
 						if (userFor === EMatchSide.HOSTS) {
 							updatedMatchDetails.secondTeam.players = [...updatedTeam];

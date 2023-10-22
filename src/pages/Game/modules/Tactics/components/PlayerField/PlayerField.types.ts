@@ -1,3 +1,5 @@
+import { IPlayer } from 'footballsimulationengine';
+
 export interface IPlayerInFieldProps {
-	currentPlayer: any;
+	currentPlayer: IPlayer;
 }

@@ -3,7 +3,7 @@ import { useDrop } from 'react-dnd';
 
 import { IPositionBenchTableProps } from './PositionBenchTable.types';
 import styles from './PositionBenchTable.module.scss';
-import { ETypeDragDrop } from '../../constants/type-drag-drop';
+import { ETypeDragTactics } from '../../constants/type-drag-drop';
 import { PlayerBenchTable } from '..';
 
 export function PositionBenchTable({
@@ -13,8 +13,15 @@ export function PositionBenchTable({
 }: IPositionBenchTableProps) {
 	const [{ isOver }, drop] = useDrop(
 		() => ({
-			accept: [ETypeDragDrop.PLAYER_MAIN, ETypeDragDrop.PLAYER_BENCH],
-			drop: () => currentPlayer,
+			accept: [
+				ETypeDragTactics.FOOTBALL_FIELD,
+				ETypeDragTactics.TABLE_MAIN,
+				ETypeDragTactics.TABLE_BENCH
+			],
+			drop: () => ({
+				type: ETypeDragTactics.TABLE_BENCH,
+				data: currentPlayer
+			}),
 			collect: monitor => ({
 				isOver: monitor.isOver()
 			})

@@ -1,9 +1,9 @@
-import { EPlayerPositionName } from '@/constants/player-position-name.enum';
-import { playerPositionsFirstTeam } from '@/constants/player-positions';
+import { playerPositionsFirstTeam } from '@/constants/footballsimulationengine/player-positions';
 import {
 	IRealPlayerNotMain,
 	TSquadRealTeam
 } from '@/types/real-team-full-info';
+import { EPlayerPositionName } from 'footballsimulationengine';
 
 export const parsePlayersMainHelper = (squad: TSquadRealTeam) => {
 	const parsedPlayers = [];

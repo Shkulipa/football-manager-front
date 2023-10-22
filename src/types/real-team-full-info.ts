@@ -1,4 +1,4 @@
-import { EPlayerPositionName } from '@/constants/player-position-name.enum';
+import { EPlayerPositionName } from 'footballsimulationengine';
 import { ILeague } from './league';
 import { IRealPlayer } from './real-player';
 import { ISkillsAttrs } from './skills.types';

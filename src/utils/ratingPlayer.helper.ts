@@ -1,4 +1,4 @@
-import { maxRatingPlayer } from '@/constants/common-player-values';
+import { maxRatingPlayer } from '@/constants/footballsimulationengine/common-player-values';
 import { IPlayerSkills } from '@/types/player-skills';
 
 export const ratingHelper = (skills: IPlayerSkills) => {

@@ -1,4 +1,4 @@
-import { EPlayerPositionName } from '@/constants/player-position-name.enum';
+import { EPlayerPositionName } from 'footballsimulationengine';
 import { ICountry } from './country';
 import { IPlayerSkills } from './player-skills';
 import { IRealTeamShortInfo } from './real-team-short-info';
