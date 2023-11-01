@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+
+.successIconWrapper {
+    padding: 3px;
+    border: 2px solid $secondary-color;
+    border-radius: 50%;
+
+    &.outlined {
+        background: transparent;
+        fill: $quinary-color;
+    }
+
+    &.filled {
+        background: $secondary-color;
+        fill: $secondary-color;
+    }
+}

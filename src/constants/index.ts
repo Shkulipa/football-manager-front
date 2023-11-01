@@ -10,8 +10,9 @@ export const limitReplacements = 3;
  * @info
  * revalidate for fetching of requests from nextjs in server components
  * (in seconds)
+ * 3600 = 1 hour
  */
-export const revalidate = 10;
+export const revalidate = 3600 * 24;
 
 /**
  * @info

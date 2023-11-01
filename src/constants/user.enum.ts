@@ -1,3 +1,4 @@
 export enum EUSER {
-	LOCAL_STORAGE_USER = 'user'
+	LOCAL_STORAGE_USER = 'user',
+	SESSION_STORAGE_COOL_DOWN_SEND_EMAILS = 'coolDown'
 }

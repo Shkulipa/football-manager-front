@@ -1,0 +1,8 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: fit-content;
+    width: 100%;
+    max-width: 450px;
+}

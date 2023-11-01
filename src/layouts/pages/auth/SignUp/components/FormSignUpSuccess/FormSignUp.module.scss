@@ -1,0 +1,33 @@
+.contentModalWrapper {
+    gap: 20px;
+    justify-content: center;
+}
+
+.description {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sendAgainWrapper {
+    display: grid;
+    gap: 12px;
+}
+
+.sendAgainText {
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+}
+
+.errorNotification {
+    margin: 0 auto;
+}
+
+.titleWrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}

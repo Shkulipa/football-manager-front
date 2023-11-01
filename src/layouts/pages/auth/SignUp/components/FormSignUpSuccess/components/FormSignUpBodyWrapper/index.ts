@@ -1,0 +1,1 @@
+export { FormSignUpBodyWrapper } from './FormSignUpBodyWrapper';

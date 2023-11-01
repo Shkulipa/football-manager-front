@@ -1,0 +1,21 @@
+@import '@/styles/variables';
+
+$size: 45px;
+
+.position {
+  position: absolute;
+  width:  $size;
+  height: $size;
+  background-color: rgba($color: $white, $alpha: 60%);
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.decoration {
+  border: 2px solid $white;
+  box-shadow: calc($size / 15) calc($size / 15) 2px 0 rgba($color: $black, $alpha: 35%);
+}
+
+.isOver {
+  transform: translate(-50%, 50%) scale(1.2);
+}

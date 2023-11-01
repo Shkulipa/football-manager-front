@@ -1,0 +1,11 @@
+@import '@/styles/variables';
+
+.playersTable {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .title {
+    font-size: $m-text-size;
+  }
+  

@@ -1,0 +1,11 @@
+@import '@/styles/variables';
+
+.link {
+    position: relative;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

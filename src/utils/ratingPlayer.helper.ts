@@ -1,5 +1,5 @@
 import { maxRatingPlayer } from '@/constants/footballsimulationengine/common-player-values';
-import { IPlayerSkills } from '@/types/player-skills';
+import { IPlayerSkills } from '@/types/primary/player-skills';
 
 export const ratingHelper = (skills: IPlayerSkills) => {
 	const values = Object.values(skills);

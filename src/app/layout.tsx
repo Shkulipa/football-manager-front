@@ -1,11 +1,13 @@
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
-import BaseLayout from '@/layouts/common/BaseLayout';
+import { BaseLayout } from '@/layouts/common/BaseLayout';
 import SWRProvider from '@/SWR/SWR.provider';
 import { NetworkError, GlobalError } from '@/modules';
 import ReduxProvider from '@/providers/ReduxProvider/ReduxProvider';
-import { ICommonBasePropsWithChildren } from '@/types/commonProps';
+import { ICommonBasePropsWithChildren } from '@/types/others/commonProps';
 import { AuthLayout } from '@/layouts/common/AuthLayout/AuthLayout';
+import { Suspense } from 'react';
+import { ContentLoader } from '@/components';
 
 export const metadata: Metadata = {
 	title: 'FM',
@@ -31,7 +33,9 @@ export default function RootLayout({ children }: IRootLayoutProps) {
 						<NetworkError />
 						<GlobalError />
 						<BaseLayout>
-							<AuthLayout>{children}</AuthLayout>
+							<AuthLayout>
+								<Suspense fallback={<ContentLoader />}>{children}</Suspense>
+							</AuthLayout>
 						</BaseLayout>
 					</SWRProvider>
 				</ReduxProvider>

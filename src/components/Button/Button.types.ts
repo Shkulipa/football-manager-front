@@ -6,7 +6,7 @@ import {
 
 type BtnType = 'primary' | 'secondary';
 
-export interface IBtn
+export interface IButtonProps
 	extends PropsWithChildren<
 		DetailedHTMLProps<
 			ButtonHTMLAttributes<HTMLButtonElement>,

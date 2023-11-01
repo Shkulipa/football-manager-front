@@ -6,7 +6,7 @@ import styles from './Ptag.module.scss';
 export const Ptag = ({
 	children,
 	className,
-	size,
+	size = 'm',
 	...props
 }: IPtagProps): JSX.Element => {
 	return (

@@ -19,6 +19,18 @@
   }
 }
 
+.isInputTypePassword {
+  padding-right: 10%;
+}
+
+.passwordEye {
+  position: absolute;
+  top: 50%;
+  right: 2.5%;
+  cursor: pointer;
+  transform: translate(0, -50%);
+}
+
 .errorMsg {
   position: absolute;
   bottom: -5px;

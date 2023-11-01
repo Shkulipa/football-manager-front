@@ -19,8 +19,9 @@
     position: relative;
     display: grid;
     gap: 20px;
+    width: 100%;
 
-    width: 500px;
+    max-width: 450px;
     padding: 16px;
     background-color: #fff;
     border-radius: 12px;

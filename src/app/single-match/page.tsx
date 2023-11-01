@@ -1,5 +1,5 @@
-import { getTeamsWithoutJoinSquad } from '@/api/rest/teams';
-import { SingleMatchPage } from '@/pages/SingleMatch';
+import { getTeamsWithoutJoinSquad } from '@/api/rest/teams/teams';
+import { SingleMatchPage } from '@/layouts/pages/single-match/SingleMatchPage';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,6 +10,5 @@ export const metadata: Metadata = {
 
 export default async function Page() {
 	const teams = await getTeamsWithoutJoinSquad();
-
 	return <SingleMatchPage teams={teams} />;
 }

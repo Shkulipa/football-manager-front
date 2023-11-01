@@ -1,3 +1,3 @@
-import { ISkillsTeam } from '@/types/skills.types';
+import { ISkillsTeam } from '@/types/primary/skills.types';
 
 export interface ITeamRatingProps extends ISkillsTeam {}

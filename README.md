@@ -2,7 +2,7 @@
 - [X] Login
 - [X] Errors fetching
 - [X] Refresh tokens after expired access token
-- [X] Fix tactics in single match
+- [X] Tactic in single match
     - [X] Drag from Football Field
         - [X]  into Football Field(index yourself)
         - [X]  into Main table
@@ -14,13 +14,16 @@
     - [X] Drag from Bench
         - [X] into Football Field
         - [X] into Main Table
-- [ ] Sign up
-- [ ] Activation email
-- [ ] Create user team
-- [ ] Delete user team
-- [ ] Rating match (finding...)
-- [ ] Play rating match
-- [ ] Make replacements + tactic in rating match
+- [X] Sign up
+- [X] Activation email
+- [X] Login with not activated account
+- [ ] User Team
+    - [X] Create user team
+    - [ ] Set/update squad in user team
+    - [ ] Delete user team
+- [ ] Rating match (finding opponent...)
+- [ ] Rating match (playing in real time)
+    - [ ] update tactic(Make replacements, move players)
 - [ ] Online chat
     - [ ] Common Chat
     - [ ] Directs Chat
@@ -37,6 +40,9 @@
 - [ ] User update username
 - [ ] User update email
 - [ ] Restore forgot pass
+
+# next js docs
+https://nextjs.org/docs
 
 # UI library
 https://primereact.org/carousel/

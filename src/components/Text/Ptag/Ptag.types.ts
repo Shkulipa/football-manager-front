@@ -7,5 +7,5 @@ export interface IPtagProps
 			HTMLParagraphElement
 		>
 	> {
-	size: 'l' | 'm' | 's';
+	size?: 'l' | 'm' | 's';
 }

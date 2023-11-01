@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IServerError } from '@/types/server-error';
+import { IServerError } from '@/api/rest/types/server-error';
 
 interface IInitialErrorState {
 	globalError: IServerError | null;
@@ -21,7 +21,7 @@ export const errorSlice = createSlice({
 		) {
 			state.globalError = action.payload;
 		},
-		hideGlobalError(state) {
+		resetGlobalError(state) {
 			state.globalError = initialState.globalError;
 		},
 		setNetworkError(
@@ -33,5 +33,5 @@ export const errorSlice = createSlice({
 	}
 });
 
-export const { showGlobalError, hideGlobalError, setNetworkError } =
+export const { showGlobalError, resetGlobalError, setNetworkError } =
 	errorSlice.actions;

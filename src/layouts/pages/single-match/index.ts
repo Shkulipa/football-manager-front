@@ -1,0 +1,1 @@
+export { SingleMatchPage } from './SingleMatchPage';

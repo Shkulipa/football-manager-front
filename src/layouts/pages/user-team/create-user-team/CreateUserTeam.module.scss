@@ -1,0 +1,38 @@
+@import '@/styles/variables';
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+
+    border: 1px solid $primary-color;
+    border-radius: 12px;
+
+    transition: $transition;
+
+    object-fit: contain;
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+}
+
+.wrapperLogoContent {
+    display: grid;
+    gap: 10px;
+}
+
+.imgInputWrapper {
+    position: relative;
+}
+
+.fileError {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    font-size: $xs-text-size;
+    transform: translate(0, 100%);
+}

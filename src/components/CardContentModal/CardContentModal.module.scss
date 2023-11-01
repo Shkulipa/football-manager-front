@@ -1,0 +1,26 @@
+@import '@/styles/variables';
+
+.modal {
+    position: relative;
+    display: grid;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 450px;
+}
+
+.title {
+    width: 100%;
+    max-width: 80%;
+}
+
+.closeIcon {
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+    width: fit-content;
+    height: fit-content;
+
+    cursor: pointer;
+}

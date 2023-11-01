@@ -1,0 +1,1 @@
+export { ReplacementTitle } from './ReplacementTitle';

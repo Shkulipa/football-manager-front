@@ -1,0 +1,1 @@
+export { ErrorContentModal } from './ErrorContentModal';

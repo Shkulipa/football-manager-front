@@ -1,0 +1,16 @@
+@import '@/styles/variables';
+@import '@/styles/fonts';
+
+.tableTitles {
+  display: grid;
+  grid-template-columns: 50px 1fr 6fr 3fr;
+  gap: 10px;
+  height: fit-content;
+  font-size: $l-text-size;
+  text-align: center;
+  letter-spacing: 1px;
+
+  div {
+    border-bottom: 2px solid $black;
+  }
+}

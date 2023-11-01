@@ -1,7 +1,10 @@
-export enum ServerStatus {
+export enum EServerStatus {
 	INTERNAL_SERVER = 500,
 	BAD_REQUEST = 400,
 	NOT_FOUND = 404,
 	FORBIDDEN = 403,
-	NOT_AUTHORIZED = 401
+	NOT_AUTHORIZED = 401,
+	MANY_REQUESTS = 429,
+	EXPIRED = 498,
+	CONFLICT = 409
 }

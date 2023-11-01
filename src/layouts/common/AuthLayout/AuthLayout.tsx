@@ -7,15 +7,15 @@ import {
 	IAuthUser,
 	refreshToken,
 	setUser
-} from '@/layouts/common/user/store/user';
-import { ICommonBasePropsWithChildren } from '@/types/commonProps';
+} from '@/layouts/common/AuthLayout/store/user';
+import { ICommonBasePropsWithChildren } from '@/types/others/commonProps';
 import { useEffect } from 'react';
 
 interface IAuthLayoutProps extends ICommonBasePropsWithChildren {}
 
 export const AuthLayout = ({ children }: IAuthLayoutProps): JSX.Element => {
 	const dispatch = useAppDispatch();
-	const { isFetching } = useAppSelector(state => state.userReducer);
+	const { isLoading } = useAppSelector(s => s.baseLayoutReducer);
 
 	useEffect(() => {
 		const userJSON = localStorage.getItem(EKeyLocalStorage.USER);
@@ -35,7 +35,7 @@ export const AuthLayout = ({ children }: IAuthLayoutProps): JSX.Element => {
 		}
 	}, []);
 
-	if (isFetching) return <ContentLoader />;
+	if (isLoading) return <ContentLoader />;
 
 	return <>{children}</>;
 };

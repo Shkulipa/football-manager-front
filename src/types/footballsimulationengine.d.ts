@@ -95,6 +95,7 @@ declare module 'footballsimulationengine' {
 		hasBall: boolean;
 		stats: IStats;
 		number: number;
+		photo?: string;
 	}
 
 	export interface IPlayerSkills {

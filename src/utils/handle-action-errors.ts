@@ -3,23 +3,25 @@ import { FormikHelpers } from 'formik';
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from '@reduxjs/toolkit';
 import { showGlobalError } from '@/components/GlobalModal/store';
-import { IServerError } from '@/types/server-error';
-import { ServerStatus } from '@/constants/server-status.enum';
+import { IServerError } from '@/api/rest/types/server-error';
+import { EServerStatus } from '@/constants/server-status.enum';
 
 interface THandleActionErrorProps {
 	e: unknown;
 	dispatch: ThunkDispatch<any, unknown, AnyAction>;
+	additionalConditions?: (status: number, data: IServerError) => boolean | void;
 	formik?: FormikHelpers<any>;
 }
 
 export function handleActionErrors({
 	e,
 	dispatch,
+	additionalConditions,
 	formik
 }: THandleActionErrorProps): void {
 	if (formik) formik.setSubmitting(false);
 
-	if (!isAxiosError<IServerError>(e) || !e.response) {
+	if (!isAxiosError(e) || !e.response) {
 		console.error(e);
 		return;
 	}
@@ -27,10 +29,16 @@ export function handleActionErrors({
 	const { status, data } = e.response;
 	if (isCancel(e)) return;
 
-	const badReq = status === ServerStatus.BAD_REQUEST;
-	const notFoundReq = status === ServerStatus.NOT_FOUND;
-	const forbiddenReq = status === ServerStatus.FORBIDDEN;
-	if (formik && (badReq || notFoundReq || forbiddenReq)) {
+	if (additionalConditions) {
+		const hasReturn = additionalConditions(status, data);
+		if (hasReturn) return;
+	}
+
+	const badReq = status === EServerStatus.BAD_REQUEST;
+	const notFoundReq = status === EServerStatus.NOT_FOUND;
+	const forbiddenReq = status === EServerStatus.FORBIDDEN;
+	const expiredReq = status === EServerStatus.EXPIRED;
+	if (formik && (badReq || notFoundReq || forbiddenReq || expiredReq)) {
 		formik.setErrors(data.message as any);
 		return;
 	}

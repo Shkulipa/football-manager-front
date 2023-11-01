@@ -1,0 +1,19 @@
+@import '@/styles/variables';
+
+.positionReserveRegionTableWrapper {
+    display: grid;
+    gap: 5px;
+    width: 100%;
+    min-height: 250px;
+    padding: 5px;
+    background-color: $quinary-color;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+
+    transition: $transition;
+}
+
+.isOver {
+    background-color: $tertiary-color;
+    transition: $transition;
+}

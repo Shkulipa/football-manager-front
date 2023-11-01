@@ -1,15 +1,15 @@
 import { SERVER_URL, AXIOS_TIMEOUT } from '@/constants';
 import { EUSER } from '@/constants/user.enum';
-import { logout } from '@/layouts/common/user/store/user';
 import axios, { isAxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
 import { apiAuth } from './rest/auth/apiAuth';
-import { ServerStatus } from '@/constants/server-status.enum';
+import { EServerStatus } from '@/constants/server-status.enum';
 import { TStore } from '@/store/store';
 import {
 	setNetworkError,
 	showGlobalError
 } from '@/components/GlobalModal/store';
 import { ISignInRes } from './rest/auth/types/sign-in-res';
+import { logout } from '@/layouts/common/AuthLayout/store/user';
 
 /**
  * @info
@@ -52,14 +52,14 @@ apiPrivate.interceptors.request.use(config => {
  * refresh tokens logic on the response
  */
 apiPrivate.interceptors.response.use(null, async (error: any) => {
-	if (!error.response && error.message === 'Network Error') {
+	if (!error.response && error.code === 'ERR_NETWORK') {
 		store.dispatch(setNetworkError(true));
 		return Promise.reject({});
 	}
 
 	const originalRequest = error.config;
 	if (
-		error.response.status === ServerStatus.NOT_AUTHORIZED &&
+		error.response.status === EServerStatus.NOT_AUTHORIZED &&
 		error.config &&
 		!error.config._isRetry
 	) {
@@ -94,9 +94,5 @@ apiPrivate.interceptors.response.use(null, async (error: any) => {
 		}
 	}
 
-	console.error(error);
-	return Promise.reject({
-		...error,
-		response: { data: { message: 'Unknown error' } }
-	});
+	return Promise.reject(error);
 });

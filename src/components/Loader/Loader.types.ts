@@ -1,4 +1,4 @@
-import { TSize } from '@/types/size.types';
+import { TSize } from '@/types/others/size.types';
 import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface ILoaderProps

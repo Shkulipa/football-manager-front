@@ -26,8 +26,10 @@ export const NetworkError = (): JSX.Element => {
 
 	return (
 		<GlobalModal
-			title={'Network Connection Error'}
-			description={'Please, check your Internet connection'}
+			title={'Network Error Connection'}
+			description={
+				'Sorry, we are unable to connect to the server. Please check your internet connection and try again.'
+			}
 			isShow={networkError}
 			callbackClose={closeGlobalErrorHandler}
 		/>

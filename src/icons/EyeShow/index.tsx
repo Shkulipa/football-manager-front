@@ -6,10 +6,11 @@ import { defaultIconSize } from '@/constants';
 export function EyeShow({
 	width = defaultIconSize,
 	height = defaultIconSize,
-	fill = 'black'
+	fill = 'black',
+	...props
 }: IIconProps): JSX.Element {
 	return (
-		<IconContainer>
+		<IconContainer {...props}>
 			<svg
 				width={width}
 				height={height}

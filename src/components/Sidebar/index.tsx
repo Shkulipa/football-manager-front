@@ -7,7 +7,7 @@ import {
 	MenuItem,
 	sidebarClasses
 } from 'react-pro-sidebar';
-import { Arrow, SingleMatch, Teams } from '@/icons';
+import { Arrow, SingleMatch, Team } from '@/icons';
 import Link from 'next/link';
 import styles from './Sidebar.module.scss';
 import { ISidebarProps } from './Sidebar.types';
@@ -17,6 +17,19 @@ import { useAppSelector } from '@/hooks/redux';
 import { Logout } from './components/Logout/Logout';
 import { Login } from './components/Login/Login';
 
+interface IAuthorizedRoute {
+	icon: JSX.Element;
+	link: string;
+	label: string;
+}
+const authorizedRoutes: IAuthorizedRoute[] = [
+	{
+		icon: <Team width={28} height={28} />,
+		link: ROUTES.USER_TEAM,
+		label: 'Your Team'
+	}
+];
+
 export function Sidebar({
 	isCollapseSidebar,
 	setCollapseSidebar
@@ -24,6 +37,14 @@ export function Sidebar({
 	const { user } = useAppSelector(state => state.userReducer);
 
 	const authorization = user ? <Logout /> : <Login />;
+
+	const renderAuthorizedRoutes =
+		user &&
+		authorizedRoutes.map(r => (
+			<MenuItem key={r.link} icon={r.icon} component={<Link href={r.link} />}>
+				{r.label}
+			</MenuItem>
+		));
 
 	return (
 		<div className={cn(styles.sidebarWrapper)}>
@@ -53,12 +74,7 @@ export function Sidebar({
 					>
 						Single Match
 					</MenuItem>
-					<MenuItem
-						icon={<Teams width={50} height={50} />}
-						component={<Link href={ROUTES.TEAMS} />}
-					>
-						Teams
-					</MenuItem>
+					{renderAuthorizedRoutes}
 					{authorization}
 				</Menu>
 			</SideBarReactPro>

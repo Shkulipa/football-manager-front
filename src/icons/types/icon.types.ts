@@ -1,4 +1,4 @@
-import { IDirection } from '@/types/direction.types';
+import { IDirection } from '@/types/others/direction.types';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface IIconProps

@@ -1,0 +1,1 @@
+export { OwnUserTeam } from './OwnUserTeam';
