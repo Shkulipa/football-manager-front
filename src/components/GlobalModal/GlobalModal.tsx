@@ -4,12 +4,10 @@ import cn from 'classnames';
 import { useClickOutside } from '@/hooks/useClickOutside';
 import { IGlobalModalProps } from './GlobalModal.types';
 import styles from './GlobalModal.module.scss';
-import { CardContentModal } from '../CardContentModal';
 import { Card } from '..';
 
 export const GlobalModal = ({
-	title,
-	description,
+	children,
 	isShow,
 	callbackClose
 }: IGlobalModalProps): JSX.Element => {
@@ -21,15 +19,9 @@ export const GlobalModal = ({
 				[styles.hidden]: !isShow
 			})}
 		>
-			<Card className={styles.globalModal}>
-				<CardContentModal
-					isShowCloseButton
-					title={title}
-					description={description}
-					ref={ref}
-					callbackClose={callbackClose}
-				/>
-			</Card>
+			<div ref={ref}>
+				<Card className={styles.globalModal}>{children}</Card>
+			</div>
 		</div>
 	);
 };

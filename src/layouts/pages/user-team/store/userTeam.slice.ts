@@ -14,7 +14,12 @@ import { IGetOwnTeamRes } from '@/api/rest/user-team/types/get-own-team-res';
 interface IInitialState {
 	initVersionTeam: null | IGetOwnTeamRes;
 	secondVersionTeam: null | IGetOwnTeamRes;
-	step: null | 'user-team' | 'create-user-team' | 'success-create';
+	step:
+		| null
+		| 'user-team'
+		| 'create-user-team'
+		| 'success-create'
+		| 'success-deleted-team';
 	isLoading: boolean;
 	error: string;
 }

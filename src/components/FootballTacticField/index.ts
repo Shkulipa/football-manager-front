@@ -1,1 +1,0 @@
-export { FootballTacticField } from './FootballTacticField';

@@ -1,0 +1,36 @@
+.clubInfoWrapper {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.clubInfo {
+    display: grid;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.editClubNameWrapper {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    gap: 15px;
+}
+
+.clubNameWrapper {
+    width: 100%;
+    height: 30px;
+}
+
+.actionsConfirm {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}

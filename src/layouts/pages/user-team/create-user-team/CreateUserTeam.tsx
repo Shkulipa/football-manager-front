@@ -2,22 +2,19 @@
 
 import {
 	Button,
-	ErrorMsg,
 	ErrorNotification,
 	FormikInput,
-	ModalWrapper,
-	Ptag
+	ModalWrapper
 } from '@/components';
-import { useAppDispatch } from '@/hooks/redux';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { ICreateUserTeamInitialValues } from './CreateUserTeam.types';
 import { CreateUserTeamValidation } from './CreateUserTeam.validation';
 import { useFormik } from 'formik';
 import { CardFormContent } from '@/components/CardFormContent/CardFormContent';
 import { useFileUpload } from '@/hooks/useFileUpload';
-import styles from './CreateUserTeam.module.scss';
-import { Photo } from '@/icons';
-import Image from 'next/image';
-import { createUserTeamAsync } from '../store/userTeam.slice';
+import { createUserTeamAsync, setStep } from '../store/userTeam.slice';
+import { ImgInput } from '@/components/ImgInput/ImgInput';
+import { useEffect } from 'react';
 
 const initialValues: ICreateUserTeamInitialValues = {
 	clubName: '',
@@ -26,6 +23,7 @@ const initialValues: ICreateUserTeamInitialValues = {
 
 export const CreateUserTeam = (): JSX.Element => {
 	const dispatch = useAppDispatch();
+	const { initVersionTeam } = useAppSelector(s => s.userTeamReducer);
 
 	const formik = useFormik<ICreateUserTeamInitialValues>({
 		initialValues,
@@ -42,14 +40,16 @@ export const CreateUserTeam = (): JSX.Element => {
 		}
 	});
 
+	useEffect(() => {
+		if (initVersionTeam) {
+			dispatch(setStep('user-team'));
+			return;
+		}
+	}, [initVersionTeam]);
+
 	// error from server
 	const errorFromServer = typeof formik.errors === 'string' && (
 		<ErrorNotification message={formik.errors} />
-	);
-	const errorFile = formik.errors.userTeamImgField && (
-		<ErrorMsg className={styles.fileError}>
-			{formik.errors.userTeamImgField}
-		</ErrorMsg>
 	);
 
 	return (
@@ -71,38 +71,13 @@ export const CreateUserTeam = (): JSX.Element => {
 					</Button>
 				]}
 			>
-				<div className={styles.imgInputWrapper}>
-					{preview && (
-						<Image
-							className={styles.img}
-							width={200}
-							height={200}
-							src={preview}
-							onClick={() => inputRef.current?.click()}
-							alt=""
-						/>
-					)}
-					<input
-						ref={inputRef}
-						style={{ display: 'none' }}
-						accept="image/png, image/jpeg, image/jpg"
-						type="file"
-						onChange={onChange}
-					/>
-					{!preview && (
-						<div
-							className={styles.img}
-							style={{ width: '200px', height: '200px' }}
-							onClick={() => inputRef.current?.click()}
-						>
-							<div className={styles.wrapperLogoContent}>
-								<Photo />
-								<Ptag>Logo club</Ptag>
-							</div>
-						</div>
-					)}
-					{errorFile}
-				</div>
+				<ImgInput
+					inputRef={inputRef}
+					labelInput="Logo Club"
+					onChange={onChange}
+					preview={preview || ''}
+					msgError={formik.errors.userTeamImgField}
+				/>
 
 				<FormikInput
 					key="clubName"

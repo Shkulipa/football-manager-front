@@ -1,156 +1,159 @@
+import { TPositionTacticPositionsSingleMatch } from '@/components/football-tactic-fields/FootballTacticFieldSingleMatch/FootballTacticFieldSingleMatch.types';
+import { TPositionTacticPositionsUserTeam } from '@/components/football-tactic-fields/FootballTacticFieldUserTeam/FootballTacticFieldUserTeam.types';
 import { EPlayerPositionName } from '@/constants/footballsimulationengine/player-position-name.enum';
 import {
 	playerPositionsFirstTeam,
 	playerPositionsSecondTeam
 } from '@/constants/footballsimulationengine/player-positions';
-import { IFootballTacticFieldProps } from '@/components/FootballTacticField/FootballTacticField.types';
 
-export const initPositionsGUESTS: IFootballTacticFieldProps['positions'] = {
+export const initPositionsGUESTS:
+	| TPositionTacticPositionsSingleMatch
+	| TPositionTacticPositionsUserTeam = {
 	[EPlayerPositionName.LCF]: {
 		position: EPlayerPositionName.LCF,
 		coordinates: playerPositionsFirstTeam.LCF,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.ST]: {
 		position: EPlayerPositionName.ST,
 		coordinates: playerPositionsFirstTeam.ST,
-		currentPlayer: null
+		player: null
 	},
 	[EPlayerPositionName.RCF]: {
 		position: EPlayerPositionName.RCF,
 		coordinates: playerPositionsFirstTeam.RCF,
-		currentPlayer: null
+		player: null
 	},
 
 	/* attackers midfielders */
 	[EPlayerPositionName.LWM]: {
 		position: EPlayerPositionName.LWM,
 		coordinates: playerPositionsFirstTeam.LWM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.AML]: {
 		position: EPlayerPositionName.AML,
 		coordinates: playerPositionsFirstTeam.AML,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.AMC]: {
 		position: EPlayerPositionName.AMC,
 		coordinates: playerPositionsFirstTeam.AMC,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.AMR]: {
 		position: EPlayerPositionName.AMR,
 		coordinates: playerPositionsFirstTeam.AMR,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.RWM]: {
 		position: EPlayerPositionName.RWM,
 		coordinates: playerPositionsFirstTeam.RWM,
-		currentPlayer: null
+		player: null
 	},
 
 	/* midfielders */
 	[EPlayerPositionName.LM]: {
 		position: EPlayerPositionName.LM,
 		coordinates: playerPositionsFirstTeam.LM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.LCM]: {
 		position: EPlayerPositionName.LCM,
 		coordinates: playerPositionsFirstTeam.LCM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.CM]: {
 		position: EPlayerPositionName.CM,
 		coordinates: playerPositionsFirstTeam.CM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.RCM]: {
 		position: EPlayerPositionName.RCM,
 		coordinates: playerPositionsFirstTeam.RCM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.RM]: {
 		position: EPlayerPositionName.RM,
 		coordinates: playerPositionsFirstTeam.RM,
-		currentPlayer: null
+		player: null
 	},
 
 	/* between midfielders & deffenders */
 	[EPlayerPositionName.LWB]: {
 		position: EPlayerPositionName.LWB,
 		coordinates: playerPositionsFirstTeam.LWB,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.LDM]: {
 		position: EPlayerPositionName.LDM,
 		coordinates: playerPositionsFirstTeam.LDM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.CDM]: {
 		position: EPlayerPositionName.CDM,
 		coordinates: playerPositionsFirstTeam.CDM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.RDM]: {
 		position: EPlayerPositionName.RDM,
 		coordinates: playerPositionsFirstTeam.RDM,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.RWB]: {
 		position: EPlayerPositionName.RWB,
 		coordinates: playerPositionsFirstTeam.RWB,
-		currentPlayer: null
+		player: null
 	},
 
 	// defenders
 	[EPlayerPositionName.LB]: {
 		position: EPlayerPositionName.LB,
 		coordinates: playerPositionsFirstTeam.LB,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.LCB]: {
 		position: EPlayerPositionName.LCB,
 		coordinates: playerPositionsFirstTeam.LCB,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.CB]: {
 		position: EPlayerPositionName.CB,
 		coordinates: playerPositionsFirstTeam.CB,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.RCB]: {
 		position: EPlayerPositionName.RCB,
 		coordinates: playerPositionsFirstTeam.RCB,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.RB]: {
 		position: EPlayerPositionName.RB,
 		coordinates: playerPositionsFirstTeam.RB,
-		currentPlayer: null
+		player: null
 	},
 
 	[EPlayerPositionName.GK]: {
 		position: EPlayerPositionName.GK,
 		coordinates: playerPositionsFirstTeam.GK,
-		currentPlayer: null
+		player: null
 	}
 };
 export const initPositionsHOSTS = Object.fromEntries(
@@ -160,10 +163,12 @@ export const initPositionsHOSTS = Object.fromEntries(
 			...value,
 			position: value.position,
 			coordinates:
-				playerPositionsSecondTeam[EPlayerPositionName[value.position]]
+				playerPositionsSecondTeam[
+					EPlayerPositionName[value.position as EPlayerPositionName]
+				]
 		}
 	])
-) as IFootballTacticFieldProps['positions'];
+);
 
 // make order in this priority: GK, RB, RCB and so on, how it is in initPositionsGUESTS from Down in Up
 export const orderedPositions = Object.values(initPositionsGUESTS).map(

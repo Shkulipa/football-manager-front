@@ -1,0 +1,1 @@
+export { SuccessDeletedTeam } from './SuccessDeletedTeam';

@@ -33,7 +33,7 @@ export const AuthLayout = ({ children }: IAuthLayoutProps): JSX.Element => {
 				dispatch(setUser(user));
 			}
 		}
-	}, []);
+	}, [dispatch]);
 
 	if (isLoading) return <ContentLoader />;
 

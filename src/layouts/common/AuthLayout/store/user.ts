@@ -34,9 +34,10 @@ export const { setUser, resetUser } = userSlice.actions;
 export const logout =
 	() => async (dispatch: ThunkDispatch<any, unknown, AnyAction>) => {
 		try {
-			dispatch(setLoading(true));
 			await apiAuth.logout();
 			localStorage.removeItem(EKeyLocalStorage.USER);
+			dispatch(setLoading(true));
+			dispatch(setUser(null));
 		} catch (e) {
 			handleActionErrors({ e, dispatch });
 		} finally {

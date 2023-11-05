@@ -11,3 +11,4 @@ export * from './EyeClose';
 export * from './SuccessMark';
 export * from './SuccessIcon';
 export * from './Photo';
+export * from './Stadium';

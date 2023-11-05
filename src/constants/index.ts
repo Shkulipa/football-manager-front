@@ -5,6 +5,7 @@ export const AXIOS_TIMEOUT = 1000 * 30;
 export const defaultIconSize = 24;
 
 export const limitReplacements = 3;
+export const limitBenchPlayers = 7;
 
 /**
  * @info

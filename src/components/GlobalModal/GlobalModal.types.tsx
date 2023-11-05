@@ -1,6 +1,6 @@
-export interface IGlobalModalProps {
-	title: string;
-	description: string;
+import { PropsWithChildren } from 'react';
+
+export interface IGlobalModalProps extends PropsWithChildren {
 	isShow: boolean;
 	callbackClose: () => void;
 }

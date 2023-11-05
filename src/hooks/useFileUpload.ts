@@ -39,5 +39,5 @@ export const useFileUpload = ({
 		}
 	};
 
-	return { file, preview, inputRef, onChange, error };
+	return { file, preview, inputRef, onChange, error, setPreview };
 };

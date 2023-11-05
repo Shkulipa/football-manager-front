@@ -1,11 +1,9 @@
 import { playerPositionsFirstTeam } from '@/constants/footballsimulationengine/player-positions';
-import {
-	IRealPlayerNotMain,
-	TSquadRealTeam
-} from '@/types/primary/real-team-full-info';
+import { IRealPlayerNotMain } from '@/types/football-simulator/real-team-full-info';
+import { TSquadMain } from '@/types/football-simulator/user-team';
 import { EPlayerPositionName } from 'footballsimulationengine';
 
-export const parsePlayersMainHelper = (squad: TSquadRealTeam) => {
+export const parsePlayersMainHelper = (squad: TSquadMain) => {
 	const parsedPlayers = [];
 
 	for (const [key, val] of Object.entries(squad)) {

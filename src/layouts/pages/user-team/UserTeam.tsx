@@ -7,7 +7,7 @@ import { getUserTeam, reset } from './store/userTeam.slice';
 import { CreateUserTeam } from './create-user-team';
 import { SuccessCreatedUserTeam } from './success-created-user-team';
 import { OwnUserTeam } from './own-user-team';
-import { PaddingContainer } from '@/containers';
+import { SuccessDeletedTeam } from './success-deleted-team';
 
 export const UserTeam = (): JSX.Element => {
 	const dispatch = useAppDispatch();
@@ -31,9 +31,12 @@ export const UserTeam = (): JSX.Element => {
 		case 'success-create':
 			content = <SuccessCreatedUserTeam />;
 			break;
+		case 'success-deleted-team':
+			content = <SuccessDeletedTeam />;
+			break;
 		default:
 			content = <></>;
 	}
 
-	return <PaddingContainer>{content}</PaddingContainer>;
+	return content;
 };

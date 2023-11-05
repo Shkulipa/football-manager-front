@@ -1,4 +1,6 @@
 .fieldLayoutWrapper {
+    position: sticky;
+    top: 15px;
     display: grid;
     gap: 15px;
     height: fit-content;

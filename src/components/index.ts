@@ -16,7 +16,10 @@ export * from './ModalConfirmedAccountYet';
 export * from './CardTitle';
 export * from './ContentModal';
 export * from './ModalWrapper';
-export * from './FootballTacticField';
 export * from './PlayersTable';
 export * from './PlayerDragField';
 export * from './ReplacementTitle';
+
+// football tactic fields
+export * from './football-tactic-fields/FootballTacticFieldUserTeam/FootballTacticFieldUserTeam';
+export * from './football-tactic-fields/FootballTacticFieldSingleMatch/FootballTacticFieldSingleMatch';

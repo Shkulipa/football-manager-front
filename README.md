@@ -4,11 +4,11 @@
 - [X] Refresh tokens after expired access token
 - [X] Tactic in single match
     - [X] Drag from Football Field
-        - [X]  into Football Field(index yourself)
-        - [X]  into Main table
-        - [X]  into Bench
+        - [X] into Football Field
+        - [X] into Main table
+        - [X] into Bench
     - [X] Drag from Main Table
-        - [X] into Main table(inside yourself)
+        - [X] into Main table
         - [X] into Football Field
         - [X] into Bench
     - [X] Drag from Bench
@@ -19,8 +19,32 @@
 - [X] Login with not activated account
 - [ ] User Team
     - [X] Create user team
-    - [ ] Set/update squad in user team
-    - [ ] Delete user team
+    - [X] Set/update squad in user team
+        - [X] Drag from Football Field
+            - [X]  into Football Field(move player to another position with player)
+            - [X]  into Football Field(if position is free)
+            - [X]  into Main table(change position with another player)
+            - [X]  into Bench
+            - [X]  into Reserve
+        - [X] Drag from Main Table
+            - [X]  into Football Field(if position is free)
+            - [X]  into Football Field(if position is taken by another player)
+            - [X]  into Main table(change position with another player)
+            - [X]  into Bench
+            - [X]  into Reserve
+        - [X] Drag from Bench
+            - [X]  into Football Field(free field)
+            - [X]  into Football Field(with replace player from bench player)
+            - [X]  into Main table(instead of exist player there)
+            - [X]  into Reserve
+        - [X] Drag from Reserve
+            - [X]  into Football Field(if free position)
+            - [X]  into Football Field(if position is taken by another player)
+            - [X]  into Bench table
+    - [X] Update Rating after changing main squad
+    - [X] Update logo club
+    - [X] Disable update, if nothing changed
+    - [X] Delete user team (with confirmation modal)
 - [ ] Rating match (finding opponent...)
 - [ ] Rating match (playing in real time)
     - [ ] update tactic(Make replacements, move players)
@@ -31,7 +55,7 @@
     - [ ] Google
     - [ ] Facebook
 - [ ] Shop (buy packs)
-- [ ] Update user team
+- [ ] User inventory(where you can open packs)
 - [ ] Open packs
 - [ ] Auction create lot
 - [ ] Auction cancel lot

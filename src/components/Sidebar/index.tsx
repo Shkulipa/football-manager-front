@@ -7,7 +7,7 @@ import {
 	MenuItem,
 	sidebarClasses
 } from 'react-pro-sidebar';
-import { Arrow, SingleMatch, Team } from '@/icons';
+import { Arrow, SingleMatch, Stadium, Team } from '@/icons';
 import Link from 'next/link';
 import styles from './Sidebar.module.scss';
 import { ISidebarProps } from './Sidebar.types';
@@ -68,6 +68,12 @@ export function Sidebar({
 				}}
 			>
 				<Menu>
+					<MenuItem
+						icon={<Stadium width={32} height={32} />}
+						component={<Link href={ROUTES.HOME} />}
+					>
+						Home
+					</MenuItem>
 					<MenuItem
 						icon={<SingleMatch width={32} height={32} />}
 						component={<Link href={ROUTES.SINGLE_MATCH} />}

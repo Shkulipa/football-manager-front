@@ -2,12 +2,13 @@ import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import { BaseLayout } from '@/layouts/common/BaseLayout';
 import SWRProvider from '@/SWR/SWR.provider';
-import { NetworkError, GlobalError } from '@/modules';
 import ReduxProvider from '@/providers/ReduxProvider/ReduxProvider';
 import { ICommonBasePropsWithChildren } from '@/types/others/commonProps';
 import { AuthLayout } from '@/layouts/common/AuthLayout/AuthLayout';
 import { Suspense } from 'react';
 import { ContentLoader } from '@/components';
+import { GlobalError } from '@/layouts/modals/GlobalError/GlobalError';
+import { NetworkError } from '@/layouts/modals/NetworkError/NetworkError';
 
 export const metadata: Metadata = {
 	title: 'FM',

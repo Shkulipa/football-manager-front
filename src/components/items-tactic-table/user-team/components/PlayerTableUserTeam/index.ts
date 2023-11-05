@@ -1,0 +1,1 @@
+export { PlayerTableUserTeam } from './PlayerTableUserTeam';

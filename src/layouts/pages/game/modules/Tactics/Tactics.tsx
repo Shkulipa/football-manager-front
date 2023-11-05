@@ -8,26 +8,30 @@ import {
 import { withReactDnd } from '@/providers/ReactDnd/ReactDnd.hoc';
 import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
 import {
-	FootballTacticField,
+	FootballTacticFieldSingleMatch,
 	PlayersTable,
 	ReplacementTitle
 } from '@/components';
 import { FieldLayout } from '@/layouts/common/tactic/FieldLayout';
 import { TacticLayout } from '@/layouts/common/tactic/TacticLayout';
 import { PlayersLayout } from '@/layouts/common/tactic/PlayersLayout';
-import { PositionMainTable } from '@/components/items-tactic-table';
-import { PositionBenchTable } from '@/components/items-tactic-table/items/PositionBenchTable/PositionBenchTable';
+import { PositionBenchTable } from '@/components/items-tactic-table/single-match/positions/PositionBenchTable/PositionBenchTable';
 import { TableTitlesMemo } from '@/components/TableTitles/TableTitles';
-import { EFootballFieldsType } from '@/components/FootballTacticField/FootballTacticField.types';
-
-const step = 30;
+import { PositionMainTable } from '@/components/items-tactic-table/single-match/positions/PositionMainTable/PositionMainTable';
+import { TPositionTacticPositionsSingleMatch } from '@/components/football-tactic-fields/FootballTacticFieldSingleMatch/FootballTacticFieldSingleMatch.types';
+import { IPosition } from '@/components/items-tactic-table/single-match/types/position.types';
+import { EPlayerPositionName } from '@/constants/footballsimulationengine/player-position-name.enum';
+import { step } from '@/components/football-tactic-fields/constants';
 
 function Tactics(): JSX.Element {
 	const { matchDetails, userFor } = useAppSelector(s => s.singleMatchReducer);
 	const isUserHosts = userFor === EMatchSide.HOSTS;
 	const initPositions = isUserHosts ? initPositionsHOSTS : initPositionsGUESTS;
 
-	const [positions, setPositions] = useState(initPositions);
+	const [positions, setPositions] =
+		useState<TPositionTacticPositionsSingleMatch>(
+			initPositions as TPositionTacticPositionsSingleMatch
+		);
 
 	const team = isUserHosts
 		? matchDetails!.secondTeam
@@ -40,7 +44,9 @@ function Tactics(): JSX.Element {
 	 */
 	useEffect(() => {
 		if (matchDetails) {
-			const playersPosition = JSON.parse(JSON.stringify(initPositions));
+			const playersPosition = JSON.parse(
+				JSON.stringify(initPositions)
+			) as TPositionTacticPositionsSingleMatch;
 
 			team.players.forEach(p => {
 				const x = p.originPOS[0];
@@ -55,7 +61,7 @@ function Tactics(): JSX.Element {
 						value.coordinates[1] - step <= y &&
 						value.coordinates[1] + step >= y;
 					if (isXLine && isYLine) {
-						playersPosition[key].currentPlayer = p;
+						playersPosition[key as EPlayerPositionName].player = p;
 					}
 				}
 			});
@@ -66,11 +72,11 @@ function Tactics(): JSX.Element {
 
 	const positionsInArr = Object.values(positions);
 	const positionTaken = positionsInArr
-		.filter(val => val.currentPlayer)
-		.sort(function (a: any, b: any) {
+		.filter(val => val.player)
+		.sort(function (a: IPosition, b: IPosition) {
 			return (
-				orderedPositions.indexOf(a.currentPlayer.position) -
-				orderedPositions.indexOf(b.currentPlayer.position)
+				orderedPositions.indexOf(a.position) -
+				orderedPositions.indexOf(b.position)
 			);
 		});
 	const mainPlayers = positionTaken.map((position, index) => (
@@ -78,16 +84,13 @@ function Tactics(): JSX.Element {
 	));
 
 	const benchPlayers = team.bench.map(p => (
-		<PositionBenchTable key={p._id} currentPlayer={p} />
+		<PositionBenchTable key={p._id} player={p} />
 	));
 
 	return (
 		<TacticLayout>
 			<FieldLayout>
-				<FootballTacticField
-					positions={positions}
-					typeField={EFootballFieldsType.MATCH}
-				/>
+				<FootballTacticFieldSingleMatch positions={positions} />
 				<ReplacementTitle
 					title={`Replacements: ${team.replacements.length}/3`}
 				/>
