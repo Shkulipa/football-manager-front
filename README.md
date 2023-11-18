@@ -46,7 +46,7 @@
     - [X] Disable update, if nothing changed
     - [X] Delete user team (with confirmation modal)
 - [X] Rating match (finding opponent...)
-- [ ] Rating match (playing in real time)
+- [X] Rating match (playing in real time)
     - [X] Rejoin to match
     - [X] When match was finished, and second player wants to join into this moment
     - [X] Update tactic(Make replacements, move players)
@@ -64,7 +64,27 @@
             - [X]  into Football Field(free field)
             - [X]  into Football Field(with replace player from bench player)
             - [X]  into Main table(instead of exist player there)
-    - [ ] Update with server(send request yo the server about updated squad)
+    - [X] Update with server(send request to the server about updated squad)
+    - [X] Update squad with replacements
+        - [X] Replacements
+            - [X] 1/3 players from bench into field
+            - [X] 2/3 players from bench into field
+            - [X] 3/3 players from bench into field
+            - [X] replace new recently player that was into bench (make replace then make it again with recently new player from bench)
+            - [X] make 2 replacements, and replace 1 of them
+        - [X] Move player(s)
+            - [X] 1 move player in another position
+            - [X] 2 move player in another position
+            - [X] 3 move player in another position
+        - [X] Replacements with move
+            - [X] 1/3 player replace from bench into field and move another position
+            - [X] 2/3 player replace from bench into field and move another position (1 player in another position)
+            - [X] 3/3 player replace from bench into field and move another position (2 player in another position)
+            - [X] 3/3 player replace from bench into field and move another position (3 player in another position)
+            - [X] make 2 replacements, and replace 1 of them (that wasn't replaced - move into another position)
+            - [X] make 2 replacements, and replace 1 of them (that was replaced - move into another position)
+            - [X] make 2 replacements, and replace 1 of them (move both players in other positions)
+- [ ] Bug spikes in rating match
 - [ ] Deploy railway
 - [ ] Online chat
     - [ ] Common Chat

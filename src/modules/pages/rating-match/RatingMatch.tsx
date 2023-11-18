@@ -27,7 +27,9 @@ export const RatingMatch = () => {
 
 	const dispatch = useAppDispatch();
 	const { user } = useAppSelector(s => s.userReducer);
-	const { setMatchDetails, setInitUserTeam } = ratingMatchSlice.actions;
+	const { cooldownUpdateSquad } = useAppSelector(s => s.ratingMatchReducer);
+	const { setMatchDetails, setInitUserTeam, setSecondUserTeamVersion } =
+		ratingMatchSlice.actions;
 	const [error, setError] = useState<string | null>(null);
 
 	const [joinDetail, setJoinDetail] = useState<IJoinDetails | null>();
@@ -68,7 +70,11 @@ export const RatingMatch = () => {
 						user?.username === newMatchDetails.secondTeam.manager
 							? newMatchDetails.secondTeam
 							: newMatchDetails.kickOffTeam;
-					dispatch(setInitUserTeam(team));
+
+					if (team) {
+						dispatch(setInitUserTeam(team));
+						if (cooldownUpdateSquad) dispatch(setSecondUserTeamVersion(team));
+					}
 
 					/**
 					 * @info

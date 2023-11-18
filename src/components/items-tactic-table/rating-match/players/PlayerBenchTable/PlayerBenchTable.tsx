@@ -109,7 +109,7 @@ export function PlayerBenchTable({
 				isDragging: monitor.isDragging()
 			})
 		}),
-		[player]
+		[player, secondUserTeamVersion]
 	);
 
 	/**

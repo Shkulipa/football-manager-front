@@ -1,7 +1,8 @@
 import { EPlayerPositionName } from '@/constants/footballsimulationengine/player-position-name.enum';
-import { IRealPlayerNotMain } from 'footballsimulationengine';
+import { IReplacement } from 'footballsimulationengine';
 
 export interface ISquadUpdateReq {
 	main: Record<Partial<EPlayerPositionName>, string>;
-	bench: IRealPlayerNotMain[];
+	bench: string[];
+	replacements: IReplacement[];
 }

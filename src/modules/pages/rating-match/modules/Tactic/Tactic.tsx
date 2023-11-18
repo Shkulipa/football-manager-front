@@ -4,7 +4,7 @@ import {
 	initPositionsHOSTS,
 	orderedPositions
 } from '@/components/items-tactic-table/constants/init-positions';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FieldLayout } from '@/layouts/tactic/FieldLayout';
 import ReactDndProvider from '@/providers/ReactDnd/ReactDnd.provider';
 import {
@@ -42,7 +42,7 @@ export const Tactic = (): JSX.Element => {
 		ratingMatchSlice.actions;
 
 	const { restart, seconds } = useTimer({
-		expiryTimestamp: new Date(cooldownUpdateSquad || 0),
+		expiryTimestamp: new Date(cooldownUpdateSquad || Date.now()),
 		onExpire: () => {
 			dispatch(setCooldownUpdateSquad(null));
 		}
@@ -94,19 +94,17 @@ export const Tactic = (): JSX.Element => {
 	 * @info
 	 * checking updating, for disabling button "update"
 	 */
-	const isEqualSquads = useMemo(() => {
-		if (initUserTeam && secondUserTeamVersion)
-			return isEqualSquad(initUserTeam, secondUserTeamVersion);
-
-		return false;
-	}, []);
+	const isEqualSquads =
+		initUserTeam &&
+		secondUserTeamVersion &&
+		isEqualSquad(initUserTeam, secondUserTeamVersion);
 
 	const onReset = () => dispatch(reset());
 
-	if (!secondUserTeamVersion) return <></>;
-
 	if (cooldownUpdateSquad)
 		return <div>Updating squad will available in: {seconds} seconds</div>;
+
+	if (!secondUserTeamVersion) return <></>;
 
 	/**
 	 * @info
@@ -129,21 +127,25 @@ export const Tactic = (): JSX.Element => {
 	));
 
 	const onUpdateHandler = async () => {
-		const { players, bench } = secondUserTeamVersion;
+		const { players, bench, replacements } = secondUserTeamVersion;
 
 		try {
 			setIsLoading(true);
 			const main = Object.fromEntries(
 				players.map(p => [p.position, p._id])
 			) as Record<Partial<EPlayerPositionName>, string>;
+			const benchSquad = bench.map(p => p._id);
 
-			await apiRatingMatch.squadUpdate(params.id as string, { main, bench });
+			await apiRatingMatch.squadUpdate(params.id as string, {
+				main,
+				bench: benchSquad,
+				replacements
+			});
 
 			const currentTime = new Date().getTime();
-			const expireIn = currentTime + 15000; // 15 secs
-			dispatch(setCooldownUpdateSquad(expireIn));
+			const expireIn = currentTime + 5000; // 15 secs
 			restart(new Date(expireIn));
-			setSecondUserTeamVersion(null);
+			dispatch(setCooldownUpdateSquad(expireIn));
 		} catch (e) {
 			handleActionErrors({ e, dispatch });
 		} finally {
