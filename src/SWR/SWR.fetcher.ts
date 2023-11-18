@@ -1,4 +1,4 @@
-import $axios from '@/config/axios';
+import { apiPublic } from '@/api/instance';
 
 type TStorageData = [string, any, number];
 
@@ -22,7 +22,7 @@ export const SWRFetcher = async (url: string, maxAge = week) => {
 		}
 	}
 
-	const response = await $axios.get(url);
+	const response = await apiPublic.get(url);
 	const responseData = response.data;
 	const timestamp = Date.now();
 

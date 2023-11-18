@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+
+.errorContentModal {
+    position: relative;
+    display: grid;
+}
+
+.closeIcon {
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+    width: fit-content;
+    height: fit-content;
+
+    cursor: pointer;
+}

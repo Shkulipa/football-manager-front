@@ -20,6 +20,11 @@ export const revalidate = 3600 * 24;
  * using for matches
  */
 export const gameLength = 3000;
+
+/**
+ * @info
+ * 54000 = 90 minutes
+ */
 export const timeForOneIteration = 5400 / gameLength;
 export const radiusItems = 18;
 export const pitchSize = {

@@ -1,4 +1,4 @@
-import { Game } from '@/layouts/pages/game';
+import { Game } from '@/modules/pages/game';
 
 export default async function Page() {
 	return <Game />;

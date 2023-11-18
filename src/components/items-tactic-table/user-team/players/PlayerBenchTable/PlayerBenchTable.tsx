@@ -5,7 +5,7 @@ import { IPlayerBenchTableProps } from './PlayerBenchTable.interfaces';
 import { ETypeDragTactics } from '@/components/items-tactic-table/constants/type-drag-drop';
 import { IDropResult, IDropResultData } from '../../types/position-user-team';
 import { IGetOwnTeamRes } from '@/api/rest/user-team/types/get-own-team-res';
-import { setSecondVersionTeam } from '@/layouts/pages/user-team/store/userTeam.slice';
+import { setSecondVersionTeam } from '@/modules/pages/user-team/store/userTeam.slice';
 import { PlayerTableUserTeam } from '../../components/PlayerTableUserTeam';
 import { TSquadMain } from '@/types/football-simulator/user-team';
 import { groupPlayersByPositionInMainSquad } from '@/utils/group-players-by-position-in-main-squad';

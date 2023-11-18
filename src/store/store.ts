@@ -10,14 +10,15 @@ import {
 	persistStore
 } from 'redux-persist';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { singleMatchSlice } from '@/layouts/pages/single-match/store/single-match.slice';
+import { singleMatchSlice } from '@/modules/pages/single-match/store/single-match.slice';
 import { errorSlice } from '@/components/GlobalModal/store';
-import { signUpSlice } from '@/layouts/pages/auth/SignUp/store/sign-up.slice';
-import { baseLayoutSlice } from '@/layouts/common/BaseLayout/store/base-layout.slice';
-import { userSlice } from '@/layouts/common/AuthLayout/store/user';
-import { confirmEmailSlice } from '@/layouts/pages/activation/ConfirmEmail/store/confirm-email.slice';
-import { signInSlice } from '@/layouts/pages/auth/SignIn/store/signIn.slice';
-import { userTeamSlice } from '@/layouts/pages/user-team/store/userTeam.slice';
+import { signUpSlice } from '@/modules/pages/auth/SignUp/store/sign-up.slice';
+import { userSlice } from '@/layouts/AuthLayout/store/user';
+import { confirmEmailSlice } from '@/modules/pages/activation/ConfirmEmail/store/confirm-email.slice';
+import { signInSlice } from '@/modules/pages/auth/SignIn/store/signIn.slice';
+import { userTeamSlice } from '@/modules/pages/user-team/store/userTeam.slice';
+import { baseLayoutSlice } from '@/layouts/BaseLayout/store/base-layout.slice';
+import { ratingMatchSlice } from '@/modules/pages/rating-match/store/rating-match';
 
 const rootPersistConfig = {
 	key: 'root',
@@ -32,7 +33,8 @@ const rootReducer = combineReducers({
 	baseLayoutReducer: baseLayoutSlice.reducer,
 	confirmEmailReducer: confirmEmailSlice.reducer,
 	singleMatchReducer: singleMatchSlice.reducer,
-	userTeamReducer: userTeamSlice.reducer
+	userTeamReducer: userTeamSlice.reducer,
+	ratingMatchReducer: ratingMatchSlice.reducer
 });
 
 const persistedReducer = persistReducer(rootPersistConfig, rootReducer);

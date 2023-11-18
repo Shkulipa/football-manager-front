@@ -3,7 +3,7 @@ import { ETypeDragTactics } from '../../../constants/type-drag-drop';
 import { IPlayerReserveTableProps } from './PlayerReserveTable.types';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { TSquadMain } from '@/types/football-simulator/user-team';
-import { setSecondVersionTeam } from '@/layouts/pages/user-team/store/userTeam.slice';
+import { setSecondVersionTeam } from '@/modules/pages/user-team/store/userTeam.slice';
 import { IGetOwnTeamRes } from '@/api/rest/user-team/types/get-own-team-res';
 import { IDropResultData, IDropResult } from '../../types/position-user-team';
 import { groupPlayersByPositionInMainSquad } from '@/utils/group-players-by-position-in-main-squad';

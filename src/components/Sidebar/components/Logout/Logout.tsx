@@ -4,7 +4,7 @@ import { useAppDispatch } from '@/hooks/redux';
 import { Login } from '@/icons';
 import { MenuItem } from 'react-pro-sidebar';
 import styles from './Logout.module.scss';
-import { logout } from '@/layouts/common/AuthLayout/store/user';
+import { logout } from '@/layouts/AuthLayout/store/user';
 
 export const Logout = (): JSX.Element => {
 	const dispatch = useAppDispatch();

@@ -7,7 +7,7 @@ import {
 	MenuItem,
 	sidebarClasses
 } from 'react-pro-sidebar';
-import { Arrow, SingleMatch, Stadium, Team } from '@/icons';
+import { Arrow, Cup, SingleMatch, Stadium, Team } from '@/icons';
 import Link from 'next/link';
 import styles from './Sidebar.module.scss';
 import { ISidebarProps } from './Sidebar.types';
@@ -27,6 +27,11 @@ const authorizedRoutes: IAuthorizedRoute[] = [
 		icon: <Team width={28} height={28} />,
 		link: ROUTES.USER_TEAM,
 		label: 'Your Team'
+	},
+	{
+		icon: <Cup width={28} height={28} />,
+		link: ROUTES.RATING,
+		label: 'Rating'
 	}
 ];
 

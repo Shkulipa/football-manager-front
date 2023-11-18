@@ -1,0 +1,1 @@
+export { RatingMatch } from './RatingMatch';

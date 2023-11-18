@@ -23,3 +23,11 @@ export * from './ReplacementTitle';
 // football tactic fields
 export * from './football-tactic-fields/FootballTacticFieldUserTeam/FootballTacticFieldUserTeam';
 export * from './football-tactic-fields/FootballTacticFieldSingleMatch/FootballTacticFieldSingleMatch';
+export * from './football-tactic-fields/FootballTacticFieldRatingMatch/FootballTacticFieldRatingMatch';
+
+// football match components
+export * from './match/TimeLine';
+export * from './match/Teams';
+export * from './match/Statistics';
+export * from './match/Options';
+export * from './match/MatchDetails';

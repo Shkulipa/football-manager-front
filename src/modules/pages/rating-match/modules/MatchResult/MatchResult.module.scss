@@ -1,0 +1,11 @@
+.matchResultWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    justify-content: center;
+}
+
+.rewardsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

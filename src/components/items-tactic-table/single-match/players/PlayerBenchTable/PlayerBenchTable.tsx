@@ -1,7 +1,7 @@
 import { useDrag } from 'react-dnd';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
-import { singleMatchSlice } from '@/layouts/pages/single-match/store/single-match.slice';
+import { singleMatchSlice } from '@/modules/pages/single-match/store/single-match.slice';
 import { IMatchDetails } from 'footballsimulationengine';
 import { limitReplacements } from '@/constants';
 import { IPlayerBenchTableProps } from './PlayerBenchTable.interfaces';

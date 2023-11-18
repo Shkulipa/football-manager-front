@@ -1,5 +1,5 @@
-import { PrivateRouteLayout } from '@/layouts/common/permissions/PrivateRouteLayout';
-import { UserTeam } from '@/layouts/pages/user-team';
+import { PrivateRouteLayout } from '@/layouts/permissions/PrivateRouteLayout';
+import { UserTeam } from '@/modules/pages/user-team';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

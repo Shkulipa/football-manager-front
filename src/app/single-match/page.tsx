@@ -1,5 +1,5 @@
 import { getTeamsWithoutJoinSquad } from '@/api/rest/teams/teams';
-import { SingleMatchPage } from '@/layouts/pages/single-match/SingleMatchPage';
+import { SingleMatchPage } from '@/modules/pages/single-match/SingleMatchPage';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

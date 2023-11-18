@@ -1,5 +1,5 @@
-import { ProtectedAuthRouterLayout } from '@/layouts/common/permissions/ProtectedAuthRouteLayout';
-import { SignUp } from '@/layouts/pages/auth/SignUp';
+import { ProtectedAuthRouterLayout } from '@/layouts/permissions/ProtectedAuthRouteLayout';
+import { SignUp } from '@/modules/pages/auth/SignUp';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

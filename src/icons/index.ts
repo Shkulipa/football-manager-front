@@ -12,3 +12,5 @@ export * from './SuccessMark';
 export * from './SuccessIcon';
 export * from './Photo';
 export * from './Stadium';
+export * from './Cup';
+export * from './Cash';

@@ -17,7 +17,7 @@
 - [X] Sign up
 - [X] Activation email
 - [X] Login with not activated account
-- [ ] User Team
+- [X] User Team
     - [X] Create user team
     - [X] Set/update squad in user team
         - [X] Drag from Football Field
@@ -45,9 +45,27 @@
     - [X] Update logo club
     - [X] Disable update, if nothing changed
     - [X] Delete user team (with confirmation modal)
-- [ ] Rating match (finding opponent...)
+- [X] Rating match (finding opponent...)
 - [ ] Rating match (playing in real time)
-    - [ ] update tactic(Make replacements, move players)
+    - [X] Rejoin to match
+    - [X] When match was finished, and second player wants to join into this moment
+    - [X] Update tactic(Make replacements, move players)
+        - [X] Drag from Football Field
+            - [X]  into Football Field(move player to another position with player)
+            - [X]  into Football Field(if position is free)
+            - [X]  into Main table(change position with another player)
+            - [X]  into Bench
+        - [X] Drag from Main Table
+            - [X]  into Football Field(if position is free)
+            - [X]  into Football Field(if position is taken by another player)
+            - [X]  into Main table(change position with another player)
+            - [X]  into Bench
+        - [X] Drag from Bench
+            - [X]  into Football Field(free field)
+            - [X]  into Football Field(with replace player from bench player)
+            - [X]  into Main table(instead of exist player there)
+    - [ ] Update with server(send request yo the server about updated squad)
+- [ ] Deploy railway
 - [ ] Online chat
     - [ ] Common Chat
     - [ ] Directs Chat
@@ -76,3 +94,7 @@ https://react-dnd.github.io/react-dnd/examples/dustbin/single-target
 
 # @syncfusion/ej2-base
 https://ej2.syncfusion.com/react/demos/#/material3/chart/polar-area
+
+# Sockets
+https://www.youtube.com/watch?v=o43iiH4kGqg&t=1610s&ab_channel=UlbiTV
+https://www.youtube.com/watch?v=djMy4QsPWiI&ab_channel=PedroTech

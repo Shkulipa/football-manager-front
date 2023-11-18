@@ -17,7 +17,7 @@ declare module 'footballsimulationengine' {
 		rating: number;
 		intent: string;
 		teamID: number;
-		logoClub: string;
+		logoClub?: string;
 		replacements: IReplacement[];
 	}
 

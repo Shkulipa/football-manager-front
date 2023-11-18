@@ -2,7 +2,7 @@ import { useDrag } from 'react-dnd';
 
 import { IPlayerMainTableProps } from './PlayerMainTable.interfaces';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
-import { singleMatchSlice } from '@/layouts/pages/single-match/store/single-match.slice';
+import { singleMatchSlice } from '@/modules/pages/single-match/store/single-match.slice';
 import { IMatchDetails, IRealPlayerNotMain } from 'footballsimulationengine';
 import { limitReplacements } from '@/constants';
 

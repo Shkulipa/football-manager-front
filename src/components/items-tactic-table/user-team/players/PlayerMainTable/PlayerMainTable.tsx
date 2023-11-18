@@ -6,7 +6,7 @@ import { IDropResult, IDropResultData } from '../../types/position-user-team';
 import { PlayerTableUserTeam } from '../../components/PlayerTableUserTeam';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { IGetOwnTeamRes } from '@/api/rest/user-team/types/get-own-team-res';
-import { setSecondVersionTeam } from '@/layouts/pages/user-team/store/userTeam.slice';
+import { setSecondVersionTeam } from '@/modules/pages/user-team/store/userTeam.slice';
 import { movePlayer } from '../../utils/move-player';
 import { swapPlayers } from '../../utils/swap-players';
 import { groupPlayersByPositionInMainSquad } from '@/utils/group-players-by-position-in-main-squad';

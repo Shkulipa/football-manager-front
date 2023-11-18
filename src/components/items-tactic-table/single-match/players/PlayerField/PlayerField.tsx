@@ -2,7 +2,7 @@ import { useDrag } from 'react-dnd';
 
 import { IPlayerInFieldProps } from './PlayerField.types';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
-import { singleMatchSlice } from '@/layouts/pages/single-match/store/single-match.slice';
+import { singleMatchSlice } from '@/modules/pages/single-match/store/single-match.slice';
 import { IRealPlayerNotMain } from 'footballsimulationengine';
 import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
 import { PlayerDragField } from '@/components';

@@ -6,17 +6,17 @@ const username = Yup.string()
 		new RegExp(/^[a-zA-Z0-9@.]*$/),
 		'Username should only contain letters or digits'
 	)
-	.required('Required');
+	.required('This Field is Required');
 
-const email = Yup.string().email().required('Required');
+const email = Yup.string().email().required('This Field is Required');
 
 const password = Yup.string()
 	.min(6, 'Should be 6+ symbols')
-	.required('Required');
+	.required('This Field is Required');
 
 const confirmPassword = Yup.string()
 	.oneOf([Yup.ref('password')], "Passwords doesn't match")
-	.required();
+	.required('This Field is Required');
 
 const file = Yup.mixed()
 	.notRequired()

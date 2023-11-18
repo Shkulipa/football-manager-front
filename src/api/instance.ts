@@ -9,7 +9,7 @@ import {
 	showGlobalError
 } from '@/components/GlobalModal/store';
 import { ISignInRes } from './rest/auth/types/sign-in-res';
-import { logout } from '@/layouts/common/AuthLayout/store/user';
+import { logout } from '@/layouts/AuthLayout/store/user';
 
 /**
  * @info

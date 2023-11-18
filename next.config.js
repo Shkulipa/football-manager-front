@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// const nodeExternals = require('webpack-node-externals');
 
 const nextConfig = {
   async headers() {
@@ -14,10 +15,15 @@ const nextConfig = {
       },
     ];
   },
-  webpack(config) {
+  webpack(config, { isServer }) {
     config.resolve.fallback = {
       fs: false, // the solution
     };
+
+    if (!isServer) {
+      config.externals.push({ bufferutil: "bufferutil", "utf-8-validate": "utf-8-validate", "supports-color": "supports-color" }); 
+    }
+
     return config;
   },
   images: {
