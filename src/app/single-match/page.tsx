@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 
 export default async function Page() {
 	const teams = await getTeamsWithoutJoinSquad();
-	return <SingleMatchPage teams={teams} />;
+	return <SingleMatchPage teams={teams || []} />;
 }

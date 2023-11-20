@@ -30,7 +30,7 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 	);
 
 	useEffect(() => {
-		if (initHosts && initGuests) {
+		if (initHosts && initGuests && teams.length > 0) {
 			const teamHosts =
 				teams[initHosts.initCountry].leagues[initHosts.initLeague].teams[
 					initHosts.initTeam
@@ -43,7 +43,7 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 			dispatch(setHosts(teamHosts));
 			dispatch(setGuests(teamGuests));
 		}
-	}, [initHosts, initGuests]);
+	}, [initHosts, initGuests, teams]);
 
 	// handlers for picking teams
 	const { setGuests, setHosts, setUserFor } = singleMatchSlice.actions;
@@ -68,6 +68,14 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 		dispatch(setUserFor(EMatchSide.GUESTS));
 		startGame();
 	};
+
+	if (teams.length === 0) {
+		return (
+			<PaddingContainer>
+				<SingleMatchContainer>Real Teams does not exist</SingleMatchContainer>
+			</PaddingContainer>
+		);
+	}
 
 	return (
 		<PaddingContainer>
