@@ -179,7 +179,7 @@ export const RatingMatch = () => {
 					setJoinDetail(data);
 					setTimeout(() => {
 						socket.current?.close();
-					}, 2500);
+					}, 300);
 					return;
 				});
 

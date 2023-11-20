@@ -1,3 +1,9 @@
+# Run
+```yarn dev```
+
+# CI/CD (deploy)
+1. for front here using "vercel"
+
 # Todo
 - [X] Login
 - [X] Errors fetching
@@ -116,5 +122,6 @@ https://react-dnd.github.io/react-dnd/examples/dustbin/single-target
 https://ej2.syncfusion.com/react/demos/#/material3/chart/polar-area
 
 # Sockets
+docs: https://socket.io/docs/v4/client-initialization/
 https://www.youtube.com/watch?v=o43iiH4kGqg&t=1610s&ab_channel=UlbiTV
 https://www.youtube.com/watch?v=djMy4QsPWiI&ab_channel=PedroTech

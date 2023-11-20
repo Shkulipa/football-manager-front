@@ -33,6 +33,16 @@ const nextConfig = {
         hostname: 'football-manager-dev.s3.eu-central-1.amazonaws.com',
         pathname: '/public/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'football-manager-staging.s3.eu-central-1.amazonaws.com',
+        pathname: '/public/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'football-manager-prod.s3.eu-central-1.amazonaws.com',
+        pathname: '/public/**',
+      },
     ],
   },
 }
