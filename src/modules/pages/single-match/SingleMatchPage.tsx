@@ -20,13 +20,14 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 
 	// init teams
 	const { hosts, guests } = useAppSelector(s => s.singleMatchReducer);
+
 	const initHosts = useMemo(
-		() => initTeam({ currTeam: hosts, teams }),
-		[hosts]
+		() => teams.length > 0 && initTeam({ currTeam: hosts, teams }),
+		[teams, hosts]
 	);
 	const initGuests = useMemo(
-		() => initTeam({ currTeam: guests, teams }),
-		[guests]
+		() => teams.length > 0 && initTeam({ currTeam: guests, teams }),
+		[teams, guests]
 	);
 
 	useEffect(() => {
@@ -69,7 +70,7 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 		startGame();
 	};
 
-	if (teams.length === 0) {
+	if (teams.length === 0 || !initHosts || !initGuests) {
 		return (
 			<PaddingContainer>
 				<SingleMatchContainer>Real Teams does not exist</SingleMatchContainer>
