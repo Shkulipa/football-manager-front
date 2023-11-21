@@ -194,9 +194,7 @@ export const RatingMatch = () => {
 						data.reward &&
 						data.statistics
 					) {
-						setJoinDetail(data);
 						setSetStatusMatch(EStatusMatch.FINISHED);
-						return;
 					}
 
 					if (data.status === EStatusMatch.IN_PROCESS) {
@@ -204,13 +202,13 @@ export const RatingMatch = () => {
 					}
 
 					// handler about starting match
-					const isBothPlayersReady =
-						data.player1.isReady && data.player2.isReady;
-					const isFirstPlayer = data.player1.user._id === user?._id; // only 1 player have to start the match
-					if (data.status === EStatusMatch.PREPARE && isBothPlayersReady) {
-						if (isFirstPlayer)
-							socket.current?.emit('start-match', { matchId: params.id });
-					}
+					// const isBothPlayersReady =
+					// 	data.player1.isReady && data.player2.isReady;
+					// const isFirstPlayer = data.player1.user._id === user?._id; // only 1 player have to start the match
+					// if (data.status === EStatusMatch.PREPARE && isBothPlayersReady) {
+					// 	if (isFirstPlayer)
+					// 		socket.current?.emit('start-match', { matchId: params.id });
+					// }
 
 					setJoinDetail(data);
 				});

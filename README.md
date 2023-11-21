@@ -2,7 +2,7 @@
 ```yarn dev```
 
 # CI/CD (deploy)
-1. for front here using "vercel"
+1. for front here using "railway" for the "same site" for fixing error with different domains
 
 # Todo
 - [X] Login
@@ -90,8 +90,8 @@
             - [X] make 2 replacements, and replace 1 of them (that wasn't replaced - move into another position)
             - [X] make 2 replacements, and replace 1 of them (that was replaced - move into another position)
             - [X] make 2 replacements, and replace 1 of them (move both players in other positions)
-- [ ] Bug spikes in rating match
-- [ ] Deploy railway
+- [X] Deploy railway
+- [X] Bug spikes in rating match
 - [ ] Online chat
     - [ ] Common Chat
     - [ ] Directs Chat
