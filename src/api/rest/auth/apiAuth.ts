@@ -14,7 +14,11 @@ export const logout = async () =>
 	await apiPublic.post<IServerSuccessRes>('/auth/logout');
 
 export const refreshToken = async () =>
-	await apiPublic.post<ISignInRes>('/token/refresh');
+	await apiPublic.post<ISignInRes>(
+		'/token/refresh',
+		{},
+		{ withCredentials: true }
+	);
 
 export const apiAuth = {
 	login,
