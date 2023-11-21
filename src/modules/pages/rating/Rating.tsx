@@ -1,7 +1,7 @@
 'use client';
 
 import { io, Socket } from 'socket.io-client';
-import { Button, ErrorNotification, Ptag } from '@/components';
+import { Button, ErrorNotification, Loader, Ptag } from '@/components';
 import styles from './Rating.module.scss';
 import { Search } from '@/icons/Search';
 import { useEffect, useRef, useState } from 'react';
@@ -28,7 +28,9 @@ export const Rating = (): JSX.Element => {
 	const [isSearching, setIsSearching] = useState(false);
 	const [playersInPool, setPlayersInPool] = useState(0);
 	const [error, setError] = useState('');
+	const [disabledSearchButton, setDisabledSearchBtn] = useState(false);
 	const [currMatch, setCurrMatch] = useState('');
+	const [isCheckExistInMatch, setIsCheckExistInMatch] = useState(false);
 	const [isShowLinkToYourTeam, setIsShowLinkToYourTeam] = useState(false);
 
 	const onCancelSearch = () => {
@@ -54,6 +56,7 @@ export const Rating = (): JSX.Element => {
 			try {
 				const { data } = await apiRatingMatch.getCurrentLiveMatch();
 				setCurrMatch(data);
+				setIsCheckExistInMatch(true);
 			} catch (e) {
 				handleActionErrors({
 					e,
@@ -69,6 +72,7 @@ export const Rating = (): JSX.Element => {
 	}, []);
 
 	const onSearchOpponent = async () => {
+		setDisabledSearchBtn(true);
 		if (SERVER_URL) {
 			/**
 			 * @info
@@ -160,8 +164,11 @@ export const Rating = (): JSX.Element => {
 			});
 		}
 
+		setDisabledSearchBtn(false);
 		return;
 	};
+
+	if (!isCheckExistInMatch) return <Loader />;
 
 	const errorNotification = error && (
 		<div className={styles.errorWrapper}>
@@ -179,7 +186,10 @@ export const Rating = (): JSX.Element => {
 			Cancel Searching...
 		</Button>
 	) : (
-		<Button onClick={onSearchOpponent} disabled={Boolean(error)}>
+		<Button
+			onClick={onSearchOpponent}
+			disabled={Boolean(error) || disabledSearchButton}
+		>
 			Search Opponent{isSearching && '...'}
 		</Button>
 	);

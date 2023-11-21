@@ -9,6 +9,7 @@ import { ContentLoader } from '@/components';
 import { GlobalError } from '@/modules/modals/GlobalError/GlobalError';
 import { NetworkError } from '@/modules/modals/NetworkError/NetworkError';
 import { BaseLayout } from '@/layouts/BaseLayout';
+import NextTopLoader from 'nextjs-toploader';
 
 export const metadata: Metadata = {
 	title: 'FM',
@@ -33,6 +34,13 @@ export default function RootLayout({ children }: IRootLayoutProps) {
 					<SWRProvider>
 						<NetworkError />
 						<GlobalError />
+						<NextTopLoader
+							color="black"
+							height={7}
+							zIndex={9999}
+							showSpinner={false}
+							shadow="0 0 0 #fff"
+						/>
 						<BaseLayout>
 							<AuthLayout>
 								<Suspense fallback={<ContentLoader />}>{children}</Suspense>

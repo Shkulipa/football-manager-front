@@ -35,21 +35,22 @@ export function BaseLayout({ children }: IBaseLayoutProps): JSX.Element {
 	const content = error ? <ErrorContentModal /> : isLoadingContent;
 
 	return (
-		<div className={cn(styles.baseLayoutWrapper)}>
-			<Sidebar
-				isCollapseSidebar={isCollapseSidebar}
-				setCollapseSidebar={callbackCollapseSidebar}
-			/>
-
-			<ContentContainer>
-				<Header ref={headerRef}>header</Header>
-				<main
-					className={cn(styles.main)}
-					style={{ height: `calc(100vh - ${headerHeight}px)` }}
-				>
-					{content}
-				</main>
-			</ContentContainer>
-		</div>
+		<>
+			<div className={cn(styles.baseLayoutWrapper)}>
+				<Sidebar
+					isCollapseSidebar={isCollapseSidebar}
+					setCollapseSidebar={callbackCollapseSidebar}
+				/>
+				<ContentContainer>
+					<Header ref={headerRef}>header</Header>
+					<main
+						className={cn(styles.main)}
+						style={{ height: `calc(100vh - ${headerHeight}px)` }}
+					>
+						{content}
+					</main>
+				</ContentContainer>
+			</div>
+		</>
 	);
 }
