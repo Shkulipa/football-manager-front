@@ -1,4 +1,4 @@
-import { SERVER_URL, revalidate } from '@/constants';
+import { SERVER_URL } from '@/constants';
 import { ITeam } from './teams.types';
 
 /**
@@ -8,7 +8,7 @@ import { ITeam } from './teams.types';
 export const getTeamsWithoutJoinSquad = async (): Promise<ITeam[]> => {
 	const resJSON = await fetch(
 		`${SERVER_URL}/real-team/short-info?limit=50&page=1`,
-		{ next: { revalidate } }
+		{ next: { revalidate: false } }
 	);
 
 	return resJSON.json();
