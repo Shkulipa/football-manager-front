@@ -16,7 +16,6 @@ import { EStatusMatch, IJoinDetails } from './types/match-detail';
 import styles from './RatingMatch.module.scss';
 import { ErrorNotification, Loader, Ptag } from '@/components';
 import { IMatchSimulationData } from './types/match-simulation';
-import { IMatchDetails } from 'footballsimulationengine';
 import { Game } from './modules/Game';
 import { MatchResult } from './modules/MatchResult';
 import { ratingMatchSlice } from './store/rating-match';
@@ -27,7 +26,9 @@ export const RatingMatch = () => {
 
 	const dispatch = useAppDispatch();
 	const { user } = useAppSelector(s => s.userReducer);
-	const { cooldownUpdateSquad } = useAppSelector(s => s.ratingMatchReducer);
+	const { cooldownUpdateSquad, initUserTeam } = useAppSelector(
+		s => s.ratingMatchReducer
+	);
 	const { setMatchDetails, setInitUserTeam, setSecondUserTeamVersion } =
 		ratingMatchSlice.actions;
 	const [error, setError] = useState<string | null>(null);
@@ -37,64 +38,13 @@ export const RatingMatch = () => {
 		IJoinDetails['status'] | null
 	>();
 
-	const currIteration = useRef(0);
 	const [gameLength, setGameLength] = useState<number | null>();
 	const intervalSimulationMatch = useRef<ReturnType<typeof setInterval>>();
-	const iterationsSimulations = useRef<IMatchDetails[]>([]);
 
 	// main value on BE
 	const [matchIteration, setMatchIteration] = useState(0);
 
 	const { reset } = ratingMatchSlice.actions;
-
-	useEffect(() => {
-		/**
-		 * @info
-		 * run only once
-		 */
-		if (
-			statusMatch === EStatusMatch.IN_PROCESS &&
-			iterationsSimulations.current.length > 0 &&
-			gameLength &&
-			currIteration.current === 0
-		) {
-			intervalSimulationMatch.current = setInterval(() => {
-				// if it is not last iteration in arr of iterations
-				if (iterationsSimulations.current.length !== currIteration.current) {
-					const newMatchDetails =
-						iterationsSimulations.current[currIteration.current];
-
-					dispatch(setMatchDetails(newMatchDetails));
-
-					const team =
-						user?.username === newMatchDetails.secondTeam.manager
-							? newMatchDetails.secondTeam
-							: newMatchDetails.kickOffTeam;
-
-					if (team) {
-						dispatch(setInitUserTeam(team));
-						if (cooldownUpdateSquad) dispatch(setSecondUserTeamVersion(team));
-					}
-
-					/**
-					 * @info
-					 * matchIteration - curr iteration in match on server(BE) side
-					 * currIteration - curr iteration in match on client side,
-					 *
-					 * because we get iterations in array from BE, for make less requests to client from BE
-					 * when BE this.io.emit(roomMatch).emit('key', data) to client
-					 */
-					++currIteration.current;
-					return;
-				}
-			}, 20);
-		}
-	}, [
-		statusMatch,
-		iterationsSimulations.current.length,
-		gameLength,
-		currIteration.current
-	]);
 
 	useEffect(() => {
 		const connectSockets = async () => {
@@ -125,7 +75,7 @@ export const RatingMatch = () => {
 					auth: {
 						token: user?.accessToken || ''
 					},
-					transports: ['websocket', 'polling']
+					transports: ['websocket']
 				});
 				socket.current = socketClient;
 
@@ -160,11 +110,19 @@ export const RatingMatch = () => {
 					// set match time from BE
 					setMatchIteration(parsedData.currIteration);
 
-					// set iterations
-					iterationsSimulations.current = [
-						...iterationsSimulations.current,
-						...parsedData.simulations
-					];
+					dispatch(setMatchDetails(parsedData.matchInfo));
+
+					if (!initUserTeam) {
+						const team =
+							user?.username === parsedData.matchInfo.secondTeam.manager
+								? parsedData.matchInfo.secondTeam
+								: parsedData.matchInfo.kickOffTeam;
+
+						if (team) {
+							dispatch(setInitUserTeam(team));
+							if (cooldownUpdateSquad) dispatch(setSecondUserTeamVersion(team));
+						}
+					}
 
 					if (statusMatch !== EStatusMatch.IN_PROCESS)
 						setSetStatusMatch(EStatusMatch.IN_PROCESS);
@@ -200,15 +158,6 @@ export const RatingMatch = () => {
 					if (data.status === EStatusMatch.IN_PROCESS) {
 						setSetStatusMatch(EStatusMatch.IN_PROCESS);
 					}
-
-					// handler about starting match
-					// const isBothPlayersReady =
-					// 	data.player1.isReady && data.player2.isReady;
-					// const isFirstPlayer = data.player1.user._id === user?._id; // only 1 player have to start the match
-					// if (data.status === EStatusMatch.PREPARE && isBothPlayersReady) {
-					// 	if (isFirstPlayer)
-					// 		socket.current?.emit('start-match', { matchId: params.id });
-					// }
 
 					setJoinDetail(data);
 				});

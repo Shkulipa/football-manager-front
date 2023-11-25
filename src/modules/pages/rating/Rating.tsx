@@ -106,11 +106,12 @@ export const Rating = (): JSX.Element => {
 
 			socket.current.on('connect', () => {
 				setIsSearching(true);
+				setDisabledSearchBtn(false);
 			});
 
 			/**
 			 * @info
-			 * error before connecting
+			 * error before connecting to server
 			 */
 			socket.current.on('connect_error', data => {
 				console.error('connect_error', data);
@@ -123,7 +124,7 @@ export const Rating = (): JSX.Element => {
 
 			/**
 			 * @info
-			 * error before connecting
+			 * players in pool in current time
 			 */
 			socket.current.on('players-in-poll', (count: number) => {
 				setPlayersInPool(count);
@@ -140,7 +141,7 @@ export const Rating = (): JSX.Element => {
 
 			/**
 			 * @info
-			 * errors after connecting to ws
+			 * errors after connecting to server
 			 */
 			socket.current.on('exception', (data: string) => {
 				console.error('exception', data);
@@ -160,11 +161,11 @@ export const Rating = (): JSX.Element => {
 				setTimeout(() => {
 					setError('');
 					setIsShowLinkToYourTeam(false);
+					setDisabledSearchBtn(false);
 				}, 15000);
 			});
 		}
 
-		setDisabledSearchBtn(false);
 		return;
 	};
 

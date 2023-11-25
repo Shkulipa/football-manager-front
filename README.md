@@ -2,7 +2,7 @@
 ```yarn dev```
 
 # CI/CD (deploy)
-1. for front here using "railway" for the "same site" for fixing error with different domains
+1. for front here using "railway" for the "same site" for fixing error with different domains(safari as example problems in cookies)
 
 # Todo
 - [X] Login
@@ -91,6 +91,7 @@
             - [X] make 2 replacements, and replace 1 of them (that was replaced - move into another position)
             - [X] make 2 replacements, and replace 1 of them (move both players in other positions)
 - [X] Deploy railway
+- [X] Instead of generated simulations array, get last iteration from Back End
 - [X] Bug spikes in rating match
 - [ ] Online chat
     - [ ] Common Chat
@@ -101,13 +102,17 @@
 - [ ] Shop (buy packs)
 - [ ] User inventory(where you can open packs)
 - [ ] Open packs
-- [ ] Auction create lot
-- [ ] Auction cancel lot
-- [ ] Auction buy lot
-- [ ] User update password
-- [ ] User update username
-- [ ] User update email
+- [ ] Auction
+    - [ ] Auction create lot
+    - [ ] Auction cancel lot
+    - [ ] Auction buy lot
+- [ ] Profile
+    - [ ] User update password
+    - [ ] User update username
+    - [ ] User update email
 - [ ] Restore forgot pass
+- [ ] Home tutorials with video from youtube
+- [ ] Privacy Policy
 
 # next js docs
 https://nextjs.org/docs
