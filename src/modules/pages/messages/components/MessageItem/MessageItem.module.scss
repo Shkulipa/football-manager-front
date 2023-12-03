@@ -1,0 +1,27 @@
+@import '@/styles/variables';
+
+.messageItemWrapper {
+    width: fit-content;
+    min-width: 40%;
+    height: fit-content;
+    padding: 10px;
+    color: $black;
+    border: 2px solid $primary-color;
+    border-radius: 12px;
+    box-shadow: $box-shadow;
+}
+
+.isMyMessage {
+    margin-left: auto;
+}
+
+.time {
+    width: fit-content;
+    margin-left: auto;
+    color: $tertiary-color;
+}
+
+.author {
+    width: fit-content;
+    color: $tertiary-color;
+}

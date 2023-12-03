@@ -25,7 +25,7 @@ export const CardFormContent = ({
 
 			<CardForm {...formProps}>
 				<CardInputsWrapper>{children}</CardInputsWrapper>
-				{buttons.map(b => b)}
+				<div className={styles.buttonsWrapper}>{buttons.map(b => b)}</div>
 			</CardForm>
 		</Card>
 	);

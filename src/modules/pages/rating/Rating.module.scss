@@ -1,5 +1,6 @@
 .ratingWrapper {
     display: flex;
+    gap: 100px;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -46,3 +47,34 @@
       transform: rotate(360deg) translateX(15px) rotate(-360deg);
     }
   }
+
+.leftSide {
+  display: grid;
+  gap: 75px;
+  width: 400px;
+}
+
+.ratingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.tableRating, .teamsRating {
+  display: grid;
+  gap: 70px;
+}
+
+.teamsRating {
+  display: grid;
+  gap: 20px;
+}
+
+.pagination {
+  margin: 0 auto;
+}
+
+.textItem {
+  text-align: center;
+}

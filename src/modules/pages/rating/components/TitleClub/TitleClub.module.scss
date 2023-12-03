@@ -1,0 +1,11 @@
+.title {
+  display: grid;
+  grid-template-columns: 75px 125px 1fr;
+  gap: 15px;
+  width: 100%;
+}
+  
+.textItem {
+  text-align: center;
+}
+  

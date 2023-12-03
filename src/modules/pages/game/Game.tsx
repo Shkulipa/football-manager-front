@@ -8,6 +8,10 @@ import { Options, Statistics, Teams } from '@/components';
 import { useAppSelector } from '@/hooks/redux';
 import { GameLayout } from '@/layouts/GameLayout/GameLayout';
 
+/**
+ * @info
+ * this page is after /single-match where user can pick teams for playing
+ */
 export function Game(): JSX.Element {
 	const { userFor } = useAppSelector(s => s.singleMatchReducer);
 

@@ -1,0 +1,1 @@
+export { TermsConditional } from './TermsConditional';

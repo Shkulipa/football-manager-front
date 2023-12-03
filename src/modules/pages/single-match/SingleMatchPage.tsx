@@ -12,6 +12,7 @@ import { Card } from './components/Card';
 import { SingleMatchActions } from './components/SingleMatchActions';
 import { PaddingContainer } from '@/containers';
 import { EMatchSide } from '@/constants/footballsimulationengine/match-sides.enum';
+import styles from './SIngleMatch.module.scss';
 
 export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 	const router = useRouter();
@@ -57,7 +58,9 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 	};
 
 	// handlers start match
-	const startGame = async () => router.push(pathname + '/game');
+	const startGame = async () => {
+		router.push(pathname + '/game');
+	};
 	const hostsHandler = () => {
 		dispatch(setUserFor(EMatchSide.HOSTS));
 		startGame();
@@ -79,7 +82,7 @@ export function SingleMatchPage({ teams }: ISingleMatchProps): JSX.Element {
 	}
 
 	return (
-		<PaddingContainer>
+		<PaddingContainer className={styles.singleMatchWrapper}>
 			<SingleMatchContainer>
 				<CardsContainer>
 					<Card

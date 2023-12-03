@@ -13,6 +13,16 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
+          },
+        ],
+      },
+
     ];
   },
   webpack(config, { isServer }) {
@@ -42,7 +52,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'football-manager-prod.s3.eu-central-1.amazonaws.com',
         pathname: '/public/**',
-      },
+      }
     ],
   },
 }

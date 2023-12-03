@@ -1,0 +1,1 @@
+export { TitleClubMemo } from './TitleClub';

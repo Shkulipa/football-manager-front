@@ -1,7 +1,12 @@
-import { maxRatingPlayer } from '@/constants/footballsimulationengine/common-player-values';
 import { IPlayerSkills } from '@/types/football-simulator/player-skills';
 
-export const ratingHelper = (skills: IPlayerSkills) => {
+/**
+ * result in stars
+ */
+export const ratingHelper = (
+	skills: IPlayerSkills,
+	maxRatingPlayer: number = 5
+) => {
 	const values = Object.values(skills);
 	const sum = values.reduce((acc, curr) => acc + Number(curr), 0);
 	const average = sum / values.length;

@@ -16,13 +16,36 @@ import { ROUTES } from '@/constants/routes.enum';
 import { useAppSelector } from '@/hooks/redux';
 import { Logout } from './components/Logout/Logout';
 import { Login } from './components/Login/Login';
+import { Chat } from '@/icons/Chat';
+import { Shop } from '@/icons/Shop';
+import { Box } from '@/icons/Box';
+import { Contract } from '@/icons/Contract';
+/* import { Auction } from '@/icons/Auction';
+import { Profile } from '@/icons/Profile'; */
 
 interface IAuthorizedRoute {
 	icon: JSX.Element;
 	link: string;
 	label: string;
 }
-const authorizedRoutes: IAuthorizedRoute[] = [
+export const publicRoutes: IAuthorizedRoute[] = [
+	{
+		icon: <Stadium width={32} height={32} />,
+		link: ROUTES.HOME,
+		label: 'Home'
+	},
+	{
+		icon: <SingleMatch width={32} height={32} />,
+		link: ROUTES.SINGLE_MATCH,
+		label: 'Single Match'
+	},
+	{
+		icon: <Contract width={24} height={24} />,
+		link: ROUTES.RULES,
+		label: 'Rules'
+	}
+];
+export const authorizedRoutes: IAuthorizedRoute[] = [
 	{
 		icon: <Team width={28} height={28} />,
 		link: ROUTES.USER_TEAM,
@@ -32,7 +55,32 @@ const authorizedRoutes: IAuthorizedRoute[] = [
 		icon: <Cup width={28} height={28} />,
 		link: ROUTES.RATING,
 		label: 'Rating'
+	},
+	{
+		icon: <Chat width={28} height={28} />,
+		link: ROUTES.MESSAGES,
+		label: 'Messages'
+	},
+	{
+		icon: <Shop width={28} height={28} />,
+		link: ROUTES.SHOP,
+		label: 'Shop'
+	},
+	{
+		icon: <Box width={35} height={35} />,
+		link: ROUTES.INVENTORY,
+		label: 'Inventory'
 	}
+	/* {
+		icon: <Auction width={35} height={35} />,
+		link: ROUTES.MESSAGES,
+		label: 'Auction'
+	},
+	{
+		icon: <Profile width={24} height={24} />,
+		link: ROUTES.MESSAGES,
+		label: 'Profile'
+	}*/
 ];
 
 export function Sidebar({
@@ -46,10 +94,15 @@ export function Sidebar({
 	const renderAuthorizedRoutes =
 		user &&
 		authorizedRoutes.map(r => (
-			<MenuItem key={r.link} icon={r.icon} component={<Link href={r.link} />}>
+			<MenuItem key={r.label} icon={r.icon} component={<Link href={r.link} />}>
 				{r.label}
 			</MenuItem>
 		));
+	const renderPublicRoutes = publicRoutes.map(r => (
+		<MenuItem key={r.label} icon={r.icon} component={<Link href={r.link} />}>
+			{r.label}
+		</MenuItem>
+	));
 
 	return (
 		<div className={cn(styles.sidebarWrapper)}>
@@ -73,18 +126,7 @@ export function Sidebar({
 				}}
 			>
 				<Menu>
-					<MenuItem
-						icon={<Stadium width={32} height={32} />}
-						component={<Link href={ROUTES.HOME} />}
-					>
-						Home
-					</MenuItem>
-					<MenuItem
-						icon={<SingleMatch width={32} height={32} />}
-						component={<Link href={ROUTES.SINGLE_MATCH} />}
-					>
-						Single Match
-					</MenuItem>
+					{renderPublicRoutes}
 					{renderAuthorizedRoutes}
 					{authorization}
 				</Menu>

@@ -1,0 +1,23 @@
+@import '@/styles/variables';
+
+.chatWrapper {
+    height: fit-content;
+    padding: 8px;
+    color: $black;
+    cursor: pointer;
+    background-color: $quinary-color;
+    border: 2px solid $primary-color;
+    border-radius: 12px;
+    transition: $transition;
+    transform: scale(1);
+
+    &:hover {
+        background-color: $quaternary-color;
+    }
+}
+
+
+.active {
+    pointer-events: none;
+    background-color: $quaternary-color;
+}

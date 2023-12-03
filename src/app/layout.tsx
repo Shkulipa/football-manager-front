@@ -1,4 +1,5 @@
 import '@/styles/globals.scss';
+import '@/styles/vendor/rc-pagination.scss';
 import type { Metadata } from 'next';
 import SWRProvider from '@/SWR/SWR.provider';
 import ReduxProvider from '@/providers/ReduxProvider/ReduxProvider';
@@ -41,11 +42,11 @@ export default function RootLayout({ children }: IRootLayoutProps) {
 							showSpinner={false}
 							shadow="0 0 0 #fff"
 						/>
-						<BaseLayout>
-							<AuthLayout>
+						<AuthLayout>
+							<BaseLayout>
 								<Suspense fallback={<ContentLoader />}>{children}</Suspense>
-							</AuthLayout>
-						</BaseLayout>
+							</BaseLayout>
+						</AuthLayout>
 					</SWRProvider>
 				</ReduxProvider>
 			</body>

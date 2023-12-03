@@ -15,12 +15,13 @@ interface IAuthLayoutProps extends ICommonBasePropsWithChildren {}
 
 export const AuthLayout = ({ children }: IAuthLayoutProps): JSX.Element => {
 	const dispatch = useAppDispatch();
+	const { user } = useAppSelector(s => s.userReducer);
 	const { isLoading } = useAppSelector(s => s.baseLayoutReducer);
 
 	useEffect(() => {
 		const userJSON = localStorage.getItem(EKeyLocalStorage.USER);
 
-		if (userJSON) {
+		if (userJSON && !user) {
 			const user = JSON.parse(userJSON) as IAuthUser['user'];
 			const expiry = JSON.parse(atob(user!.accessToken.split('.')[1])).exp;
 			const isExpired = Date.now() >= expiry * 1000;
@@ -33,7 +34,7 @@ export const AuthLayout = ({ children }: IAuthLayoutProps): JSX.Element => {
 				dispatch(setUser(user));
 			}
 		}
-	}, [dispatch]);
+	}, [user, dispatch]);
 
 	if (isLoading) return <ContentLoader />;
 

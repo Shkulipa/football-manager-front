@@ -1,0 +1,71 @@
+@import '@/styles/variables';
+
+.playerCardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 300px;
+    padding: $primary-indent;
+    border: 1px solid $tertiary-color;
+    border-radius: 12px;
+    box-shadow: $box-shadow;
+}
+
+.photoPlayer {
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+}
+
+.photoBlock {
+    object-fit: contain;
+    width: 35px;
+    height: 35px;
+}
+
+.upBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.playerInfoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.skillBlockWrapper {
+    display: grid;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.scorePlayer {
+    text-align: center;
+}
+
+.stars {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.skillText {
+    display: grid;
+    grid-template-columns: 200px 50px;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.skillNumber {
+    display: grid;
+    gap: 5px;
+    margin-top: 15px;
+}

@@ -1,7 +1,7 @@
 .singleMatchContainer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 70px;
   width: 100%;
   height: fit-content;
-  height: 100%;
 }

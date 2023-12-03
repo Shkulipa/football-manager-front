@@ -19,6 +19,12 @@ import { showGlobalError } from '@/components/GlobalModal/store';
 import { isAxiosError } from 'axios';
 import { apiRatingMatch } from '@/api/rest/rating-match/rating-match';
 import { handleActionErrors } from '@/utils/handle-action-errors';
+import { IGetRatingRes } from '@/api/rest/rating-match/types/get-rating';
+import { TeamInfo } from './components/TeamInfo';
+import Pagination from 'rc-pagination';
+import { TitleClubMemo } from './components/TitleClub';
+
+const limit = 10;
 
 export const Rating = (): JSX.Element => {
 	const router = useRouter();
@@ -32,6 +38,9 @@ export const Rating = (): JSX.Element => {
 	const [currMatch, setCurrMatch] = useState('');
 	const [isCheckExistInMatch, setIsCheckExistInMatch] = useState(false);
 	const [isShowLinkToYourTeam, setIsShowLinkToYourTeam] = useState(false);
+
+	const [currPage, setCurrPage] = useState(1);
+	const [rating, setRating] = useState<IGetRatingRes | null>(null);
 
 	const onCancelSearch = () => {
 		if (socket.current) {
@@ -70,6 +79,21 @@ export const Rating = (): JSX.Element => {
 			onCancelSearch();
 		};
 	}, []);
+
+	useEffect(() => {
+		const getCurrRating = async () => {
+			try {
+				const { data } = await apiRatingMatch.getRating(limit, currPage);
+				setRating(data);
+			} catch (e) {
+				handleActionErrors({
+					e,
+					dispatch
+				});
+			}
+		};
+		getCurrRating();
+	}, [currPage]);
 
 	const onSearchOpponent = async () => {
 		setDisabledSearchBtn(true);
@@ -169,7 +193,7 @@ export const Rating = (): JSX.Element => {
 		return;
 	};
 
-	if (!isCheckExistInMatch) return <Loader />;
+	if (!isCheckExistInMatch || !rating) return <Loader />;
 
 	const errorNotification = error && (
 		<div className={styles.errorWrapper}>
@@ -247,10 +271,49 @@ export const Rating = (): JSX.Element => {
 	);
 
 	const content = currMatch ? secondaryContent : primaryContent;
+	const ratingContent = rating ? (
+		<div className={styles.tableRating}>
+			{rating.userTeam._id && (
+				<div className={styles.ratingBlock}>
+					<Ptag size="l" className={styles.textItem}>
+						Your Rating
+					</Ptag>
+					<TitleClubMemo />
+					<TeamInfo team={rating.userTeam} />
+				</div>
+			)}
+
+			<div className={styles.ratingBlock}>
+				<Ptag size="l" className={styles.textItem}>
+					Rating
+				</Ptag>
+				<TitleClubMemo />
+				<div className={styles.teamsRating}>
+					{rating.rating.items.map(t => (
+						<TeamInfo key={t._id} team={t} />
+					))}
+					{rating.rating.count > limit && (
+						<Pagination
+							className={styles.pagination}
+							onChange={setCurrPage}
+							current={currPage}
+							pageSize={limit}
+							total={rating.rating.count}
+						/>
+					)}
+				</div>
+			</div>
+		</div>
+	) : (
+		<></>
+	);
 
 	return (
 		<div className={styles.ratingWrapper}>
-			<div className={styles.ratingCard}>{content}</div>
+			<div className={styles.leftSide}>
+				<div className={styles.ratingCard}>{content}</div>
+			</div>
+			<div>{ratingContent}</div>
 		</div>
 	);
 };

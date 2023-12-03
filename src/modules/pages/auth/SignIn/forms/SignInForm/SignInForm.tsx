@@ -15,6 +15,8 @@ import { ROUTES } from '@/constants/routes.enum';
 import { SignButton } from '../../../components/SignButton';
 import { signInAsync } from '../../store/signIn.slice';
 import { CardFormContent } from '@/components/CardFormContent/CardFormContent';
+import { GoogleLogin } from '../../components/GoogleLogin/GoogleLogin';
+import { FacebookLogin } from '../../components/FacebookLogin';
 
 const initialValues: ISignInReq = {
 	username: '',
@@ -54,7 +56,9 @@ export function SignInForm(): JSX.Element {
 						disabled={!formik.isValid}
 					>
 						Sign In
-					</SignButton>
+					</SignButton>,
+					<GoogleLogin key="google" />,
+					<FacebookLogin key="facebook" />
 				]}
 			>
 				<FormikInput

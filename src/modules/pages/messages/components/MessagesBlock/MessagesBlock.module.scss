@@ -1,0 +1,25 @@
+@import '@/styles/variables';
+
+.messagesBlockWrapper {
+    display: grid;
+    grid-template-rows: 80vh 1fr;
+    gap: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.messagesBlockActionsWrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;;
+    padding: 15px;
+    overflow: auto;
+    border: 1px solid $tertiary-color;
+}
