@@ -119,7 +119,7 @@
 - [X] Google analytics
     - https://analytics.google.com/
     - https://gaudion.dev/blog/setup-google-analytics-with-gdpr-compliant-cookie-consent-in-nextjs13, https://gaudion.dev/info/cookies
-- [ ] Home tutorials with video from youtube
+- [X] Home tutorials with video from youtube
 
 # next js docs
 https://nextjs.org/docs
