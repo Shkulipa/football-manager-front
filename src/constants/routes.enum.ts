@@ -4,7 +4,10 @@ export enum ROUTES {
 	RATING_MATCH = '/rating-match',
 	AUTH_SIGN_IN = '/auth/sign-in',
 	AUTH_SIGN_UP = '/auth/sign-up',
+	AUTH_FORGOT_PASSWORD = '/auth/forgot-password',
+	AUTH_RECOVER_PASSWORD = '/auth/recover-password',
 	USER_TEAM = '/user-team',
+	REAL_TEAM = '/real-team',
 	REAL_PLAYER = '/real-player',
 	RATING = '/rating',
 	MESSAGES = '/messages',
@@ -13,5 +16,10 @@ export enum ROUTES {
 	INVENTORY = '/inventory',
 	PRIVACY_POLICY = '/privacy-policy',
 	RULES = '/rules',
-	TERMS_CONDITIONS = '/terms-conditions'
+	TERMS_CONDITIONS = '/terms-conditions',
+	AUCTION = '/auction',
+	AUCTION_OWN_LOTS = '/auction/own-lots',
+	AUCTION_CREATE_LOTS = '/auction/create-lot',
+	SEARCH = '/search',
+	PROFILE = '/profile'
 }

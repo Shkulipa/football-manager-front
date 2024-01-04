@@ -3,7 +3,7 @@ import { Messages } from '@/modules/pages/messages';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Messages'
+	title: 'Messages'
 };
 
 export default async function Page() {

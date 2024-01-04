@@ -3,7 +3,7 @@ import { Success } from '@/modules/pages/shop';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Success operation'
+	title: 'Success operation'
 };
 
 export default async function Page() {

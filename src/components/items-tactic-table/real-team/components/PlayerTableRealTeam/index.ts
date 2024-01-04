@@ -1,0 +1,1 @@
+export { PlayerTableRealTeam } from './PlayerTableRealTeam';

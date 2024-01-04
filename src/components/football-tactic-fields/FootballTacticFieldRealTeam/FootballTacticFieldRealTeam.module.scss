@@ -1,0 +1,39 @@
+@import '@/styles/variables';
+
+$size: 45px;
+
+.position {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:  $size;
+  height: $size;
+  background-color: $black;
+  border: 2px solid $white;
+  border-radius: 50%;
+  box-shadow: $box-shadow;
+  transform: translate(-50%, 50%);
+}
+
+.content {
+  font-size: $m-text-size;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.name {
+  position: absolute;
+  bottom: 145%;
+  font-size: $xs-text-size;
+  color: $black;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.rating {
+  position: absolute;
+  top: -45%;
+  gap: 1.5px !important;
+}

@@ -3,7 +3,7 @@ import { Shop } from '@/modules/pages/shop';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Shop'
+	title: 'Shop'
 };
 
 export default async function Page() {

@@ -12,6 +12,10 @@ const email = Yup.string().email().required('This Field is Required');
 
 const password = Yup.string()
 	.min(6, 'Should be 6+ symbols')
+	.matches(
+		/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]+$/,
+		'Should contain at least one letter, one digit, and one special character'
+	)
 	.required('This Field is Required');
 
 const confirmPassword = Yup.string()

@@ -20,6 +20,9 @@ import { Chat } from '@/icons/Chat';
 import { Shop } from '@/icons/Shop';
 import { Box } from '@/icons/Box';
 import { Contract } from '@/icons/Contract';
+import { Auction } from '@/icons/Auction';
+import { Search } from '@/icons/Search';
+import { Profile } from '@/icons/Profile';
 /* import { Auction } from '@/icons/Auction';
 import { Profile } from '@/icons/Profile'; */
 
@@ -38,6 +41,11 @@ export const publicRoutes: IAuthorizedRoute[] = [
 		icon: <SingleMatch width={32} height={32} />,
 		link: ROUTES.SINGLE_MATCH,
 		label: 'Single Match'
+	},
+	{
+		icon: <Search width={35} height={35} />,
+		link: ROUTES.SEARCH,
+		label: 'Search'
 	},
 	{
 		icon: <Contract width={24} height={24} />,
@@ -70,17 +78,17 @@ export const authorizedRoutes: IAuthorizedRoute[] = [
 		icon: <Box width={35} height={35} />,
 		link: ROUTES.INVENTORY,
 		label: 'Inventory'
-	}
-	/* {
+	},
+	{
 		icon: <Auction width={35} height={35} />,
-		link: ROUTES.MESSAGES,
+		link: ROUTES.AUCTION,
 		label: 'Auction'
 	},
 	{
 		icon: <Profile width={24} height={24} />,
-		link: ROUTES.MESSAGES,
+		link: ROUTES.PROFILE,
 		label: 'Profile'
-	}*/
+	}
 ];
 
 export function Sidebar({

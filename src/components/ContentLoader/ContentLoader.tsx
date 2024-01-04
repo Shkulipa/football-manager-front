@@ -1,10 +1,10 @@
-import { LoaderContainer } from '@/containers';
+import { CenterContainer } from '@/containers';
 import { Loader } from '..';
 
 export const ContentLoader = (): JSX.Element => {
 	return (
-		<LoaderContainer>
+		<CenterContainer>
 			<Loader size="l" />
-		</LoaderContainer>
+		</CenterContainer>
 	);
 };

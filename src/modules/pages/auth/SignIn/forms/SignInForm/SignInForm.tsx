@@ -74,10 +74,16 @@ export function SignInForm(): JSX.Element {
 					type="password"
 					formik={formik}
 				/>
-				<Switcher key="switcher">
-					Haven&apos;t account yet?{' '}
-					<TextLink href={ROUTES.AUTH_SIGN_UP} text="Sign Up" />
-				</Switcher>
+				<div>
+					<Switcher key="switcher">
+						Haven&apos;t account yet?{' '}
+						<TextLink href={ROUTES.AUTH_SIGN_UP} text="Sign Up" />
+					</Switcher>
+					<Switcher key="switcher">
+						Forgot your password?{' '}
+						<TextLink href={ROUTES.AUTH_FORGOT_PASSWORD} text="Recover" />
+					</Switcher>
+				</div>
 			</CardFormContent>
 		</ModalWrapper>
 	);

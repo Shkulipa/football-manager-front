@@ -1,4 +1,4 @@
-import { ITeam } from '@/api/rest/teams/teams.types';
+import { ITeam } from '@/api/rest/teams/types/teams.types';
 
 export interface ISingleMatchProps {
 	teams: ITeam[];

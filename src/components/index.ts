@@ -19,11 +19,13 @@ export * from './ModalWrapper';
 export * from './PlayersTable';
 export * from './PlayerDragField';
 export * from './ReplacementTitle';
+export * from './AuctionTabs/AuctionTabs';
 
 // football tactic fields
 export * from './football-tactic-fields/FootballTacticFieldUserTeam/FootballTacticFieldUserTeam';
 export * from './football-tactic-fields/FootballTacticFieldSingleMatch/FootballTacticFieldSingleMatch';
 export * from './football-tactic-fields/FootballTacticFieldRatingMatch/FootballTacticFieldRatingMatch';
+export * from './football-tactic-fields/FootballTacticFieldRealTeam/FootballTacticFieldRealTeam';
 
 // football match components
 export * from './match/TimeLine';

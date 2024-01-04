@@ -11,6 +11,7 @@ import { GlobalError } from '@/modules/modals/GlobalError/GlobalError';
 import { NetworkError } from '@/modules/modals/NetworkError/NetworkError';
 import { BaseLayout } from '@/layouts/BaseLayout';
 import NextTopLoader from 'nextjs-toploader';
+import { GoogleAnalytics } from '@/modules/GoogleAnalytics/GoogleAnalytics';
 
 export const metadata: Metadata = {
 	title: 'FM',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: IRootLayoutProps) {
 					type="font/ttf"
 					crossOrigin="anonymous"
 				/>
+				<GoogleAnalytics />
 				<ReduxProvider>
 					<SWRProvider>
 						<NetworkError />

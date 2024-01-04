@@ -3,7 +3,7 @@ import { UserTeam } from '@/modules/pages/user-team';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Your team'
+	title: 'Your team'
 };
 
 export default async function Page() {

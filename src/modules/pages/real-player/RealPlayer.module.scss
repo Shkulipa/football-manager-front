@@ -1,0 +1,184 @@
+@import '@/styles/variables';
+
+.playerWrapper {
+    display: flex;
+    gap: 50px;
+    width: fit-content;
+}
+
+.countryPhoto {
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.logoClub {
+    object-fit: contain;
+    width: 60px;
+    height: 60px;
+}
+
+.playerAdditionalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.countyWrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.playerInfo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+// skills stars
+.skillBlockWrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.scorePlayer {
+    text-align: center;
+}
+
+.stars {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+// skills stats
+.skillsCountWrapper {
+    display: grid;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.skillText {
+    display: grid;
+    grid-template-columns: 200px 50px;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.ratingBlocks {
+    display: flex;
+    align-items: center;
+}
+
+.field {
+    position: relative;
+    margin-top: 15px;
+    background-image: url('/images/pitch.png');
+    background-size: 100% 100%;
+    border: 2px solid $quaternary-color;
+  }
+  
+  $sizeForLine: 5.55%;
+  $middlePlayersLeft: 50%;
+  $extremePosition: 10%;
+  $betweenExtremeAndMiddlePosition: calc($extremePosition * 3);
+  
+  // attackers
+  $attackersBottom: calc($sizeForLine * 15.05);
+  
+  .st {
+    bottom: $attackersBottom;
+    left: $middlePlayersLeft;
+  }
+  
+  // attackers midfielders
+  $attackersMidfieldersBottom: calc($sizeForLine * 12.1);
+  
+  .am {
+    bottom: $attackersMidfieldersBottom;
+    left: $middlePlayersLeft;
+  }
+  
+  // midfielders
+  $midfielderBottom: 50%;
+  
+  .cm {
+    bottom: $midfielderBottom;
+    left: $middlePlayersLeft;
+  }
+  
+  // defensive midfielders
+  $defendersMidfieldersBottom: calc($sizeForLine * 6);
+  
+  .dm {
+    bottom: $defendersMidfieldersBottom;
+    left: $middlePlayersLeft;
+  }
+  
+  // defenders
+  $defendersBottom: calc($sizeForLine * 3.05);
+  
+  .cb {
+    bottom: $defendersBottom;
+    left: $middlePlayersLeft;
+  }
+  
+  // goalkeepers
+  $goalKeepersBottom: calc($sizeForLine / 1.9);
+  
+  .gk {
+    bottom: $goalKeepersBottom;
+    left: $middlePlayersLeft;
+  }
+  
+  // common
+  .lcb, .lcm, .lcf, .ldm, .aml {
+    left: $betweenExtremeAndMiddlePosition;
+  }
+  
+  .rcm, .rcb, .rcf, .rdm, .amr {
+    left: calc(100% - $betweenExtremeAndMiddlePosition);
+  }
+  
+  .lb,  .lm, .lwb, .lwm {
+    left: $extremePosition;
+  }
+  
+  .rb, .rm, .rwb, .rwm {
+    left: calc(100% - $extremePosition);
+  }
+
+  $size: 20px;
+  
+  .position {
+    position: absolute;
+    width:  $size;
+    height: $size;
+    background-color: rgba($color: chartreuse, $alpha: 100%);
+    border: 2px solid $black;
+    border-radius: 50%;
+    box-shadow: $box-shadow;
+    transform: translate(-50%, 50%);
+  }
+
+  .positionText {
+    position: absolute;
+    font-size: $xs-text-size;
+    transform: translate(-25%, 100%);
+  }
+
+  .link {
+    display: grid;
+    gap: 5px;
+    color: $black;
+    text-align: center;
+    cursor: pointer;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }

@@ -3,7 +3,7 @@
 import { apiInventory } from '@/api/rest/inventory/inventory';
 import { IGetInventoryRes } from '@/api/rest/inventory/types/get-inventory';
 import { Button, Loader, Ptag } from '@/components';
-import { LoaderContainer, PaddingContainer } from '@/containers';
+import { CenterContainer, PaddingContainer } from '@/containers';
 import { useAppDispatch } from '@/hooks/redux';
 import { Cash } from '@/icons';
 import { handleActionErrors } from '@/utils/handle-action-errors';
@@ -67,9 +67,9 @@ export const Inventory = () => {
 
 	if (isLoading || !inventoryData)
 		return (
-			<LoaderContainer>
+			<CenterContainer>
 				<Loader size="l" />
-			</LoaderContainer>
+			</CenterContainer>
 		);
 
 	if (resultOpenPack) {

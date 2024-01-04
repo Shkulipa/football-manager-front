@@ -1,6 +1,6 @@
 import { IResultOpenPackProps } from './ResultOpenPack.types';
 import styles from './ResultOpenPack.module.scss';
-import { PlayerCard } from '../PlayerCard';
+import { PlayerCard } from '@/components/PlayerCard';
 import { Button, Htag } from '@/components';
 import { Cash } from '@/icons';
 

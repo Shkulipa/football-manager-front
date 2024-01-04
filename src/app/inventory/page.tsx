@@ -3,7 +3,7 @@ import { Inventory } from '@/modules/pages/inventory/Inventory';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Inventory'
+	title: 'Inventory'
 };
 
 export default async function Page() {

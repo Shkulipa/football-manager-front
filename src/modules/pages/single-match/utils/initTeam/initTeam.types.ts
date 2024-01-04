@@ -1,4 +1,4 @@
-import { ITeam } from '@/api/rest/teams/teams.types';
+import { ITeam } from '@/api/rest/teams/types/teams.types';
 import { IRealTeamShortInfo } from '@/types/football-simulator/real-team-short-info';
 
 export interface IUseInitTeamProps {

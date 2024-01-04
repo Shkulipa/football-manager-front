@@ -1,9 +1,21 @@
-import { Ptag } from '@/components';
+import { Htag, Ptag } from '@/components';
 import { PaddingContainer } from '@/containers';
 
 export default function Home() {
 	return (
 		<PaddingContainer>
+			<Htag tag="h2">Demo</Htag>
+			<div style={{ maxWidth: '991px' }}>
+				<iframe
+					width="960"
+					height="540"
+					src="https://www.youtube.com/embed/3MMVkBe5eXw"
+				></iframe>
+			</div>
+
+			<br />
+			<br />
+
 			<Ptag style={{ maxWidth: '991px' }}>
 				Welcome to the captivating world of football management in our game
 				&apos;Master of Football&apos;! Become a true strategist and leader of

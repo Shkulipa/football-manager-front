@@ -3,7 +3,7 @@ import { SignIn } from '@/modules/pages/auth/SignIn/SignIn';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Sign In',
+	title: 'Sign In',
 	description:
 		'Sign in to access your account. Enter your credentials to securely log in and manage your account settings.'
 };

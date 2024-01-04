@@ -23,6 +23,7 @@
 - [X] Sign up
 - [X] Activation email
 - [X] Login with not activated account
+- [X] Restore forgot pass
 - [X] User Team
     - [X] Create user team
     - [X] Set/update squad in user team
@@ -103,22 +104,21 @@
 - [X] Open packs
 - [X] Privacy Policy
 - [X] Terms and Conditions
-- [ ] Auction
-    - [ ] Auction create lot
-    - [ ] Auction cancel lot
-    - [ ] Auction buy lot
-- [ ] Search(4 categories before searching)
-    - [ ] Page players
-    - [ ] Page users
-    - [ ] Page user teams
-    - [ ] Page real teams
-- [ ] Restore forgot pass
-- [ ] Profile
-    - [ ] User update password
-    - [ ] User update username
-    - [ ] User update email
-- [ ] Direct Chats
-- [ ] Disabled app for mobiles
+- [X] Auction
+    - [X] Auction get lots
+    - [X] Auction create lot
+    - [X] Auction cancel lot
+    - [X] Auction buy lot
+- [X] Search(4 categories before searching)
+    - [X] Page players
+    - [X] Page real teams
+- [X] Profile
+    - [X] User update password
+    - [X] User update username
+    - [X] User update email
+- [X] Google analytics
+    - https://analytics.google.com/
+    - https://gaudion.dev/blog/setup-google-analytics-with-gdpr-compliant-cookie-consent-in-nextjs13, https://gaudion.dev/info/cookies
 - [ ] Home tutorials with video from youtube
 
 # next js docs
@@ -130,10 +130,10 @@ https://primereact.org/carousel/
 # react dnd
 https://react-dnd.github.io/react-dnd/examples/dustbin/single-target
 
-# @syncfusion/ej2-base
-https://ej2.syncfusion.com/react/demos/#/material3/chart/polar-area
-
 # Sockets
 docs: https://socket.io/docs/v4/client-initialization/
 https://www.youtube.com/watch?v=o43iiH4kGqg&t=1610s&ab_channel=UlbiTV
 https://www.youtube.com/watch?v=djMy4QsPWiI&ab_channel=PedroTech
+
+# google analytics
+https://www.youtube.com/watch?v=2woWjkED-vg

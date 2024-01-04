@@ -3,7 +3,7 @@ import { Rating } from '@/modules/pages/rating';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Rating'
+	title: 'Rating'
 };
 
 export default async function Page() {

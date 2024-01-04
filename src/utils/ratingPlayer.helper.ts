@@ -11,7 +11,7 @@ export const ratingHelper = (
 	const sum = values.reduce((acc, curr) => acc + Number(curr), 0);
 	const average = sum / values.length;
 	const rating = (average * maxRatingPlayer) / 100;
-	const fixedRating = rating.toFixed(0);
+	const fixedRating = Math.floor(rating);
 
 	return +fixedRating;
 };

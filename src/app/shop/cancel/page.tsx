@@ -3,7 +3,7 @@ import { Cancel } from '@/modules/pages/shop';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'FM | Cancel operation'
+	title: 'Cancel operation'
 };
 
 export default async function Page() {
